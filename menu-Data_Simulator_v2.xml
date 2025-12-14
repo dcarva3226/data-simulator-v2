@@ -1,0 +1,2486 @@
+<refs>
+	<sys_sch_job>
+		<ref id="365" name="ssi.datasim.create.daily.usage.js"/>
+	</sys_sch_job>
+</refs>
+<menu name="Data Simulator v2" parent="$VirtualRoot$>Custom Links" component="HTML Page" icon="icon-connect_to_database">
+	<children>
+		<menu name="Create Resources" parent="$VirtualRoot$>Custom Links>Data Simulator v2" component="Dashboard" icon="icon-ask_chaklun">
+			<configs>
+				<dashboard name="Data Simulator Create Resources Home" columns="3" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+					<widgets>
+						<ui_widget_html title="Overview" colspan="3" rowspan="1" show_title="t">
+							<attributes>
+								<html><![CDATA[<div><span style="font-size: small; font-family: Verdana;">This section can be used to create new users and computers for the platform.</span></div><span style="font-family: Verdana;"><div><span style="font-size: small;"><br></span></div><div><span style="font-size: small;">Configuration - configure the parameters for the creation of uses and computers.</span></div><div><span style="font-size: small;">User Database - this is the list of fake users that will be used to create the platform users.</span></div><div><span style="font-size: small;">Execute - use this area to check on current script status and execute the script to create users and computers.</span></div><div><span style="font-size: small;">View Logs - view details about previous script runs.</span></div><div><br></div><span style="font-size: small; font-weight: bold;">Pre-requisites</span></span><div><ul><li><span style="font-family: Verdana; font-size: small;">Operating systems must already exist in the database.</span></li><li><span style="font-family: Verdana; font-size: small;">Operating system manufacturers must already exist in the database.</span></li></ul></div><div><div><div><span style="font-family: Verdana; font-size: small; font-weight: bold;">Note</span></div></div><div><span style="font-family: Verdana; font-size: small;"><br></span></div><div><span style="font-family: Verdana; font-size: small;">If a user or computer already exists, Data Simulator will not create a duplicate.</span></div></div>]]></html>
+							</attributes>
+						</ui_widget_html>
+						<ui_widget_chart title="Computers by Manufacturer" colspan="1" rowspan="1" type="DOUGHNUT_CHART" subcaption="Primary Users have @datasim source" aggregate="COUNT" limit="100" order_by="Aggregation value" order_dir="DESC" drill_into_details="f" data_view="Data Simulator Create Resources Computers" custom_filter="Data Simulator Computers" group_by="manufacturer" showToolTip="true">
+							<configs>
+								<data_view_info name="Data Simulator Create Resources Computers" table="cmdb_ci_computer" show_summary="f" group_fields="t">
+									<columns>
+										<column path="name" show_in_table="t"/>
+										<column path="antispyware" show_in_table="t"/>
+										<column path="antivirus" show_in_table="t"/>
+										<column path="asset_type" show_in_table="t"/>
+										<column path="asset_tag" show_in_table="t"/>
+										<column path="bios_manufacturer" show_in_table="t"/>
+										<column path="bios_date" show_in_table="t"/>
+										<column path="bios_version" show_in_table="t"/>
+										<column path="baseboard_manufacturer" show_in_table="t"/>
+										<column path="baseboard_product" show_in_table="t"/>
+										<column path="baseboard_serial_no" show_in_table="t"/>
+										<column path="baseboard_version" show_in_table="t"/>
+										<column path="cpu" show_in_table="t"/>
+										<column path="cpu_count" show_in_table="t"/>
+										<column path="cpu_socket_count" show_in_table="t"/>
+										<column path="cpu_speed" show_in_table="t"/>
+										<column path="chassis" show_in_table="t"/>
+										<column path="cluster" show_in_table="t"/>
+										<column path="dns_fullname" show_in_table="t"/>
+										<column path="description" show_in_table="t"/>
+										<column path="device_location" show_in_table="t"/>
+										<column path="discovery_status" show_in_table="t"/>
+										<column path="disk_encryption" show_in_table="t"/>
+										<column path="domain" show_in_table="t"/>
+										<column path="domain_role" show_in_table="t"/>
+										<column path="enclosure_serial_no" show_in_table="t"/>
+										<column path="environment" show_in_table="t"/>
+										<column path="firewall" show_in_table="t"/>
+										<column path="form_factor" show_in_table="t"/>
+										<column path="hd" show_in_table="t"/>
+										<column path="hostid" show_in_table="t"/>
+										<column path="ip_address" show_in_table="t"/>
+										<column path="last_boot_up_date" show_in_table="t"/>
+										<column path="last_logged_in_user" show_in_table="t"/>
+										<column path="last_logged_in_user_admin" show_in_table="t"/>
+										<column path="location" show_in_table="t"/>
+										<column path="mac_address" show_in_table="t"/>
+										<column path="manufacturer" show_in_table="t"/>
+										<column path="memory_free_slot_count" show_in_table="t"/>
+										<column path="memory_total_capacity" show_in_table="t"/>
+										<column path="memory_total_slot_count" show_in_table="t"/>
+										<column path="model_name" show_in_table="t"/>
+										<column path="model_version" show_in_table="t"/>
+										<column path="os_architecture" show_in_table="t"/>
+										<column path="os_build_label" show_in_table="t"/>
+										<column path="os_build_number" show_in_table="t"/>
+										<column path="os_kernel_version" show_in_table="t"/>
+										<column path="os_service_pack" show_in_table="t"/>
+										<column path="ou" show_in_table="t"/>
+										<column path="os" show_in_table="t"/>
+										<column path="os_ver" show_in_table="t"/>
+										<column path="operational" show_in_table="t"/>
+										<column path="owner" show_in_table="t"/>
+										<column path="owner_group" show_in_table="t"/>
+										<column path="part_number" show_in_table="t"/>
+										<column path="primary_user" show_in_table="t"/>
+										<column path="ram" show_in_table="t"/>
+										<column path="serial_number" show_in_table="t"/>
+										<column path="stats" show_in_table="t"/>
+										<column path="status" show_in_table="t"/>
+										<column path="support_contact" show_in_table="t"/>
+										<column path="system_serial_no" show_in_table="t"/>
+										<column path="system_uuid" show_in_table="t"/>
+										<column path="time_zone" show_in_table="t"/>
+										<column path="computer_type" show_in_table="t"/>
+										<column path="update_policy" show_in_table="t"/>
+										<column path="virtual" show_in_table="t"/>
+										<column path="virtualization_software" show_in_table="t"/>
+										<column path="primary_user>source" show_in_table="t"/>
+									</columns>
+									<custom_filters>
+										<custom_filter name="Data Simulator Computers">
+											<attributes>
+												<criteria><![CDATA[ 'primary_user>source' contains "datasim" ]]></criteria>
+											</attributes>
+										</custom_filter>
+										<custom_filter name="Data Simulator VDI Computers">
+											<attributes>
+												<criteria><![CDATA[ 'primary_user>source' contains "datasim" and 'virtual' is t ]]></criteria>
+											</attributes>
+										</custom_filter>
+									</custom_filters>
+								</data_view_info>
+							</configs>
+						</ui_widget_chart>
+						<ui_widget_chart title="Computers by BIOS Age" colspan="1" rowspan="1" type="PIE_CHART" subcaption="Primary Users have @datasim source" aggregate="COUNT" limit="100" order_by="Aggregation value" order_dir="DESC" drill_into_details="f" data_view="Data Simulator Create Resources Computers" custom_filter="Data Simulator Computers" group_by="bios_date" showToolTip="true" paletteColors="#82b74b, #ffef96,#034f84, #c94c4c, #ffef96"/>
+						<ui_widget_chart title="Computers by OS" colspan="1" rowspan="1" type="BAR_CHART" subcaption="Primary Users have @datasim source" aggregate="COUNT" limit="15" order_by="Aggregation value" order_dir="DESC" drill_into_details="f" data_view="Data Simulator Create Resources Computers" custom_filter="Data Simulator Computers" group_by="os_ver" paletteColors="#034f84, #c94c4c, #ffef96, #82b74b, #ffef96"/>
+					</widgets>
+				</dashboard>
+			</configs>
+			<children>
+				<menu name="1. Configuration" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Resources" component="Data View Grid" icon="icon-configuration">
+					<configs>
+						<data_view_info name="Data Simulator Create Resources Configs" table="ds_create_res_config" show_summary="f" group_fields="t">
+							<columns>
+								<column path="name" show_in_table="t"/>
+								<column path="description" show_in_table="t"/>
+								<column path="value" show_in_table="t"/>
+								<column path="var_name" show_in_table="f" label="Var Name"/>
+								<column path="type" show_in_table="f"/>
+								<column path="order" show_in_table="f"/>
+								<column custom_control="Colored Status" show_in_table="t" label="Error Message">
+									<attributes>
+										<path><![CDATA[_calc:message::string:"include(\"ssi.utils.js\");
+var varName = get(\"Var Name\");
+var value = get(\"Value\");
+
+var errs = get(\"Errors\");
+var retVal = \"\";
+
+if (varName == \"number_of_users\") {
+
+    if (parseInt(value) < 0)
+        retVal = \"This value must be 0 or greater.\"
+  
+} else if (varName == \"number_of_computers\") {
+
+    if (parseInt(value) < 0) 
+        retVal = \"This number must be 0 or greater.\";
+
+} else if (varName == \"vdi_percentage\") {
+
+    if (parseInt(value) < 1 || parseInt(value) > 100) 
+        retVal = \"This number must be between 1 and 100.\";
+
+} else if (varName == \"operating_systems\") {
+    
+    var osSplit = value.split(\";\");
+    for (var i=0; i < osSplit.length; i++) {
+        
+        var os = osSplit[i].trim();
+
+        var entity = this.mgr.readEntity(\"cmdb_software_product_version\",
+            Criterion.EQ(\"friendly_name\", os)); 
+               
+        if (!entity) {
+            retVal = \"One or more OSs are not found in the database. (\" + os + \")\";
+            break;        
+        }  
+    }
+    
+} else if (varName == \"comp_manuf\") {
+    
+    var entity = this.mgr.readEntity(\"cmdb_discovered_company\", Criterion.EQ(\"name\", value.trim())); 
+           
+    if (!entity) {
+        retVal = \"The computer manufacturer was not found in the database.\";
+    }  
+
+} else if (varName == \"comp_cpu\") {
+    
+    var entity = this.mgr.readEntity(\"cmdb_cpu\", Criterion.EQ(\"model\", value.trim())); 
+           
+    if (!entity) {
+        retVal = \"The CPU was not found in the database.\";
+    }  
+
+} else if (varName == \"comp_ip_address_prefix\") {
+    
+    var ipSplit = value.split(\".\");
+    
+    if (ipSplit.length != 2) {
+        retVal = \"Enter an IP prefix like '192.169'.\";
+    }  
+    
+    if (isNaN(ipSplit[0]) || isNaN(ipSplit[1])) {
+        retVal = \"Enter a numeric IP like '192.169'.\";
+    }  
+} else if (varName == \"bios_release_date_old_perc\") {
+    
+    if (value < 0 || value > 100) {
+        retVal = \"Enter an value between 0 and 100.\";
+    }
+} else if (varName == \"bios_release_date_recent\") {
+    
+    if (value == \"\") {
+        retVal = \"Enter a date value.\";
+    }
+} else if (varName == \"bios_release_date_older\") {
+    
+    var dt = new java.util.Date(value);
+    var df = getDateDiff(dt, new java.util.Date());
+    
+    if (value == \"\" || df < 1095) {
+        retVal = \"Enter a date value that is greater than 3 years.\";
+    }
+}
+
+if (retVal != \"\") retVal += \":#b00\";
+
+retVal;":]]></path>
+									</attributes>
+								</column>
+							</columns>
+							<controls>
+								<control name="Colored Status">
+									<attributes>
+										<renderer><![CDATA[if ($ctx.value == null || $ctx.value === '') {
+    '';
+} else {
+    var split = $ctx.value.split(':');
+    var label = split[0];
+    var color = '#EEE';
+    var marker = 0;
+    if (split.length > 1) {
+		color = split[1];
+    }
+    if (split.length > 2) {
+		marker = split[2];
+    }
+    var style = ';font-weight:normal;width:100%;border-radius:5px;box-shadow:0 1px 1px #CCC;color:#FFF;padding:3px 5px 0 5px;height:22px;box-sizing:border-box;';
+    var clazz = 'status-sm ' + label.toLowerCase() +'';
+    '<div class=\"'+ clazz +'\" data-marker=\"'+ marker + '\" style=\"background-color:'+ color + style  + '\">'+ label +'</div>'
+}]]></renderer>
+									</attributes>
+								</control>
+							</controls>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Create Resources Configs,orderBy:order,orderDir:ASC,title:"Configuration",description:"Required: Set the parameters for the next run. Each run will create a log record with parameters used. If both \"Number of Users\" and \"Number of Computers\" are 0, then the script will do nothing."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="2. User Database" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Resources" component="Data View Grid" icon="icon-administrator">
+					<configs>
+						<data_view_info name="Data Simulator Create Resources User Db" table="ds_create_res_user_db" show_summary="f" group_fields="t">
+							<columns>
+								<column path="user_name" show_in_table="t"/>
+								<column path="first_name" show_in_table="t"/>
+								<column path="last_name" show_in_table="t"/>
+								<column path="email" show_in_table="t"/>
+								<column path="phone" show_in_table="t"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Create Resources User Db,title:"Fake User Database",description:"Required: This is the list that will be used to create users in the platform. Feel free to add/import new users."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="3. Execute" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Resources" component="Dashboard" icon="icon-run">
+					<configs>
+						<dashboard name="Data Simulator Create Resources Status" columns="3" rows="3" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+							<widgets>
+								<ui_widget_html title="Instructions" colspan="3" rowspan="1" show_title="t">
+									<attributes>
+										<html><![CDATA[<style>
+body {
+  background-color: #f5f5f0;
+}
+</style>
+<div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">Use the "<span style="font-weight: bold;">Script Status</span>" area to see if the script is currently running. If the script End Time is empty, then the script is</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">still running.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">If you need to cancel the script, edit the job below and select the "<span style="font-weight: bold;">Cancel Job</span>" button.</span><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">&nbsp;The script may not stop immediately.</span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">To refresh the data below, right-click on the "<span style="font-weight: bold;">Script Status</span>" area and select "<span style="font-weight: bold;">Refresh Data</span>" to see status updates.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">If the script is not running, you may click on the blue "<span style="font-weight: bold;">Run Script</span>" below. Only click on it once.&nbsp;<br></span></div>]]></html>
+									</attributes>
+								</ui_widget_html>
+								<ui_widget_data_grid title="Script Status (Last 5 Runs)" colspan="3" rowspan="1" data_view="Data Simulator Job Logs" custom_filter="Create Resources Script" order_by="queue_time" order_dir="DESC" limit="5">
+									<configs>
+										<data_view_info name="Data Simulator Job Logs" table="sys_sch_job_log" category="Auto Generated" show_summary="f" group_fields="f">
+											<columns>
+												<column path="job_id" show_in_table="t"/>
+												<column custom_control="RAG" red="1" perc="true" min="0" green="50" max="100" show_in_table="t" label="Progress Status">
+													<attributes>
+														<path><![CDATA[_calc:progress_status::string:"var x = get(\"Progress\");
+x;":]]></path>
+													</attributes>
+												</column>
+												<column path="sys_user_id" show_in_table="t"/>
+												<column path="queue_time" show_in_table="t"/>
+												<column path="idempotence_type_id" show_in_table="f"/>
+												<column path="start_time" show_in_table="t"/>
+												<column path="end_time" show_in_table="t"/>
+												<column path="intent_time" show_in_table="f"/>
+												<column path="progress" show_in_table="f"/>
+												<column path="schedule_digest" show_in_table="f"/>
+												<column path="schedule_name" show_in_table="f"/>
+												<column path="succeeded" show_in_table="t"/>
+												<column path="details" show_in_table="t"/>
+											</columns>
+											<custom_filters>
+												<custom_filter name="Data Simulator">
+													<attributes>
+														<criteria><![CDATA[ 'job_id' is "365" ]]></criteria>
+													</attributes>
+												</custom_filter>
+												<custom_filter name="Daily Usage Script">
+													<attributes>
+														<criteria><![CDATA[ 'job_id' contains "ssi.datasim.create.daily.usage.js" ]]></criteria>
+													</attributes>
+												</custom_filter>
+												<custom_filter name="Create Resources Script">
+													<attributes>
+														<criteria><![CDATA[ 'job_id' contains "ssi.datasim.create.resources.js" ]]></criteria>
+													</attributes>
+												</custom_filter>
+												<custom_filter name="Create Program Crashes">
+													<attributes>
+														<criteria><![CDATA[ 'job_id' contains "ssi.data.sim.create.prog.crashes.js" ]]></criteria>
+													</attributes>
+												</custom_filter>
+												<custom_filter name="Create System Crashes">
+													<attributes>
+														<criteria><![CDATA[ 'job_id' contains "ssi.data.sim.create.sys.crashes.js" ]]></criteria>
+													</attributes>
+												</custom_filter>
+												<custom_filter name="Create User Journey Script">
+													<attributes>
+														<criteria><![CDATA[ 'job_id' contains "ssi.data.sim.create.user.journeys.js" ]]></criteria>
+													</attributes>
+												</custom_filter>
+											</custom_filters>
+										</data_view_info>
+									</configs>
+								</ui_widget_data_grid>
+								<ui_widget_function_list title="Script Execution" colspan="1" rowspan="1" show_title="f" show_decoration="f">
+									<functions>
+										<ui_widget_function name="Run Script" description="Run script, if script is not already running.">
+											<pipelines>
+												<pipeline type="ActionButtonRendererPipeline">
+													<attributes>
+														<config><![CDATA[colorName:"blue",iconName:"server"]]></config>
+													</attributes>
+												</pipeline>
+												<pipeline type="RunJobPipeline">
+													<attributes>
+														<config><![CDATA[base.sys_sch_schedule.job_id:"ssi.datasim.create.resources.js"]]></config>
+													</attributes>
+												</pipeline>
+											</pipelines>
+										</ui_widget_function>
+									</functions>
+								</ui_widget_function_list>
+							</widgets>
+						</dashboard>
+					</configs>
+					<attributes>
+						<configs><![CDATA[Dashboard:Data Simulator Create Resources Status,title:"Execute"]]></configs>
+					</attributes>
+				</menu>
+				<menu name="4. View Logs" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Resources" component="Data View Grid" icon="icon-lcd_monitor">
+					<configs>
+						<data_view_info name="Data Simulator Create Resource Logs" table="ds_create_res_log" show_summary="f" group_fields="t">
+							<columns>
+								<column custom_control="Colored Status" show_in_table="t" label="Status">
+									<attributes>
+										<path><![CDATA[_calc:status::string:"var errs = get(\"Errors\");
+var color = null;
+var retVal = 0;
+
+if (errs == \"None\") 
+{
+    retVal = \"Pass\";
+    color = \":#74b72e\";
+} else {
+    retVal = \"Failed\";
+    color = \":#B00\";
+}
+
+retVal += color;":]]></path>
+									</attributes>
+								</column>
+								<column path="name" show_in_table="t"/>
+								<column path="created_on" show_in_table="t"/>
+								<column path="created_by" show_in_table="t" label="Run By"/>
+								<column path="users_created" show_in_table="t" label="Users Created"/>
+								<column path="comp_created" show_in_table="t" label="Computers Created"/>
+								<column path="parameter_list" show_in_table="t"/>
+								<column path="err" show_in_table="t" label="Errors"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Create Resource Logs,orderBy:created_on,orderDir:DESC,title:"View Logs"]]></configs>
+					</attributes>
+				</menu>
+			</children>
+			<attributes>
+				<configs><![CDATA[Dashboard:Data Simulator Create Resources Home,title:"Create Resources"]]></configs>
+			</attributes>
+		</menu>
+		<menu name="Create Daily Usage" parent="$VirtualRoot$>Custom Links>Data Simulator v2" component="Dashboard" icon="icon-ask_chaklun">
+			<configs>
+				<dashboard name="Data Simulator Daily Usage Home" columns="3" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+					<widgets>
+						<ui_widget_html title="Overview" colspan="3" rowspan="1" show_title="t">
+							<attributes>
+								<html><![CDATA[<div><span style="font-family: Verdana; font-size: small;">This section can be used to create program daily usage for users/computers in the platform.&nbsp;</span><span style="font-family: Verdana; font-size: small;">It will also create program and packages if needed.&nbsp;</span><span style="font-family: Verdana; font-size: small;">If specified in the configuration, i</span><span style="font-family: Verdana; font-size: small;">t will also&nbsp;</span><span style="font-family: Verdana; font-size: small;">create device resource utilization records. I</span><span style="font-family: Verdana; font-size: small;">f needed, use the Create Resources menu to generate users and computers.&nbsp;</span><span style="font-family: Verdana; font-size: small;">If the target program, program publisher, program instance or software package already exists, Data Simulator will not create a duplicate.</span></div><span style="font-family: Verdana;"><div><span style="font-size: small;"><br></span></div><div><span style="font-size: small;">Configuration - configure the parameters for the creation of program daily usage.</span></div><div><span style="font-size: small;">Include Groups - use this page to include groups that will get usage created for them.</span></div><div><span style="font-size: small;">Include/Exclude Users - use this page to include or exclude users that will get usage created for them.</span></div><div><span style="font-size: small;">Select Software - use this page to select which software will have usage created against it.</span></div><div><span style="font-size: small;">Select Web Apps - use this page to select which web applications will have usage created against it.</span></div><div><span style="font-size: small;">Review Settings - use this page to review the settings before you run the script.</span></div><div><span style="font-size: small;">Execute - use this area to check on current script status and execute the script to create program daily usage.</span></div><div><span style="font-size: small;">View Logs - view details about previous script runs.<br>View Usage Plan Logs - view the last set of usage pattern data that was used.</span></div><div><span style="font-size: small;"><br></span></div><div><div><span style="font-size: small; font-weight: bold;">Pre-requisites</span></div><div><ul><li><span style="font-size: small;">User and persons must already exist in the database.</span></li><li><span style="font-size: small;">Computers must already exist in the database.</span></li></ul></div></div></span>]]></html>
+							</attributes>
+						</ui_widget_html>
+						<ui_widget_function_list title="Desktop Application Usage Totals" colspan="1" rowspan="1" show_title="t" show_decoration="t">
+							<functions>
+								<ui_widget_function name="Usage Records Created">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<configs>
+												<data_view_info name="Data Simulator Daily Usage Raw" table="cmdb_program_daily_usage" category="Auto Generated" show_summary="f" group_fields="f">
+													<columns>
+														<column path="day_of_week" show_in_table="t"/>
+														<column path="keystrokes" show_in_table="t"/>
+														<column path="minutes_in_use" show_in_table="t"/>
+														<column path="uptime_minutes" show_in_table="t"/>
+														<column path="program_instance" show_in_table="t"/>
+														<column path="thin_client" show_in_table="t"/>
+														<column path="times_started" show_in_table="t"/>
+														<column path="usage_date" show_in_table="t"/>
+														<column path="used_from" show_in_table="t"/>
+														<column path="user" show_in_table="t"/>
+														<column path="user>user_name" show_in_table="t"/>
+														<column path="user>source" show_in_table="t"/>
+														<column path="program_instance>spkg" show_in_table="t" label="Software Package"/>
+														<column path="program_instance>spkg>name" show_in_table="t"/>
+														<column path="program_instance>spkg>version" show_in_table="t"/>
+														<column path="program_instance>spkg>publisher" show_in_table="t"/>
+														<column path="program_instance>spkg>operational" show_in_table="t"/>
+														<column path="program_instance>spkg>software" show_in_table="t" label="Software Product Version"/>
+														<column path="program_instance>spkg>software_resolver>software>product" show_in_table="t" label="Software Product"/>
+														<column path="id" show_in_table="t"/>
+														<column path="program_instance>install_path" show_in_table="t"/>
+														<column path="run_time" show_in_table="t"/>
+														<column path="use_time" show_in_table="t"/>
+														<column path="utc_offset" show_in_table="t"/>
+														<column path="created_on" show_in_table="t"/>
+														<column path="created_by" show_in_table="t"/>
+														<column path="used_from>virtual" show_in_table="t"/>
+													</columns>
+													<custom_filters>
+														<custom_filter name="Nick Machine">
+															<attributes>
+																<criteria><![CDATA[ 'used_from' contains "DESKTOP-TG0HUUH" and 'minutes_in_use' is not 0 ]]></criteria>
+															</attributes>
+														</custom_filter>
+													</custom_filters>
+												</data_view_info>
+											</configs>
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"blue",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="VDI Computer Usage Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'used_from>virtual\' is t and \'program_instance\' is not empty  "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"green",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'used_from>virtual\' is t and \'program_instance\' is not empty  "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="Desktop Computer Usage Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'used_from>virtual\' is not t and \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"orange",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'used_from>virtual\' is not t and \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+							</functions>
+						</ui_widget_function_list>
+						<ui_widget_function_list title="Web App Usage Totals" colspan="1" rowspan="1" show_title="t" show_decoration="t">
+							<functions>
+								<ui_widget_function name="Usage Records Created">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'program_instance\' is empty  "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"blue",footerIcon:"arrow-right",footerText:"More Details",iconName:"chrome"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'program_instance\' is empty  "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="VDI Computer Usage Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'used_from>virtual\' is t and \'program_instance\' is empty  "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"green",footerIcon:"arrow-right",footerText:"More Details",iconName:"chrome"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'used_from>virtual\' is t and \'program_instance\' is empty  "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="Desktop Computer Usage Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'used_from>virtual\' is not t and \'user>source\' contains \"@datasim\" and \'program_instance\' is empty  "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"orange",footerIcon:"arrow-right",footerText:"More Details",iconName:"chrome"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'used_from>virtual\' is not t and \'user>source\' contains \"@datasim\" and \'program_instance\' is empty  "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+							</functions>
+						</ui_widget_function_list>
+						<ui_widget_function_list title="Device Resource Utilization Totals" colspan="1" rowspan="1" show_title="t" show_decoration="t">
+							<functions>
+								<ui_widget_function name="Device Resource Utilization Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<configs>
+												<data_view_info name="Data Simulator Resource Utilization Raw" table="cmdb_device_resource_util" show_summary="f" group_fields="t">
+													<columns>
+														<column path="computer" show_in_table="t"/>
+														<column path="memory_usage" show_in_table="t"/>
+														<column path="processor_usage" show_in_table="t"/>
+														<column path="usage_date" show_in_table="t"/>
+														<column path="computer>primary_user>source" show_in_table="t"/>
+														<column path="id" show_in_table="t"/>
+														<column path="computer>virtual" show_in_table="t"/>
+													</columns>
+												</data_view_info>
+											</configs>
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"blue",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="VDI Computer Utilization Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"green",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="Desktop Computer Utilization Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"orange",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="Average Memory Utilization">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:AVG,show_scopes:true,value:memory_usage,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"red",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="ScriptFormatterPipeline">
+											<attributes>
+												<config><![CDATA[Format:"$value = $value + \"%\";"]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="Average CPU Utilization">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:AVG,show_scopes:true,value:processor_usage,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"lightblue",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="ScriptFormatterPipeline">
+											<attributes>
+												<config><![CDATA[Format:"$value = $value + \"%\";"]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+							</functions>
+						</ui_widget_function_list>
+					</widgets>
+				</dashboard>
+			</configs>
+			<children>
+				<menu name="1. Configuration" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Data View Grid" icon="icon-configuration">
+					<configs>
+						<data_view_info name="Data Simulator Daily Usage Configs" table="ds_daily_usage_config" show_summary="f" group_fields="t">
+							<columns>
+								<column path="name" show_in_table="t"/>
+								<column path="description" show_in_table="t"/>
+								<column path="value" show_in_table="t"/>
+								<column custom_control="Colored Status" show_in_table="t" label="Error Message">
+									<attributes>
+										<path><![CDATA[_calc:message::string:"var mgr = dbApi.getEntityManager();
+var name = get(\"Name\");
+var value = get(\"Value\");
+
+var retVal = \"\";
+
+if (name == \"Create Program Daily Usage\")  {
+    
+    if (value != \"TRUE\" && value != \"FALSE\") 
+        retVal = \"Please enter TRUE or FALSE.\";
+}   
+
+if (name == \"Create Hardware Utilization\")  {
+    
+    if (value != \"TRUE\" && value != \"FALSE\") 
+        retVal = \"Please enter TRUE or FALSE.\";
+}
+
+if (name == \"Start Hour\") {
+    if (value < 0 || value > 23 || !value)
+       retVal = \"This value must be between 0 and 23.\";
+}
+
+if (name == \"End Hour\") {
+    if (value < 0 || value > 23 || !value)
+       retVal = \"This value must be between 0 and 23.\";
+} 
+
+if (name == \"Exclude Weekends\") {
+    
+    if (value != \"TRUE\" && value != \"FALSE\") 
+        retVal = \"Please enter TRUE or FALSE.\";
+}   
+
+/*************************************************************************************
+    Make sure start date is older than end date
+*************************************************************************************/
+if (name == \"Start Date\" || name == \"End Date\") {
+
+    var isValid = false;
+    var startDate = null, endDate = null;
+    var configs = this.mgr.readLazily(\"ds_daily_usage_config\", Criterion.IN(\"name\", [\"Start Date\", \"End Date\"]));
+    while (configs.hasNext()) {
+     
+        var config = configs.next();
+        var cfgValue = config.get('value');
+        if (cfgValue) {
+            
+            // Date check functions did not work, so using try/catch                    
+            try {
+                var dt = new java.util.Date(cfgValue);
+                isValid = true;            
+            } catch (e) {
+                retVal = \"Please enter a valid date in dd/mm/yyyy format.\";
+                isValid = false;            
+            }
+            
+            if (isValid) {        
+                if (config.get('name') == \"Start Date\")
+                    startDate = new java.util.Date(cfgValue);
+                else
+                    endDate = new java.util.Date(cfgValue);                              
+            }
+        }        
+    }
+    
+    if (isValid) {
+        if (config.get('name') == \"Start Date\")
+            startDate = new java.util.Date(cfgValue);
+        else
+            endDate = new java.util.Date(cfgValue);  
+         
+        if (startDate && endDate) {
+                      
+            if (startDate.getTime() > endDate.getTime()) {
+                retVal = \"The Start Date must be less than the End Date.\";  
+            }
+        } else {    
+            retVal = \"The Start Date and End Date must not be empty.\";
+        } 
+    }    
+}
+
+/*************************************************************************************
+    Make sure light, heavy, med usage percentages add up to 100
+*************************************************************************************/
+if (name.indexOf(\"Usage Percentage\") > -1) {
+    
+    var total = 0;
+    var lup = 0, mup = 0, hup = 0, nup = 0;
+    
+    var configs = mgr.readLazily(\"ds_daily_usage_config\", Criterion.ILIKE(\"name\", \"%Usage Percentage%\"));
+    while (configs.hasNext()) {
+        var config = configs.next();
+        total += parseInt(config.get('value'));
+    }
+    
+    if (total != 100) {
+        retVal = \"The light, med, heavy and no usage percentages must equal 100.\";                   
+    }
+}
+
+/*************************************************************************************
+    Make sure [Light, Med, Heavy] usage min and max minutes are legit
+*************************************************************************************/
+var TYPES = ['Minutes', 'Keystrokes'];
+var WEIGHTS = ['Light', 'Medium', 'Heavy'];
+
+for (var i = 0; i < WEIGHTS.length; i++) {
+    
+    for (var x = 0; x < TYPES.length; x++) {
+    
+        if (name.indexOf(WEIGHTS[i] + \" Usage Min \" + TYPES[x]) > -1 || name.indexOf(WEIGHTS[i] + \" Usage Max \" + TYPES[x]) > -1) {
+            var min = 0, max = 0;
+        
+            var configs = mgr.readLazily(\"ds_daily_usage_config\", Criterion.ILIKE(\"name\", WEIGHTS[i] + \" Usage%\" + TYPES[x]));
+            while (configs.hasNext()) {
+        
+                var config = configs.next();
+                var cfgName = config.get('name');
+        
+                if (cfgName == WEIGHTS[i] + \" Usage Min \" + TYPES[x]) 
+                    min = parseInt(config.get('value'));
+                else
+                    max = parseInt(config.get('value'));
+            }
+            
+            if (min > max) {
+                retVal = \"The minimum value must be less than the maximum value\"; 
+            }
+        }    
+    }    
+}
+
+/*************************************************************************************
+    Make sure times started are legit
+*************************************************************************************/
+if (name.indexOf(\"Minimum Times Started\") > -1 ) {
+    if (parseInt(value) < 1 || parseInt(value) > 50 || !value)
+        retVal = \"This value must be between 1 and 50.\";    
+}
+
+if (name.indexOf(\"Maximum Times Started\") > -1 ) {
+    if (parseInt(value) < 1 || parseInt(value) > 50 || !value)
+        retVal = \"This value must be between 1 and 50.\";    
+}
+
+/*************************************************************************************
+    Make sure uptime minutes are legit
+*************************************************************************************/
+if (name.indexOf(\"Minimum Uptime Minutes\") > -1 ) {
+    if (parseInt(value) < 1 || parseInt(value) > 1440 || !value)
+        retVal = \"This value must be between 1 and 1440.\";  
+}
+
+if (name.indexOf(\"Maximum Uptime Minutes\") > -1 ) {
+    if (parseInt(value) < 1 || parseInt(value) > 1440 || !value)
+        retVal = \"This value must be between 1 and 1440.\";  
+}
+
+/*************************************************************************************
+    Make sure usage plans are legit
+*************************************************************************************/
+if (name.indexOf(\"Usage Plan 2 Flatten Percentage\") > -1) {
+    if (parseInt(value) < 1 || parseInt(value) > 100 || !value)
+        retVal = \"This value must be between 1 and 100.\";      
+}
+
+if (name.indexOf(\"Usage Plan\") > -1 && name.indexOf(\"Flatten\") == -1) {
+    
+    var total = 0;
+    var plan1 = 0, plan2 = 0, plan3 = 0, plan4 = 0;
+    
+    var crit1 = Criterion.ILIKE(\"name\", \"%Usage Plan%\");
+    var crit2 = Criterion.NOT_LIKE(\"name\", \"%atten%\");
+    
+    var configs = mgr.readLazily(\"ds_daily_usage_config\", Criterion.AND(crit1, crit2));
+    while (configs.hasNext()) {
+        var config = configs.next();
+        total += parseInt(config.get('value'));
+    }
+    
+    if (total != 100) {
+        retVal = \"The usage plan percentages must equal 100.\";                   
+    }
+}
+
+if (name.indexOf(\"Device Utilization\") > -1) {
+    
+    if (parseInt(value) < 1 || parseInt(value) > 100|| !value)
+        retVal = \"This value must be between 1 and 100.\";      
+} 
+
+if (retVal != \"\") retVal += \":#b00\";
+
+retVal;":]]></path>
+									</attributes>
+								</column>
+								<column path="order" show_in_table="f"/>
+								<column path="var_name" show_in_table="f"/>
+								<column path="type" show_in_table="f"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Daily Usage Configs,orderBy:order,orderDir:ASC,title:"Configuration",description:"Required: Set the parameters for the next Data Simulator run. Each run will create a log record with parameters used."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="2. Include Groups" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Data View Grid" icon="icon-group">
+					<configs>
+						<data_view_info name="Data Simulator Include Groups" table="ds_daily_usage_groups_include" show_summary="f" group_fields="t">
+							<columns>
+								<column path="group" show_in_table="t"/>
+								<column path="group>type" show_in_table="t"/>
+								<column custom_control="Drill Down" data_view="Data Simulator Group Persons" orderDir="ASC" show_in_table="t" label="Person Count">
+									<attributes>
+										<path><![CDATA[_agg:person_count::Data Simulator Group Persons:" var 'group' is "group" ":COUNT:]]></path>
+										<criteria><![CDATA[ var 'group' is "group" ]]></criteria>
+									</attributes>
+								</column>
+								<column show_in_table="t" label="Usable Persons">
+									<attributes>
+										<path><![CDATA[_calc:valid_persons::string:"include(\"ssi.utils.js\");
+var group = get(\"Group\");
+
+let q = Query.select(java.util.Arrays.asList(Query.count(\"gp.id\")));
+q.from(\"acu_group_person\", \"gp\"); 
+q.join(\"cmn_user\", \"u\", \"u.person\", \"gp.person\")
+q.where(Criterion.AND(Criterion.EQ(\"gp.group\", group), Criterion.ILIKE(\"u.source\", \"%@datasim%\")));
+let personCount = this.exec.execute1(q);    
+    
+personCount;":person_count]]></path>
+									</attributes>
+								</column>
+							</columns>
+							<related_views>
+								<data_view_info name="Data Simulator Group Persons" table="acu_group_person" show_summary="f" group_fields="t">
+									<columns>
+										<column path="group" show_in_table="t"/>
+										<column path="group>name" show_in_table="f"/>
+										<column path="person" show_in_table="t"/>
+										<column path="group>type" show_in_table="t"/>
+										<column path="group>type>name" show_in_table="f"/>
+									</columns>
+								</data_view_info>
+							</related_views>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Include Groups,title:"Include Groups",description:"Optional: add/import any existing Department, Team, Role or Location groups with users that will contribute to usage data. The \"Usable Persons\"
+column refers to users in the group that were created by the Data Simulator."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="3. Include Users" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Data View Grid" icon="icon-administrator">
+					<configs>
+						<data_view_info name="Data Simulator Daily Usage Included Users" table="ds_daily_usage_users_include" show_summary="f" group_fields="t">
+							<columns>
+								<column path="user" show_in_table="t"/>
+								<column path="user>source" show_in_table="t"/>
+								<column path="user>person>name" show_in_table="t"/>
+								<column path="user>person>user_name" show_in_table="t"/>
+								<column path="user>person>email" show_in_table="t"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Daily Usage Included Users,title:"Include Users",description:"Optional: add/import any individual users that will contribute to usage data. Make sure to only select users with a source of \"@datasim\". 
+Leave empty to generate usage for all users. Can be used in conjunction with \"Include Groups\" data."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="4. Exclude Users" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Data View Grid" icon="icon-admin">
+					<configs>
+						<data_view_info name="Data Simulator Daily Usage Excluded Users" table="ds_daily_usage_users_exclude" show_summary="f" group_fields="t">
+							<columns>
+								<column path="user" show_in_table="t"/>
+								<column path="user>source" show_in_table="t"/>
+								<column path="user>person>name" show_in_table="t"/>
+								<column path="user>person>user_name" show_in_table="t"/>
+								<column path="user>person>email" show_in_table="t"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Daily Usage Excluded Users,title:"Exclude Users",description:"Optional: add/import users that you would like to exclude from the usage creation process regardless of what group they are in."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="5. Select Software" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Data View Grid" icon="icon-software">
+					<configs>
+						<data_view_info name="Data Simulator Daily Usage Software" table="ds_daily_usage_software" show_summary="f" group_fields="t">
+							<columns>
+								<column path="enabled" show_in_table="t"/>
+								<column path="publisher" show_in_table="t" label="Publisher*"/>
+								<column path="spkg" show_in_table="t" label="Software Package*"/>
+								<column path="spkg_version" show_in_table="t" label="Package Version*"/>
+								<column path="file_version" show_in_table="t" label="File Version*"/>
+								<column path="file_name" show_in_table="t" label="File Name*"/>
+								<column path="file_path" show_in_table="t" label="File Path*"/>
+								<column path="department" show_in_table="t"/>
+								<column path="location" show_in_table="t"/>
+								<column path="team" show_in_table="t"/>
+								<column path="role" show_in_table="t"/>
+								<column show_in_table="t" label="Person Count">
+									<attributes>
+										<path><![CDATA[_calc:person_count::string:"var dept = get(\"Department\");
+var loc = get(\"Location\");
+var team = get(\"Team\");
+var role = get(\"Role\");
+
+var mgr = dbApi.getEntityManager();
+
+var deptType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Department\")).get(\"id\");
+var locType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Location\")).get(\"id\");
+var teamType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Team\")).get(\"id\");
+var roleType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Role\")).get(\"id\"); 
+
+var deptGroupId = null, locGroupId = null, teamGroupId = null, roleGroupId = null;
+
+var deptGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", deptType), Criterion.EQ(\"name\", dept)));
+if (deptGroup) deptGroupId = deptGroup.get(\"id\");
+
+var locGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", locType), Criterion.EQ(\"name\", loc)));
+if (locGroup) locGroupId = locGroup.get(\"id\");
+
+var teamGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", teamType), Criterion.EQ(\"name\", team)));
+if (teamGroup) teamGroupId = teamGroup.get(\"id\");
+
+var roleGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", roleType), Criterion.EQ(\"name\", role)));
+if (roleGroup) roleGroupId = roleGroup.get(\"id\");
+
+var crits = new java.util.ArrayList();
+
+if (dept) crits.add(Criterion.EQ(\"group\", deptGroupId));
+if (loc) crits.add(Criterion.EQ(\"group\", locGroupId));
+if (team) crits.add(Criterion.EQ(\"group\", teamGroupId));
+if (role) crits.add(Criterion.EQ(\"group\", roleGroupId));
+
+var groupPersonCount = 0;
+
+if (crits.size() > 0)
+    groupPersonCount = mgr.query(\"acu_group_person\").where(Criterion.AND(crits)).count();
+
+groupPersonCount;":]]></path>
+									</attributes>
+								</column>
+								<column custom_control="Colored Status" show_in_table="t" label="Message">
+									<attributes>
+										<path><![CDATA[_calc:message::string:"var mgr = dbApi.getEntityManager();
+var retVal = \"\";
+
+var groups = [get(\"Department\"), get(\"Location\"), get(\"Team\"), get(\"Role\")];
+
+var deptType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Department\")).get(\"id\");
+var locType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Location\")).get(\"id\");
+var teamType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Team\")).get(\"id\");
+var roleType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Role\")).get(\"id\");
+
+var types = [deptType, locType, teamType, roleType];
+
+for (var i = 0; i < groups.length; i++) {
+    if (!groups[i]) break;
+    var crit1 = Criterion.EQ(\"name\", groups[i]);
+    var crit2 = Criterion.EQ(\"type\", types[i]);
+    var entity = mgr.readEntity(\"acu_group\", Criterion.AND(crit1, crit2)); 
+    if (!entity) {
+        retVal = \"The group '\" + groups[i] + \"' was not found in the acu_group table.\";
+        break;
+    }
+}
+
+if (retVal != \"\") retVal += \":#b00\";
+retVal;":]]></path>
+									</attributes>
+								</column>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Daily Usage Software,title:"Select Software",description:"Required: add/import applications that will contribute to usage data. * Denotes required fields.
+
+Note: You set one or more groups (e.g. department, team, role or location) to get usage created users that are part of those groups. 
+This allows you to specify which groups will get usage for the given software. Leave all four groups empty to create usage for all groups.
+
+The Person Count Explained
+ 
+The Person Count column shows how many users are in all of the four groups (Dept, Loc, Role, Team) combined. For example, if you include 10 users under \"Include Users\", but only 4 users match the group filters, then the Person Count will be 4 and only 4 persons will get daily usage 
+created for them. The other 6 users will not get usage created for them.
+"]]></configs>
+					</attributes>
+				</menu>
+				<menu name="6. Select Web Apps" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Data View Grid" icon="icon-globe">
+					<configs>
+						<data_view_info name="Data Simulator Daily Usage Web Apps" table="ds_daily_usage_webapp" show_summary="f" group_fields="t">
+							<columns>
+								<column path="department" show_in_table="t"/>
+								<column path="enabled" show_in_table="t"/>
+								<column path="location" show_in_table="t"/>
+								<column path="role" show_in_table="t"/>
+								<column path="team" show_in_table="t"/>
+								<column path="webapp" show_in_table="t" label="Web App*"/>
+								<column custom_control="Colored Status" show_in_table="t" label="Message">
+									<attributes>
+										<path><![CDATA[_calc:message::string:"var mgr = dbApi.getEntityManager();
+var retVal = \"\";
+
+var groups = [get(\"Department\"), get(\"Location\"), get(\"Team\"), get(\"Role\")];
+
+var deptType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Department\")).get(\"id\");
+var locType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Location\")).get(\"id\");
+var teamType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Team\")).get(\"id\");
+var roleType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Role\")).get(\"id\");
+
+var types = [deptType, locType, teamType, roleType];
+
+for (var i = 0; i < groups.length; i++) {
+    if (!groups[i]) break;
+    var crit1 = Criterion.EQ(\"name\", groups[i]);
+    var crit2 = Criterion.EQ(\"type\", types[i]);
+    var entity = mgr.readEntity(\"acu_group\", Criterion.AND(crit1, crit2)); 
+    if (!entity) {
+        retVal = \"The group '\" + groups[i] + \"' was not found in the acu_group table.\";
+        break;
+    }
+}
+
+// Does the webapp have a SaaS app?
+var webapp = get(\"Web App*\");
+var saas = mgr.readEntity(\"acu_saas_app\", Criterion.EQ(\"webapp\", webapp));
+if (!saas)
+    retVal = \"The webapp does not have an Acumen SaaS webapp record in 'acu_saas_app'.\";
+
+if (retVal != \"\") retVal += \":#b00\";
+retVal;":]]></path>
+									</attributes>
+								</column>
+								<column show_in_table="t" label="Person count">
+									<attributes>
+										<path><![CDATA[_calc:person_count::string:"var dept = get(\"Department\");
+var loc = get(\"Location\");
+var team = get(\"Team\");
+var role = get(\"Role\");
+
+var mgr = dbApi.getEntityManager();
+
+var deptType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Department\")).get(\"id\");
+var locType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Location\")).get(\"id\");
+var teamType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Team\")).get(\"id\");
+var roleType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Role\")).get(\"id\"); 
+
+var deptGroupId = null, locGroupId = null, teamGroupId = null, roleGroupId = null;
+
+var deptGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", deptType), Criterion.EQ(\"name\", dept)));
+if (deptGroup) deptGroupId = deptGroup.get(\"id\");
+
+var locGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", locType), Criterion.EQ(\"name\", loc)));
+if (locGroup) locGroupId = locGroup.get(\"id\");
+
+var teamGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", teamType), Criterion.EQ(\"name\", team)));
+if (teamGroup) teamGroupId = teamGroup.get(\"id\");
+
+var roleGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", roleType), Criterion.EQ(\"name\", role)));
+if (roleGroup) roleGroupId = roleGroup.get(\"id\");
+
+var crits = new java.util.ArrayList();
+
+if (dept) crits.add(Criterion.EQ(\"group\", deptGroupId));
+if (loc) crits.add(Criterion.EQ(\"group\", locGroupId));
+if (team) crits.add(Criterion.EQ(\"group\", teamGroupId));
+if (role) crits.add(Criterion.EQ(\"group\", roleGroupId));
+
+var groupPersonCount = 0;
+
+if (crits.size() > 0)
+    groupPersonCount = mgr.query(\"acu_group_person\").where(Criterion.AND(crits)).count();
+
+groupPersonCount;":]]></path>
+									</attributes>
+								</column>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Daily Usage Web Apps,title:"Select Web Apps",description:"Optional: add/import web applications that will contribute to usage data. * Denotes required fields.
+
+Note: You set one or more groups (e.g. department, team, role or location) to get usage created users that are part of those groups. 
+This allows you to specify which groups will get usage for the given web application. Leave all four groups empty to create usage for all groups."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="7. Review Settings" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Dashboard" icon="icon-ok">
+					<configs>
+						<dashboard name="Data Simulator Daily Usage Preview" columns="2" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+							<widgets>
+								<ui_widget_data_grid title="Review Configuration" colspan="1" rowspan="2" data_view="Data Simulator Daily Usage Configs" limit="100">
+									<fields>
+										<field path="description"/>
+										<field path="value"/>
+									</fields>
+								</ui_widget_data_grid>
+								<ui_widget_data_grid title="Person Totals" colspan="1" rowspan="1" data_view="Data Simulator Daily Usage Previews" limit="20">
+									<configs>
+										<data_view_info name="Data Simulator Daily Usage Previews" table="ds_daily_usage_preview" show_summary="f" group_fields="t">
+											<columns>
+												<column path="label" show_in_table="t" label="Details"/>
+												<column path="name" show_in_table="f"/>
+												<column show_in_table="t" label="Totals">
+													<attributes>
+														<path><![CDATA[_calc:value::string:"include(\"ssi.utils.js\");
+var retVal = \"\";
+var name = get(\"Name\");
+
+if (name == \"tot_person_included_groups\") {
+
+    let col = Query.coalesce(Query.countDistinct(\"agp.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_groups_include\", \"gi\");
+    q.join(\"acu_group_person\", \"agp\", \"agp.group\", \"gi.group\");	
+    retVal = this.exec.execute1(q); 
+
+} else if (name == \"tot_person_included_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_users_include\", \"ui\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ui.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_persons_excluded_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_users_exclude\", \"ux\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ux.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_unique_persons\") {
+    
+    let subq1 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq1.from(\"ds_daily_usage_users_exclude\", \"e\");
+    subq1.join(\"cmn_user\", \"u\", \"u.id\", \"e.user\"); 
+    subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let EXCLUDED_USER_PERSONS = this.exec.executeL1(subq1);
+    
+    let subq2 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"gp.person\")));
+    subq2.from(\"ds_daily_usage_groups_include\", \"gi\");
+    subq2.join(\"acu_group_person\", \"gp\", \"gp.group\", \"gi.group\"); 
+    let INCLUDED_GROUP_PERSONS = this.exec.executeL1(subq2);    
+    
+    let subq3 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq3.from(\"ds_daily_usage_users_include\", \"gi\");
+    subq3.join(\"cmn_user\", \"u\", \"u.id\", \"gi.user\");     
+    subq3.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let INCLUDED_USER_PERSONS = this.exec.executeL1(subq3);        
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"cmn_user\", \"u\");
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    
+    if (INCLUDED_USER_PERSONS.length > 0 || INCLUDED_GROUP_PERSONS.length > 0) {
+        q.where
+        (
+            Criterion.AND
+            (
+                Criterion.OR
+                (
+                    Criterion.IN(\"u.person\", INCLUDED_USER_PERSONS),
+                    Criterion.IN(\"u.person\", INCLUDED_GROUP_PERSONS)
+                ),
+                Criterion.NOT_IN(\"u.person\", EXCLUDED_USER_PERSONS),
+                Criterion.ILIKE(\"u.source\", \"%@datasim%\")    
+            )
+        );
+    } else {
+        q.where(Criterion.NOT_IN(\"u.person\", EXCLUDED_USER_PERSONS));                    
+    }
+    
+    retVal = this.exec.execute1(q);
+  
+} else if (name == \"tot_software\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"s.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_software\", \"s\");
+    q.where(Criterion.EQ(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_software_disabled\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"s.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_software\", \"s\");
+    q.where(Criterion.NE(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_webapps\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"w.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_webapp\", \"w\");
+    q.where(Criterion.EQ(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_webapps_disabled\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"w.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_webapp\", \"w\");
+    q.where(Criterion.NE(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+}
+
+retVal;":]]></path>
+													</attributes>
+												</column>
+											</columns>
+										</data_view_info>
+									</configs>
+								</ui_widget_data_grid>
+							</widgets>
+						</dashboard>
+					</configs>
+					<attributes>
+						<configs><![CDATA[Dashboard:Data Simulator Daily Usage Preview,title:"Review Configuration"]]></configs>
+					</attributes>
+				</menu>
+				<menu name="8. Execute" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Dashboard" icon="icon-run">
+					<configs>
+						<dashboard name="Data Simulator Daily Usage Status" columns="3" rows="3" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+							<widgets>
+								<ui_widget_html title="Instructions" colspan="3" rowspan="1" show_title="t">
+									<attributes>
+										<html><![CDATA[<style>
+body {
+  background-color: #f5f5f0;
+}
+</style>
+<div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">Use the "<span style="font-weight: bold;">Script Status</span>" area to see if the script is currently running. If the script End Time is empty, then the script is</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">still running.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">If you need to cancel the script, edit the job below and select the "<span style="font-weight: bold;">Cancel Job</span>" button.</span><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">&nbsp;The script may not stop immediately.</span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">To refresh the data below, right-click on the "<span style="font-weight: bold;">Script Status</span>" area and select "<span style="font-weight: bold;">Refresh Data</span>" to see status updates.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">If the script is not running, you may click on the blue "<span style="font-weight: bold;">Run Script</span>" below. Only click on it once.&nbsp;<br></span></div>]]></html>
+									</attributes>
+								</ui_widget_html>
+								<ui_widget_data_grid title="Script Status (Last 5 Runs)" colspan="3" rowspan="1" data_view="Data Simulator Job Logs" custom_filter="Daily Usage Script" order_by="queue_time" order_dir="DESC" limit="5"/>
+								<ui_widget_function_list title="Script Execution" colspan="1" rowspan="1" show_title="f" show_decoration="f">
+									<functions>
+										<ui_widget_function name="Run Script" description="Run script, if script is not already running.">
+											<pipelines>
+												<pipeline type="ActionButtonRendererPipeline">
+													<attributes>
+														<config><![CDATA[colorName:"blue",iconName:"server"]]></config>
+													</attributes>
+												</pipeline>
+												<pipeline type="RunJobPipeline">
+													<attributes>
+														<config><![CDATA[base.sys_sch_schedule.job_id:"ssi.datasim.create.daily.usage.js"]]></config>
+													</attributes>
+												</pipeline>
+											</pipelines>
+										</ui_widget_function>
+									</functions>
+								</ui_widget_function_list>
+							</widgets>
+						</dashboard>
+					</configs>
+					<attributes>
+						<configs><![CDATA[Dashboard:Data Simulator Daily Usage Status,title:"Execute"]]></configs>
+					</attributes>
+				</menu>
+				<menu name="9. View Logs" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Data View Grid" icon="icon-lcd_monitor">
+					<configs>
+						<data_view_info name="Data Simulator Daily Usage Logs" table="ds_daily_usage_log" show_summary="f" group_fields="t">
+							<columns>
+								<column path="name" show_in_table="t"/>
+								<column path="created_by" show_in_table="t" label="Run By"/>
+								<column path="parameter_list" show_in_table="t"/>
+								<column path="err" show_in_table="t" label="Errors"/>
+								<column path="created_on" show_in_table="t"/>
+								<column path="soft_recs_created" show_in_table="t" label="Software Recs Created"/>
+								<column path="web_recs_created" show_in_table="t" label="Web App Recs Created"/>
+								<column path="prog_created" show_in_table="t" label="Progs Created"/>
+								<column path="prog_inst_created" show_in_table="t" label="Prog Insts Created"/>
+								<column path="spkg_created" show_in_table="t"/>
+								<column custom_control="Colored Status" show_in_table="t" label="Status">
+									<attributes>
+										<path><![CDATA[_calc:status::string:"var errs = get(\"Errors\");
+var color = null;
+var retVal = 0;
+
+if (errs == \"None\") 
+{
+    retVal = \"Pass\";
+    color = \":#74b72e\";
+} else {
+    retVal = \"Failed\";
+    color = \":#B00\";
+}
+
+retVal += color;":]]></path>
+									</attributes>
+								</column>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Daily Usage Logs,orderBy:created_on,orderDir:DESC,title:"View Logs"]]></configs>
+					</attributes>
+				</menu>
+				<menu name="10. View Plan Logs" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Daily Usage" component="Data View Grid" icon="icon-default">
+					<configs>
+						<data_view_info name="Data Simulator Daily Usage Plans" table="ds_daily_usage_plan" show_summary="f" group_fields="t">
+							<columns>
+								<column path="plan" show_in_table="f"/>
+								<column show_in_table="t" label="Plan Name">
+									<attributes>
+										<path><![CDATA[_calc:plan_name::string:"var plan = get(\"Plan\");
+var retVal = \"\";
+
+switch (plan){
+    case 1 : 
+        retVal = \"Plan 1 - Increase\";
+        break;
+    case 2 :
+        retVal = \"Plan 2 - Increase but Flatten\";
+        break;
+    case 3 :
+        retVal = \"Plan 3 - Increase as Read-only\"
+        break;
+    case 4 :
+        retVal = \"Plan 4 - Decrease\";
+        break;
+}
+
+retVal;":]]></path>
+									</attributes>
+								</column>
+								<column show_in_table="t" label="Description">
+									<attributes>
+										<path><![CDATA[_calc:description::string:"var plan = get(\"Plan\");
+var retVal = \"\";
+
+switch (plan){
+    case 1 : 
+        retVal = \"Increasing usage and keystrokes over time.\";
+        break;
+    case 2 :
+        retVal = \"Increasing usage and keystrokes but usage flattens out over time.\";
+        break;
+    case 3 :
+        retVal = \"Increasing usage but keystrokes remain low over time. (read-only)\"
+        break;
+    case 4 :
+        retVal = \"Decreasing usage and keystrokes over time.\";
+        break;
+}
+
+retVal;":plan]]></path>
+									</attributes>
+								</column>
+								<column path="week" show_in_table="t"/>
+								<column path="lu_min_mins" show_in_table="t"/>
+								<column path="lu_max_mins" show_in_table="t"/>
+								<column path="mu_min_mins" show_in_table="t"/>
+								<column path="mu_max_mins" show_in_table="t"/>
+								<column path="hu_min_mins" show_in_table="t"/>
+								<column path="hu_max_mins" show_in_table="t"/>
+								<column path="lu_min_keys" show_in_table="t"/>
+								<column path="lu_max_keys" show_in_table="t"/>
+								<column path="mu_min_keys" show_in_table="t"/>
+								<column path="mu_max_keys" show_in_table="t"/>
+								<column path="hu_min_keys" show_in_table="t"/>
+								<column path="hu_max_keys" show_in_table="t"/>
+								<column path="lu_min_mous" show_in_table="t"/>
+								<column path="lu_max_mous" show_in_table="t"/>
+								<column path="mu_min_mous" show_in_table="t"/>
+								<column path="mu_max_mous" show_in_table="t"/>
+								<column path="hu_min_mous" show_in_table="t"/>
+								<column path="hu_max_mous" show_in_table="t"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Daily Usage Plans,orderBy:plan,orderDir:ASC,title:"Usage Plan Logs",description:"On the last run, these were the usage plans (aka usage patterns) that were used by the Data Simulator. If you only see 1 plan listed or only one \"Week 1\", that means there is only 7 or less days in the date range. Therefore, you need several weeks of data in order to see the pattern."]]></configs>
+					</attributes>
+				</menu>
+			</children>
+			<attributes>
+				<configs><![CDATA[Dashboard:Data Simulator Daily Usage Home,title:"Create Daily Usage"]]></configs>
+			</attributes>
+		</menu>
+		<menu name="Create Program Crashes" parent="$VirtualRoot$>Custom Links>Data Simulator v2" component="Dashboard" icon="icon-ask_chaklun">
+			<configs>
+				<dashboard name="Data Simulator Create Program Crash Home" columns="2" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+					<widgets>
+						<ui_widget_html title="Overview" colspan="2" rowspan="1" show_title="t">
+							<attributes>
+								<html><![CDATA[<div><span style="font-family: Helvetica; font-size: small;">This section can be used to create program crash data for users/computers in the platform. It will also create program and packages if needed.</span></div><div><span style="font-size: small; font-family: Helvetica;"><br></span></div><div><span style="font-size: small; font-family: Helvetica;">Configuration - configure the parameters for the creation of program daily usage.</span></div><div><span style="font-size: small; font-family: Helvetica;">Include Manufacturers - use this page to include specific manufacturers of computers.</span></div><div><span style="font-size: small; font-family: Helvetica;">Include Users - use this page to include users that will get crash data created for them.</span></div><div><span style="font-size: small; font-family: Helvetica;">Exclude Users - use this page to exclude users from getting crash data created for them.</span></div><div><span style="font-size: small; font-family: Helvetica;">Select Programs - use this page to select which programs will have crash data created against it.</span></div><div><span style="font-size: small; font-family: Helvetica;">Review Settings - use this page to review the settings before you run the script.</span></div><div><span style="font-size: small; font-family: Helvetica;">Execute - use this area to check on current script status and execute the script to create program daily usage.</span></div><div><span style="font-size: small; font-family: Helvetica;">View Logs - view details about previous script runs.</span></div><div><span style="font-family: Helvetica;"><br></span></div><span style="font-size: small; font-weight: bold; font-family: Helvetica;">Pre-requisites</span><div><ul><li><span style="font-family: Helvetica; font-size: small;">User and persons must already exist in the database and generated by the "Create Resources" feature.</span></li><li><span style="font-family: Helvetica; font-size: small;">Computers must already exist in the database and generated by the "Create Resources" feature.</span></li></ul><div><span style="font-size: small; font-weight: bold; font-family: Helvetica;">Notes</span></div><div><ul><li><span style="font-size: small; font-family: Helvetica;">If needed, use the Create Resources menu to generate users and computers.</span></li><li><span style="font-size: small; font-family: Helvetica;">If the target program, program publisher, program instance or software package already exists, Data Simulator will not create a duplicate.</span></li></ul></div></div>]]></html>
+							</attributes>
+						</ui_widget_html>
+						<ui_widget_function_list title="Program Crash Totals" colspan="1" rowspan="1" show_title="t" show_decoration="t">
+							<functions>
+								<ui_widget_function name="Crash Records Created">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<configs>
+												<data_view_info name="Data Simulator Program Crashes Raw" table="cmdb_program_crash" show_summary="f" group_fields="t">
+													<columns>
+														<column path="command_line_args" show_in_table="t"/>
+														<column path="computer" show_in_table="t"/>
+														<column path="location" show_in_table="t"/>
+														<column path="program_instance" show_in_table="t"/>
+														<column path="timestamp" show_in_table="t"/>
+														<column path="user" show_in_table="t"/>
+														<column path="user>person" show_in_table="t"/>
+														<column path="id" show_in_table="t"/>
+														<column path="user>source" show_in_table="t"/>
+														<column path="computer>virtual" show_in_table="t"/>
+														<column path="computer>os_ver" show_in_table="t"/>
+													</columns>
+												</data_view_info>
+											</configs>
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"blue",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="VDI Computer Crash Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"green",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="Desktop Computer Crash Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"orange",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+							</functions>
+						</ui_widget_function_list>
+						<ui_widget_chart title="Program Crashes" colspan="1" rowspan="1" type="DOUGHNUT_CHART" subcaption=" by Operating System" aggregate="COUNT" limit="25" order_by="Aggregation value" order_dir="DESC" drill_into_details="f" data_view="Data Simulator Program Crashes Raw" group_by="computer>os_ver" showToolTip="true"/>
+					</widgets>
+				</dashboard>
+			</configs>
+			<children>
+				<menu name="1. Configuration" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Program Crashes" component="Data View Grid" icon="icon-configuration">
+					<configs>
+						<data_view_info name="Data Simulator Program Crash Configs" table="ds_crash_prog_config" show_summary="f" group_fields="t">
+							<columns>
+								<column path="name" show_in_table="t"/>
+								<column path="description" show_in_table="t"/>
+								<column path="order" show_in_table="f"/>
+								<column path="type" show_in_table="f"/>
+								<column path="value" show_in_table="t"/>
+								<column path="var_name" show_in_table="f" label="Var  Name"/>
+								<column custom_control="Colored Status" show_in_table="t" label="Error Message">
+									<attributes>
+										<path><![CDATA[_calc:error_message::string:"include(\"ssi.utils.js\");
+var name = get(\"Name\");
+var value = get(\"Value\");
+var retVal = \"\";
+
+if (name == \"Program Crash Minimum\") {
+
+    if (parseInt(value) < 0 || parseInt(value) > 20)
+        retVal = \"This value must be 0 or greater and less than 20.\";    
+    
+} else if (name == \"Program Crash Maximum\") {
+
+    if (parseInt(value) < 0 || parseInt(value) > 20)
+        retVal = \"This value must be 0 or greater and less than 20.\";    
+    
+} else if (name == \"Start Date\" || name == \"End Date\") {
+  
+    var isValid = false;
+    var startDate = null, endDate = null;
+    var configs = this.mgr.readLazily(\"ds_crash_prog_config\", Criterion.IN(\"name\", [\"Start Date\", \"End Date\"]));
+    while (configs.hasNext()) {
+     
+        var config = configs.next();
+        var cfgValue = config.get('value');
+        if (cfgValue) {
+            
+            // Date check functions did not work, so using try/catch        
+            try {
+                var dt = new java.util.Date(cfgValue);
+                isValid = true;            
+            } catch (e) {
+                retVal = \"Please enter a valid date in dd/mm/yyyy format.\";
+                isValid = false;            
+            }
+            
+            if (isValid) {        
+                if (config.get('name') == \"Start Date\")
+                    startDate = new java.util.Date(cfgValue);
+                else
+                    endDate = new java.util.Date(cfgValue);                              
+            }
+        }        
+    }
+    
+    if (isValid) {
+        if (config.get('name') == \"Start Date\")
+            startDate = new java.util.Date(cfgValue);
+        else
+            endDate = new java.util.Date(cfgValue);  
+         
+        if (startDate && endDate) {
+                      
+            if (startDate.getTime() > endDate.getTime()) {
+                retVal = \"The Start Date must be less than the End Date.\";  
+            }
+        } else {    
+            retVal = \"The Start Date and End Date must not be empty.\";
+        } 
+    } 
+
+} else if (name == \"Exclude Weekends\") {
+    
+    if (value != \"TRUE\" && value != \"FALSE\") 
+        retVal = \"Please enter TRUE or FALSE.\";
+    
+} else if (name == \"Scatter Percentage\") {
+    
+    if (parseInt(value) < 1 || parseInt(value) > 100)
+        retVal = \"This value must be between 1 and 100.\";  
+    
+}
+               
+
+if (retVal != \"\") retVal += \":#b00\";
+
+retVal;":]]></path>
+									</attributes>
+								</column>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Program Crash Configs,orderBy:order,orderDir:ASC,title:"Configuration",description:"Required: Set the parameters for the next Data Simulator run. Each run will create a log record with parameters used."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="2. Include Manufacturers" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Program Crashes" component="Data View Grid" icon="icon-concatenate">
+					<configs>
+						<data_view_info name="Data Simulator Program Crash Manufacturers" table="ds_crash_prog_manufacturer" show_summary="f" group_fields="t">
+							<columns>
+								<column path="manufacturer" show_in_table="t"/>
+								<column show_in_table="t" label="Person Count">
+									<attributes>
+										<path><![CDATA[_calc:person_count::string:"const exec = dbApi.getQueryExecutor();
+
+var manufacturer = get(\"Manufacturer\");
+
+var q = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"p.id\")));
+q.from(\"ds_crash_prog_manufacturer\", \"m\");
+q.join(\"cmdb_ci_computer\", \"c\", \"c.manufacturer\", \"m.manufacturer\");
+q.join(\"cmn_user\", \"u\", \"u.id\", \"c.primary_user\");             
+q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+q.where(Criterion.AND(Criterion.EQ(\"c.manufacturer\", manufacturer), Criterion.ILIKE(\"u.source\", \"%@datasim%\")));            
+var results = exec.executeL1(q); 
+results.length;":]]></path>
+									</attributes>
+								</column>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Program Crash Manufacturers,title:"Include Manufacturers",description:"Optional: add/import manufacturers you want to create program crash data for. If you specify \"Dell Inc.\", for example, then crash data will be created 
+for all Dell computers. The Person Count column represents the number of Data Simulator users that who are primary users on machines matching the manufacturer."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="3. Include Users" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Program Crashes" component="Data View Grid" icon="icon-group">
+					<configs>
+						<data_view_info name="Data Simulator Program Crash Included Users" table="ds_crash_prog_user_include" show_summary="f" group_fields="t">
+							<columns>
+								<column path="user" show_in_table="t"/>
+								<column path="user>source" show_in_table="t"/>
+								<column path="user>person>name" show_in_table="t"/>
+								<column path="user>person>user_name" show_in_table="t"/>
+								<column path="user>person>email" show_in_table="t"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Program Crash Included Users,title:"Include Users for System and Crash Data",description:"Optional: add/import any individual users that will contribute to crash data. Make sure to only select users with a source of \"@datasim\"."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="4. Exclude Users" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Program Crashes" component="Data View Grid" icon="icon-admin">
+					<configs>
+						<data_view_info name="Data Simulator Program Crash Excluded Users" table="ds_crash_prog_user_exclude" show_summary="f" group_fields="t">
+							<columns>
+								<column path="user" show_in_table="t"/>
+								<column path="user>source" show_in_table="t"/>
+								<column path="user>person>name" show_in_table="t"/>
+								<column path="user>person>user_name" show_in_table="t"/>
+								<column path="user>person>email" show_in_table="t"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Program Crash Excluded Users,title:"Exclude Users",description:"Optional: exclude users from generating crash data. This is useful for excluding user(s) of computers that are part of an included manufacturer."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="5. Select Programs" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Program Crashes" component="Data View Grid" icon="icon-software">
+					<configs>
+						<data_view_info name="Data Simulator Program Crash Software" table="ds_crash_prog_software" show_summary="f" group_fields="t">
+							<columns>
+								<column path="enabled" show_in_table="t"/>
+								<column path="spkg" show_in_table="t" label="Software Package*"/>
+								<column path="spkg_version" show_in_table="t" label="Software Package Version*"/>
+								<column path="file_name" show_in_table="t" label="File Name*"/>
+								<column path="file_path" show_in_table="t" label="File Path*"/>
+								<column path="file_version" show_in_table="t" label="File Version*"/>
+								<column path="publisher" show_in_table="t" label="Publisher*"/>
+								<column custom_control="Colored Status" show_in_table="t" label="Message">
+									<attributes>
+										<path><![CDATA[_calc:error_message::string:"var fileName = get(\"File Name*\");
+var filePath = get(\"File Path*\");
+var fileVersion = get(\"File Version*\");
+var publisher = get(\"Publisher*\");
+
+var errs = get(\"Errors\");
+var retVal = \"\";
+
+if (fileName == \"\" || fileName == null) {
+    retVal = \"File name is empty. \";
+} 
+
+if (filePath == \"\" || filePath == null) {
+    retVal += \"File path is empty. \";
+}
+
+if (fileVersion == \"\" || fileVersion == null) {
+    retVal = \"File version is empty. \";
+}
+
+if (publisher == \"\" || publisher == null) {
+    retVal = \"File publisher is empty. \";
+}
+    
+if (retVal != \"\") retVal += \":#b00\";
+
+retVal;":]]></path>
+									</attributes>
+								</column>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Program Crash Software,title:"Select Programs",description:"Required: add/import programs that will contribute to crash data. Software Package and version is required in case the program does 
+not exist and must be created. If no programs are specified, then there will be nothing for the script to run. * Denotes required fields."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="6. Review Settings" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Program Crashes" component="Dashboard" icon="icon-ok">
+					<configs>
+						<dashboard name="Data Simulator Program Crash Preview" columns="2" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+							<widgets>
+								<ui_widget_data_grid title="Review Configuration" colspan="1" rowspan="1" data_view="Data Simulator Program Crash Configs" limit="100">
+									<fields>
+										<field path="description"/>
+										<field path="value"/>
+									</fields>
+								</ui_widget_data_grid>
+								<ui_widget_data_grid title="Person Totals" colspan="1" rowspan="1" data_view="Data Simulator Program Crash Previews" limit="20">
+									<configs>
+										<data_view_info name="Data Simulator Program Crash Previews" table="ds_crash_prog_preview" show_summary="f" group_fields="t">
+											<columns>
+												<column path="name" show_in_table="f"/>
+												<column path="label" show_in_table="t"/>
+												<column show_in_table="t" label="Totals">
+													<attributes>
+														<path><![CDATA[_calc:totals::string:"include(\"ssi.utils.js\");
+var retVal = \"\";
+var name = get(\"Name\");
+
+if (name == \"tot_person_included_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_user_include\", \"ui\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ui.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_persons_excluded_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_user_exclude\", \"ux\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ux.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_manufacturers\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"m.id\"), Query.value(0)).as(\"count\");
+    let q = Query.selectDistinct(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_manufacturer\", \"m\");
+    retVal = this.exec.execute1(q);    
+    
+}  else if (name == \"tot_manufacturer_users\") {
+    
+    let subq0 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"m.manufacturer\")));
+    subq0.from(\"ds_crash_prog_manufacturer\", \"m\");
+    let INCLUDED_MANUFS = this.exec.executeL1(subq0);    
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let subq1 = Query.select(java.util.Arrays.asList(col));
+    subq1.from(\"cmn_user\", \"u\");
+    subq1.join(\"cmdb_ci_computer\", \"c\", \"c.primary_user\", \"u.id\");
+    subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+    subq1.where(AND(IN(\"c.manufacturer\", INCLUDED_MANUFS), ILIKE(\"u.source\", \"%@datasim%\")));   
+    retVal = this.exec.execute1(subq1);      
+    
+} else if (name == \"tot_unique_persons\") {
+
+    let subq0 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"m.manufacturer\")));
+    subq0.from(\"ds_crash_prog_manufacturer\", \"m\");
+    let MANUFS = this.exec.executeL1(subq0);
+
+    let subq1 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq1.from(\"ds_crash_prog_user_include\", \"e\");
+    subq1.join(\"cmn_user\", \"u\", \"u.id\", \"e.user\"); 
+    subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let INCLUDED_USER_PERSONS = exec.executeL1(subq1);    
+    
+    let subq2 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\", \"id\")));
+    subq2.from(\"cmn_user\", \"u\");
+    subq2.join(\"cmdb_ci_computer\", \"c\", \"c.primary_user\", \"u.id\");
+    subq2.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+    subq2.where(IN(\"c.manufacturer\", MANUFS));
+    let INCLUDED_MANUF_PERSONS = exec.executeL1(subq2);
+            
+    let subq3 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq3.from(\"ds_crash_prog_user_exclude\", \"e\");
+    subq3.join(\"cmn_user\", \"u\", \"u.id\", \"e.user\"); 
+    subq3.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let EXCLUDED_USER_PERSONS = this.exec.executeL1(subq3);
+         
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"cmn_user\", \"u\");
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    q.where
+    (
+        AND
+        (
+            OR(IN(\"u.person\", INCLUDED_USER_PERSONS),
+                IN(\"u.person\", INCLUDED_MANUF_PERSONS)    
+            ),
+            NOT_IN(\"u.person\", EXCLUDED_USER_PERSONS),
+            ILIKE(\"u.source\", \"%@datasim%\")    
+        )
+    );
+    
+    retVal = this.exec.execute1(q);
+
+} else if (name == \"tot_software\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"p.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_software\", \"p\");
+    q.where(Criterion.EQ(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_software_disabled\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"p.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_software\", \"p\");
+    q.where(Criterion.NE(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+}
+
+retVal;":]]></path>
+													</attributes>
+												</column>
+											</columns>
+										</data_view_info>
+									</configs>
+								</ui_widget_data_grid>
+							</widgets>
+						</dashboard>
+					</configs>
+					<attributes>
+						<configs><![CDATA[Dashboard:Data Simulator Program Crash Preview,title:"Review Settings"]]></configs>
+					</attributes>
+				</menu>
+				<menu name="7. Execute" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Program Crashes" component="Dashboard" icon="icon-run">
+					<configs>
+						<dashboard name="Data Simulator Program Crash Status" columns="3" rows="3" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+							<widgets>
+								<ui_widget_html title="Instructions" colspan="3" rowspan="1" show_title="t">
+									<attributes>
+										<html><![CDATA[<style>
+body {
+  background-color: #f5f5f0;
+}
+</style>
+<div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">Use the "<span style="font-weight: bold;">Script Status</span>" area to see if the script is currently running. If the script End Time is empty, then the script is</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">still running.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">If you need to cancel the script, edit the job below and select the "<span style="font-weight: bold;">Cancel Job</span>" button.</span><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">&nbsp;The script may not stop immediately.</span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">To refresh the data below, right-click on the "<span style="font-weight: bold;">Script Status</span>" area and select "<span style="font-weight: bold;">Refresh Data</span>" to see status updates.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">If the script is not running, you may click on the blue "<span style="font-weight: bold;">Run Script</span>" below. Only click on it once.&nbsp;<br></span></div>]]></html>
+									</attributes>
+								</ui_widget_html>
+								<ui_widget_data_grid title="Script Status (Last 5 Runs)" colspan="3" rowspan="1" data_view="Data Simulator Job Logs" custom_filter="Create Program Crashes" order_by="queue_time" order_dir="DESC" limit="5"/>
+								<ui_widget_function_list title="Script Execution" colspan="1" rowspan="1" show_title="f" show_decoration="f">
+									<functions>
+										<ui_widget_function name="Run Script" description="Run script, if script is not already running.">
+											<pipelines>
+												<pipeline type="ActionButtonRendererPipeline">
+													<attributes>
+														<config><![CDATA[colorName:"blue",iconName:"server"]]></config>
+													</attributes>
+												</pipeline>
+												<pipeline type="RunJobPipeline">
+													<attributes>
+														<config><![CDATA[base.sys_sch_schedule.job_id:"ssi.data.sim.create.prog.crashes.js"]]></config>
+													</attributes>
+												</pipeline>
+											</pipelines>
+										</ui_widget_function>
+									</functions>
+								</ui_widget_function_list>
+							</widgets>
+						</dashboard>
+					</configs>
+					<attributes>
+						<configs><![CDATA[Dashboard:Data Simulator Program Crash Status,title:"Execute"]]></configs>
+					</attributes>
+				</menu>
+				<menu name="8. View Logs" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create Program Crashes" component="Data View Grid" icon="icon-lcd_monitor">
+					<configs>
+						<data_view_info name="Data Simulator Program Crash Logs" table="ds_crash_prog_log" show_summary="f" group_fields="t">
+							<columns>
+								<column path="name" show_in_table="t"/>
+								<column path="created_on" show_in_table="t"/>
+								<column path="created_by" show_in_table="t" label="Run By"/>
+								<column path="err" show_in_table="t" label="Errors"/>
+								<column path="recs_created" show_in_table="t"/>
+								<column path="spkg_created" show_in_table="t"/>
+								<column custom_control="Colored Status" show_in_table="t" label="Status">
+									<attributes>
+										<path><![CDATA[_calc:status::string:"var errs = get(\"Errors\");
+var color = null;
+var retVal = 0;
+
+if (errs == \"None\") 
+{
+    retVal = \"Pass\";
+    color = \":#74b72e\";
+} else {
+    retVal = \"Failed\";
+    color = \":#B00\";
+}
+
+retVal += color;":]]></path>
+									</attributes>
+								</column>
+								<column path="prog_inst_created" show_in_table="t"/>
+								<column path="prog_created" show_in_table="t"/>
+								<column path="parameter_list" show_in_table="t"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator Program Crash Logs,orderBy:created_on,orderDir:DESC,title:"View Logs"]]></configs>
+					</attributes>
+				</menu>
+			</children>
+			<attributes>
+				<configs><![CDATA[Dashboard:Data Simulator Create Program Crash Home,title:"Create Program Crashes"]]></configs>
+			</attributes>
+		</menu>
+		<menu name="Create System Crashes" parent="$VirtualRoot$>Custom Links>Data Simulator v2" component="Dashboard" icon="icon-ask_chaklun">
+			<configs>
+				<dashboard name="Data Simulator Create System Crash Home" columns="2" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+					<widgets>
+						<ui_widget_html title="Overview" colspan="2" rowspan="1" show_title="t">
+							<attributes>
+								<html><![CDATA[<div><span style="font-family: Helvetica; font-size: small;">This section can be used to create system crash data for users/computers in the platform. It will also create program and packages if needed.</span></div><div><span style="font-size: small; font-family: Helvetica;"><br></span></div><div><span style="font-size: small; font-family: Helvetica;">Configuration - configure the parameters for the creation of program daily usage.</span></div><div><span style="font-size: small; font-family: Helvetica;">Include Manufacturers - use this page to include specific manufacturers of computers.</span></div><div><span style="font-size: small; font-family: Helvetica;">Include Users - use this page to include users that will get crash data created for them.</span></div><div><span style="font-size: small; font-family: Helvetica;">Exclude Users - use this page to exclude users from getting crash data created for them.</span></div><div><span style="font-family: Helvetica; font-size: small;">Review Settings - use this page to review the settings before you run the script.</span></div><div><span style="font-size: small; font-family: Helvetica;">Execute - use this area to check on current script status and execute the script to create program daily usage.</span></div><div><span style="font-size: small; font-family: Helvetica;">View Logs - view details about previous script runs.</span></div><div><span style="font-family: Helvetica;"><br></span></div><span style="font-size: small; font-weight: bold; font-family: Helvetica;">Pre-requisites</span><div><ul><li><span style="font-size: small; font-family: Helvetica;">User and persons must already exist in the database and generated by the "Create Resources" feature.</span></li><li><span style="font-family: Helvetica;"><span style="font-size: small;">Computers must already exist in the database and generated by the "Create Resources" feature.</span></span></li></ul><div><span style="font-size: small; font-weight: bold; font-family: Helvetica;">Notes</span></div><div><ul><li><span style="font-size: small; font-family: Helvetica;">If needed, use the Create Resources menu to generate users and computers.</span></li></ul></div></div>]]></html>
+							</attributes>
+						</ui_widget_html>
+						<ui_widget_function_list title="System Crash Totals" colspan="1" rowspan="1" show_title="t" show_decoration="t">
+							<functions>
+								<ui_widget_function name="Usage Records Created">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<configs>
+												<data_view_info name="Data Simulator System Crashes Raw" table="cmdb_system_crash" show_summary="f" group_fields="t">
+													<columns>
+														<column path="computer" show_in_table="t"/>
+														<column path="computer>primary_user" show_in_table="t"/>
+														<column path="timestamp" show_in_table="t"/>
+														<column path="computer>primary_user>person" show_in_table="t"/>
+														<column path="id" show_in_table="t"/>
+														<column path="computer>primary_user>source" show_in_table="t"/>
+														<column path="computer>virtual" show_in_table="t"/>
+														<column path="computer>manufacturer" show_in_table="t"/>
+														<column path="computer>os_ver" show_in_table="t"/>
+													</columns>
+												</data_view_info>
+											</configs>
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator System Crashes Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"blue",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator System Crashes Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="VDI Computer Usage Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator System Crashes Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"green",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator System Crashes Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+								<ui_widget_function name="Desktop Computer Usage Records">
+									<pipelines>
+										<pipeline type="AggregatedDataSourcePipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator System Crashes Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="InfoButtonRendererPipeline">
+											<attributes>
+												<config><![CDATA[colorName:"orange",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+											</attributes>
+										</pipeline>
+										<pipeline type="DataViewDrillDownTransitionPipeline">
+											<attributes>
+												<config><![CDATA[dataView:Data Simulator System Crashes Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+											</attributes>
+										</pipeline>
+									</pipelines>
+								</ui_widget_function>
+							</functions>
+						</ui_widget_function_list>
+						<ui_widget_chart title="System Crashes" colspan="1" rowspan="1" type="DOUGHNUT_CHART" subcaption="By Operating System" aggregate="COUNT" limit="25" order_by="Aggregation value" order_dir="DESC" drill_into_details="f" data_view="Data Simulator System Crashes Raw" group_by="computer>os_ver" showToolTip="true"/>
+					</widgets>
+				</dashboard>
+			</configs>
+			<children>
+				<menu name="1. Configuration" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create System Crashes" component="Data View Grid" icon="icon-configuration">
+					<configs>
+						<data_view_info name="Data Simulator System Crash Configs" table="ds_crash_system_config" show_summary="f" group_fields="t">
+							<columns>
+								<column path="name" show_in_table="t"/>
+								<column path="description" show_in_table="t"/>
+								<column path="order" show_in_table="f"/>
+								<column path="type" show_in_table="f"/>
+								<column path="value" show_in_table="t"/>
+								<column path="var_name" show_in_table="f"/>
+								<column custom_control="Colored Status" show_in_table="t" label="Error Message">
+									<attributes>
+										<path><![CDATA[_calc:error_message::string:"var mgr = dbApi.getEntityManager();
+var name = get(\"Name\");
+var value = get(\"Value\");
+var retVal = \"\";
+
+if (name == \"System Crash Minimum\") {
+
+    if (parseInt(value) < 0 || parseInt(value) > 20)
+        retVal = \"This value must be 0 or greater and less than 20.\";    
+    
+} else if (name == \"System Crash Maximum\") {
+
+    if (parseInt(value) < 0 || parseInt(value) > 20)
+        retVal = \"This value must be 0 or greater and less than 20.\";    
+    
+} else if (name == \"Start Date\" || name == \"End Date\") {
+
+    var isValid = false;
+    var startDate = null, endDate = null;
+    var configs = this.mgr.readLazily(\"ds_crash_system_config\", Criterion.IN(\"name\", [\"Start Date\", \"End Date\"]));
+    while (configs.hasNext()) {
+     
+        var config = configs.next();
+        var cfgValue = config.get('value');
+        if (cfgValue) {
+            
+            // Date check functions did not work, so using try/catch                    
+            try {
+                var dt = new java.util.Date(cfgValue);
+                isValid = true;            
+            } catch (e) {
+                retVal = \"Please enter a valid date in dd/mm/yyyy format.\";
+                isValid = false;            
+            }
+            
+            if (isValid) {        
+                if (config.get('name') == \"Start Date\")
+                    startDate = new java.util.Date(cfgValue);
+                else
+                    endDate = new java.util.Date(cfgValue);                              
+            }
+        }        
+    }
+    
+    if (isValid) {
+        if (config.get('name') == \"Start Date\")
+            startDate = new java.util.Date(cfgValue);
+        else
+            endDate = new java.util.Date(cfgValue);  
+         
+        if (startDate && endDate) {
+                      
+            if (startDate.getTime() > endDate.getTime()) {
+                retVal = \"The Start Date must be less than the End Date.\";  
+            }
+        } else {    
+            retVal = \"The Start Date and End Date must not be empty.\";
+        } 
+    } 
+         
+} else if (name == \"Exclude Weekends\") {
+    
+    if (value != \"TRUE\" && value != \"FALSE\") 
+        retVal = \"Please enter TRUE or FALSE.\";
+    
+} else if (name == \"Scatter Percentage\") {
+    
+    if (parseInt(value) < 1 || parseInt(value) > 100)
+        retVal = \"This value must be between 1 and 100.\";  
+    
+}
+
+if (retVal != \"\") retVal += \":#b00\";
+
+retVal;":]]></path>
+									</attributes>
+								</column>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator System Crash Configs,title:"Configuration",description:"Required: Set the parameters for the next Data Simulator run. Each run will create a log record with parameters used."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="2. Include Manufacturers" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create System Crashes" component="Data View Grid" icon="icon-concatenate">
+					<configs>
+						<data_view_info name="Data Simulator System Crash Manufacturers" table="ds_crash_system_manufacturer" show_summary="f" group_fields="t">
+							<columns>
+								<column path="manufacturer" show_in_table="t"/>
+								<column show_in_table="t" label="Person Count">
+									<attributes>
+										<path><![CDATA[_calc:person_count::string:"const exec = dbApi.getQueryExecutor();
+
+var manufacturer = get(\"Manufacturer\");
+
+var q = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"p.id\")));
+q.from(\"ds_crash_system_manufacturer\", \"m\");
+q.join(\"cmdb_ci_computer\", \"c\", \"c.manufacturer\", \"m.manufacturer\");
+q.join(\"cmn_user\", \"u\", \"u.id\", \"c.primary_user\");             
+q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+q.where(Criterion.AND(Criterion.EQ(\"c.manufacturer\", manufacturer), Criterion.ILIKE(\"u.source\", \"%@datasim%\")));            
+var results = exec.executeL1(q); 
+results.length;":]]></path>
+									</attributes>
+								</column>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator System Crash Manufacturers,title:"Include Manufacturers",description:"Optional: add/import manufacturers you want to create program crash data for. If you specify \"Dell Inc.\", for example, then crash data will be created 
+for all Dell computers. The Person Count column represents the number of Data Simulator users that who are primary users on machines matching the manufacturer."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="3. Include Users" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create System Crashes" component="Data View Grid" icon="icon-group">
+					<configs>
+						<data_view_info name="Data Simulator System Included Crash Users" table="ds_crash_system_user_include" show_summary="f" group_fields="t">
+							<columns>
+								<column path="user" show_in_table="t"/>
+								<column path="user>source" show_in_table="t"/>
+								<column path="user>person>name" show_in_table="t"/>
+								<column path="user>person>user_name" show_in_table="t"/>
+								<column path="user>person>email" show_in_table="t"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator System Included Crash Users,title:"Include Users",description:"Optional: add/import any individual users that will contribute to crash data. Make sure to only select users with a source of \"@datasim\"."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="4. Excluded Users" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create System Crashes" component="Data View Grid" icon="icon-admin">
+					<configs>
+						<data_view_info name="Data Simulator System Excluded Crash Users" table="ds_crash_system_user_exclude" show_summary="f" group_fields="t">
+							<columns>
+								<column path="user" show_in_table="t"/>
+								<column path="user>source" show_in_table="t"/>
+								<column path="user>person>name" show_in_table="t"/>
+								<column path="user>person>user_name" show_in_table="t"/>
+								<column path="user>person>email" show_in_table="t"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator System Excluded Crash Users,title:"Excluded Users",description:"Optional: exclude users from generating crash data. This is useful for excluding user(s) of computers that are part of an included manufacturer."]]></configs>
+					</attributes>
+				</menu>
+				<menu name="5. Review Settings" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create System Crashes" component="Dashboard" icon="icon-ok">
+					<configs>
+						<dashboard name="Data Simulator System Crash Preview" columns="2" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+							<widgets>
+								<ui_widget_data_grid title="Review Configuration" colspan="1" rowspan="1" data_view="Data Simulator System Crash Configs" limit="20">
+									<fields>
+										<field path="description"/>
+										<field path="value"/>
+									</fields>
+								</ui_widget_data_grid>
+								<ui_widget_data_grid title="Person Totals" colspan="1" rowspan="1" data_view="Data Simulator System Crash Previews" limit="20">
+									<configs>
+										<data_view_info name="Data Simulator System Crash Previews" table="ds_crash_system_preview" show_summary="f" group_fields="t">
+											<columns>
+												<column path="name" show_in_table="f"/>
+												<column path="label" show_in_table="t"/>
+												<column show_in_table="t" label="Totals">
+													<attributes>
+														<path><![CDATA[_calc:totals::string:"include(\"ssi.utils.js\");
+var retVal = \"\";
+var name = get(\"Name\");
+
+if (name == \"tot_person_included_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_user_include\", \"ui\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ui.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_persons_excluded_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_user_exclude\", \"ux\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ux.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_manufacturers\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"m.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_manufacturer\", \"m\");
+    retVal = this.exec.execute1(q);    
+  
+}  else if (name == \"tot_manufacturer_users\") {
+    
+    let subq0 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"m.manufacturer\")));
+    subq0.from(\"ds_crash_system_manufacturer\", \"m\");
+    let INCLUDED_MANUFS = this.exec.executeL1(subq0);    
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let subq1 = Query.select(java.util.Arrays.asList(col));
+    subq1.from(\"cmn_user\", \"u\");
+    subq1.join(\"cmdb_ci_computer\", \"c\", \"c.primary_user\", \"u.id\");
+    subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+    subq1.where(AND(IN(\"c.manufacturer\", INCLUDED_MANUFS), ILIKE(\"u.source\", \"%@datasim%\")));   
+    retVal = this.exec.execute1(subq1);      
+    
+} else if (name == \"tot_unique_persons\") {
+
+    let subq0 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"m.manufacturer\")));
+    subq0.from(\"ds_crash_system_manufacturer\", \"m\");
+    let MANUFS = this.exec.executeL1(subq0);
+
+    let subq1 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq1.from(\"ds_crash_system_user_include\", \"e\");
+    subq1.join(\"cmn_user\", \"u\", \"u.id\", \"e.user\"); 
+    subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let INCLUDED_USER_PERSONS = exec.executeL1(subq1);    
+    
+    let subq2 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\", \"id\")));
+    subq2.from(\"cmn_user\", \"u\");
+    subq2.join(\"cmdb_ci_computer\", \"c\", \"c.primary_user\", \"u.id\");
+    subq2.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+    subq2.where(IN(\"c.manufacturer\", MANUFS));
+    let INCLUDED_MANUF_PERSONS = exec.executeL1(subq2);
+            
+    let subq3 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq3.from(\"ds_crash_system_user_exclude\", \"e\");
+    subq3.join(\"cmn_user\", \"u\", \"u.id\", \"e.user\"); 
+    subq3.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let EXCLUDED_USER_PERSONS = this.exec.executeL1(subq3);
+         
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"cmn_user\", \"u\");
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    q.where
+    (
+        AND
+        (
+            OR(IN(\"u.person\", INCLUDED_USER_PERSONS),
+                IN(\"u.person\", INCLUDED_MANUF_PERSONS)    
+            ),
+            NOT_IN(\"u.person\", EXCLUDED_USER_PERSONS),
+            ILIKE(\"u.source\", \"%@datasim%\")    
+        )
+    );
+    
+    retVal = this.exec.execute1(q);
+
+} else if (name == \"tot_software\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"s.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_software\", \"s\");
+    q.where(Criterion.EQ(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_software_disabled\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"s.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_software\", \"s\");
+    q.where(Criterion.NE(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+}
+
+retVal;":]]></path>
+													</attributes>
+												</column>
+											</columns>
+										</data_view_info>
+									</configs>
+								</ui_widget_data_grid>
+							</widgets>
+						</dashboard>
+					</configs>
+					<attributes>
+						<configs><![CDATA[Dashboard:Data Simulator System Crash Preview,title:"Review Settings"]]></configs>
+					</attributes>
+				</menu>
+				<menu name="6. Execute" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create System Crashes" component="Dashboard" icon="icon-run">
+					<configs>
+						<dashboard name="Data Simulator System Crash Status" columns="3" rows="3" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+							<widgets>
+								<ui_widget_html title="Instructions" colspan="3" rowspan="1" show_title="t">
+									<attributes>
+										<html><![CDATA[<style>
+body {
+  background-color: #f5f5f0;
+}
+</style>
+<div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">Use the "<span style="font-weight: bold;">Script Status</span>" area to see if the script is currently running. If the script End Time is empty, then the script is</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">still running.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">If you need to cancel the script, edit the job below and select the "<span style="font-weight: bold;">Cancel Job</span>" button.</span><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">&nbsp;The script may not stop immediately.</span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">To refresh the data below, right-click on the "<span style="font-weight: bold;">Script Status</span>" area and select "<span style="font-weight: bold;">Refresh Data</span>" to see status updates.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">If the script is not running, you may click on the blue "<span style="font-weight: bold;">Run Script</span>" below. Only click on it once.&nbsp;<br></span></div>]]></html>
+									</attributes>
+								</ui_widget_html>
+								<ui_widget_data_grid title="Script Status (Last 5 Runs)" colspan="3" rowspan="1" data_view="Data Simulator Job Logs" custom_filter="Create System Crashes" order_by="queue_time" order_dir="DESC" limit="5"/>
+								<ui_widget_function_list title="Script Execution" colspan="1" rowspan="1" show_title="f" show_decoration="f">
+									<functions>
+										<ui_widget_function name="Run Script" description="Run script, if script is not already running.">
+											<pipelines>
+												<pipeline type="ActionButtonRendererPipeline">
+													<attributes>
+														<config><![CDATA[colorName:"blue",iconName:"server"]]></config>
+													</attributes>
+												</pipeline>
+												<pipeline type="RunJobPipeline">
+													<attributes>
+														<config><![CDATA[base.sys_sch_schedule.job_id:"ssi.data.sim.create.sys.crashes.js"]]></config>
+													</attributes>
+												</pipeline>
+											</pipelines>
+										</ui_widget_function>
+									</functions>
+								</ui_widget_function_list>
+							</widgets>
+						</dashboard>
+					</configs>
+					<attributes>
+						<configs><![CDATA[Dashboard:Data Simulator System Crash Status,title:"Execute"]]></configs>
+					</attributes>
+				</menu>
+				<menu name="7. View Logs" parent="$VirtualRoot$>Custom Links>Data Simulator v2>Create System Crashes" component="Data View Grid" icon="icon-lcd_monitor">
+					<configs>
+						<data_view_info name="Data Simulator System Crash Logs" table="ds_crash_system_log" show_summary="f" group_fields="t">
+							<columns>
+								<column path="name" show_in_table="t"/>
+								<column custom_control="Colored Status" show_in_table="t" label="Status">
+									<attributes>
+										<path><![CDATA[_calc:status::string:"var errs = get(\"Errors\");
+var color = null;
+var retVal = 0;
+
+if (errs == \"None\") 
+{
+    retVal = \"Pass\";
+    color = \":#74b72e\";
+} else {
+    retVal = \"Failed\";
+    color = \":#B00\";
+}
+
+retVal += color;":]]></path>
+									</attributes>
+								</column>
+								<column path="created_on" show_in_table="t"/>
+								<column path="created_by" show_in_table="t" label="Run By"/>
+								<column path="parameter_list" show_in_table="t"/>
+								<column path="recs_created" show_in_table="t"/>
+								<column path="err" show_in_table="t" label="Errors"/>
+							</columns>
+						</data_view_info>
+					</configs>
+					<attributes>
+						<configs><![CDATA[dataView:Data Simulator System Crash Logs,orderBy:created_on,orderDir:DESC,title:"View Logs"]]></configs>
+					</attributes>
+				</menu>
+			</children>
+			<attributes>
+				<configs><![CDATA[Dashboard:Data Simulator Create System Crash Home,title:"Create System Crashes"]]></configs>
+			</attributes>
+		</menu>
+	</children>
+	<attributes>
+		<configs><![CDATA[innerHTML:"<span style=\"font-family: Helvetica, arial, sans-serif; font-weight: bold;\">Overview</span><div><span style=\"font-family: Helvetica, arial, sans-serif;\"><br></span></div><div><span style=\"font-family: Helvetica, arial, sans-serif; font-size: small;\">For more information on the Data Simulator, please visit:</span></div><div><span style=\"font-family: Helvetica, arial, sans-serif; font-size: small;\"><br></span></div><div><span style=\"font-size: small; font-family: Helvetica, arial, sans-serif;\"><a href=\"https://scalable.atlassian.net/wiki/spaces/~519693501/pages/3256877058/Data+Simulator\">https://scalable.atlassian.net/wiki/spaces/~519693501/pages/3256877058/Data+Simulator</a><br></span></div>",title:"Data Simulator",proxyPageURL:t]]></configs>
+	</attributes>
+</menu>

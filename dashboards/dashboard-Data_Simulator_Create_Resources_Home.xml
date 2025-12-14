@@ -1,0 +1,105 @@
+<dashboard name="Data Simulator Create Resources Home" columns="3" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+	<widgets>
+		<ui_widget_html title="Overview" colspan="3" rowspan="1" show_title="t">
+			<attributes>
+				<html><![CDATA[<div><span style="font-size: small; font-family: Verdana;">This section can be used to create new users and computers for the platform.</span></div><span style="font-family: Verdana;"><div><span style="font-size: small;"><br></span></div><div><span style="font-size: small;">Configuration - configure the parameters for the creation of uses and computers.</span></div><div><span style="font-size: small;">User Database - this is the list of fake users that will be used to create the platform users.</span></div><div><span style="font-size: small;">Execute - use this area to check on current script status and execute the script to create users and computers.</span></div><div><span style="font-size: small;">View Logs - view details about previous script runs.</span></div><div><br></div><span style="font-size: small; font-weight: bold;">Pre-requisites</span></span><div><ul><li><span style="font-family: Verdana; font-size: small;">Operating systems must already exist in the database.</span></li><li><span style="font-family: Verdana; font-size: small;">Operating system manufacturers must already exist in the database.</span></li></ul></div><div><div><div><span style="font-family: Verdana; font-size: small; font-weight: bold;">Note</span></div></div><div><span style="font-family: Verdana; font-size: small;"><br></span></div><div><span style="font-family: Verdana; font-size: small;">If a user or computer already exists, Data Simulator will not create a duplicate.</span></div></div>]]></html>
+			</attributes>
+		</ui_widget_html>
+		<ui_widget_chart title="Computers by Manufacturer" colspan="1" rowspan="1" type="DOUGHNUT_CHART" subcaption="Primary Users have @datasim source" aggregate="COUNT" limit="100" order_by="Aggregation value" order_dir="DESC" drill_into_details="f" data_view="Data Simulator Create Resources Computers" custom_filter="Data Simulator Computers" group_by="manufacturer" showToolTip="true">
+			<configs>
+				<data_view_info name="Data Simulator Create Resources Computers" table="cmdb_ci_computer" show_summary="f" group_fields="t">
+					<columns>
+						<column path="name" show_in_table="t"/>
+						<column path="antispyware" show_in_table="t"/>
+						<column path="antivirus" show_in_table="t"/>
+						<column path="asset_type" show_in_table="t"/>
+						<column path="asset_tag" show_in_table="t"/>
+						<column path="bios_manufacturer" show_in_table="t"/>
+						<column path="bios_date" show_in_table="t"/>
+						<column path="bios_version" show_in_table="t"/>
+						<column path="baseboard_manufacturer" show_in_table="t"/>
+						<column path="baseboard_product" show_in_table="t"/>
+						<column path="baseboard_serial_no" show_in_table="t"/>
+						<column path="baseboard_version" show_in_table="t"/>
+						<column path="cpu" show_in_table="t"/>
+						<column path="cpu_count" show_in_table="t"/>
+						<column path="cpu_socket_count" show_in_table="t"/>
+						<column path="cpu_speed" show_in_table="t"/>
+						<column path="chassis" show_in_table="t"/>
+						<column path="cluster" show_in_table="t"/>
+						<column path="dns_fullname" show_in_table="t"/>
+						<column path="description" show_in_table="t"/>
+						<column path="bae_sccm_hardware_import_date" show_in_table="t"/>
+						<column path="device_location" show_in_table="t"/>
+						<column path="discovery_status" show_in_table="t"/>
+						<column path="disk_encryption" show_in_table="t"/>
+						<column path="domain" show_in_table="t"/>
+						<column path="domain_role" show_in_table="t"/>
+						<column path="enclosure_serial_no" show_in_table="t"/>
+						<column path="environment" show_in_table="t"/>
+						<column path="firewall" show_in_table="t"/>
+						<column path="form_factor" show_in_table="t"/>
+						<column path="hd" show_in_table="t"/>
+						<column path="hostid" show_in_table="t"/>
+						<column path="ip_address" show_in_table="t"/>
+						<column path="last_boot_up_date" show_in_table="t"/>
+						<column path="last_logged_in_user" show_in_table="t"/>
+						<column path="last_logged_in_user_admin" show_in_table="t"/>
+						<column path="location" show_in_table="t"/>
+						<column path="mac_address" show_in_table="t"/>
+						<column path="manufacturer" show_in_table="t"/>
+						<column path="memory_free_slot_count" show_in_table="t"/>
+						<column path="memory_total_capacity" show_in_table="t"/>
+						<column path="memory_total_slot_count" show_in_table="t"/>
+						<column path="model_name" show_in_table="t"/>
+						<column path="model_version" show_in_table="t"/>
+						<column path="os_architecture" show_in_table="t"/>
+						<column path="os_build_label" show_in_table="t"/>
+						<column path="os_build_number" show_in_table="t"/>
+						<column path="os_kernel_version" show_in_table="t"/>
+						<column path="os_service_pack" show_in_table="t"/>
+						<column path="ou" show_in_table="t"/>
+						<column path="os" show_in_table="t"/>
+						<column path="os_ver" show_in_table="t"/>
+						<column path="operational" show_in_table="t"/>
+						<column path="owner" show_in_table="t"/>
+						<column path="owner_group" show_in_table="t"/>
+						<column path="phc_site_code" show_in_table="t"/>
+						<column path="parsons_last_logged_in_user" show_in_table="t"/>
+						<column path="part_number" show_in_table="t"/>
+						<column path="primary_user" show_in_table="t"/>
+						<column path="proton_device_data" show_in_table="t"/>
+						<column path="ram" show_in_table="t"/>
+						<column path="serial_number" show_in_table="t"/>
+						<column path="staff_number" show_in_table="t"/>
+						<column path="stats" show_in_table="t"/>
+						<column path="status" show_in_table="t"/>
+						<column path="support_contact" show_in_table="t"/>
+						<column path="system_serial_no" show_in_table="t"/>
+						<column path="system_uuid" show_in_table="t"/>
+						<column path="time_zone" show_in_table="t"/>
+						<column path="computer_type" show_in_table="t"/>
+						<column path="update_policy" show_in_table="t"/>
+						<column path="virtual" show_in_table="t"/>
+						<column path="virtualization_software" show_in_table="t"/>
+						<column path="primary_user>source" show_in_table="t"/>
+					</columns>
+					<custom_filters>
+						<custom_filter name="Data Simulator Computers">
+							<attributes>
+								<criteria><![CDATA[ 'primary_user>source' contains "datasim" ]]></criteria>
+							</attributes>
+						</custom_filter>
+						<custom_filter name="Data Simulator VDI Computers">
+							<attributes>
+								<criteria><![CDATA[ 'primary_user>source' contains "datasim" and 'virtual' is t ]]></criteria>
+							</attributes>
+						</custom_filter>
+					</custom_filters>
+				</data_view_info>
+			</configs>
+		</ui_widget_chart>
+		<ui_widget_chart title="Computers by BIOS Age" colspan="1" rowspan="1" type="PIE_CHART" subcaption="Primary Users have @datasim source" aggregate="COUNT" limit="100" order_by="Aggregation value" order_dir="DESC" drill_into_details="f" data_view="Data Simulator Create Resources Computers" custom_filter="Data Simulator Computers" group_by="bios_date" showToolTip="true" paletteColors="#82b74b, #ffef96,#034f84, #c94c4c, #ffef96"/>
+		<ui_widget_chart title="Computers by OS" colspan="1" rowspan="1" type="BAR_CHART" subcaption="Primary Users have @datasim source" aggregate="COUNT" limit="15" order_by="Aggregation value" order_dir="DESC" drill_into_details="f" data_view="Data Simulator Create Resources Computers" custom_filter="Data Simulator Computers" group_by="os_ver" paletteColors="#034f84, #c94c4c, #ffef96, #82b74b, #ffef96"/>
+	</widgets>
+</dashboard>

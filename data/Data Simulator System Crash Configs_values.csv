@@ -1,0 +1,8 @@
+Name,Description,Order,Type,Value,Var  Name,Error Message
+Start Date,Start date for crash creation (i.e. mm/dd/yyyy),1,date,1/1/2024,ds_cfg_start_date,
+End Date,Start date for crash creation (i.e. mm/dd/yyyy),2,date,1/2/2024,ds_cfg_end_date,
+System  Crash Minimum,Minimum number of system crashes per day (i.e. 2),3,int,2,ds_cfg_sys_min,
+System  Crash Maximum,Maximum number of system crashes per day (i.e. 5),4,int,5,ds_cfg_sys_max,
+Exclude Weekends,Exclude weekends from generating crashes (TRUE or FALSE),5,bool,TRUE,ds_cfg_exclude_weekends,
+Scatter Percentage,Percentage of time to randomly skip crashes,6,int,75,ds_cfg_scatter,
+Start Hour,The hour to start generating crashes,7,int,8,ds_cfg_start_hour,

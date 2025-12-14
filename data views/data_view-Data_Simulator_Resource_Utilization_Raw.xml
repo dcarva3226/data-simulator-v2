@@ -1,0 +1,11 @@
+<data_view_info name="Data Simulator Resource Utilization Raw" table="cmdb_device_resource_util" show_summary="f" group_fields="t">
+	<columns>
+		<column path="computer" show_in_table="t"/>
+		<column path="memory_usage" show_in_table="t"/>
+		<column path="processor_usage" show_in_table="t"/>
+		<column path="usage_date" show_in_table="t"/>
+		<column path="computer>primary_user>source" show_in_table="t"/>
+		<column path="id" show_in_table="t"/>
+		<column path="computer>virtual" show_in_table="t"/>
+	</columns>
+</data_view_info>

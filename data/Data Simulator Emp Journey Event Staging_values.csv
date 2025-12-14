@@ -1,0 +1,764 @@
+Computer,Duration,Event Definition,Location,Offset,Timestamp,User,Tag,ID
+CORPVDI001568,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,ava yang.ava@scalable.com,,2110
+CORPVDI001568,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,ava yang.ava@scalable.com,,2111
+CORPVDI001568,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,ava yang.ava@scalable.com,,2112
+CORPVDI001568,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,ava yang.ava@scalable.com,,2113
+CORPVDI001568,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,ava yang.ava@scalable.com,,2114
+CORPVDI001568,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,ava yang.ava@scalable.com,,2115
+CORPVDI001568,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,ava yang.ava@scalable.com,,2116
+CORPVDI001568,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,ava yang.ava@scalable.com,,2117
+CORPVDI001568,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,ava yang.ava@scalable.com,,2118
+CORPVDI001585,1031,Create New Application,,4,11/01/2024 01:00:00 AM,josiah turner.josiah@scalable.com,,2119
+CORPVDI001585,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,josiah turner.josiah@scalable.com,,2120
+CORPVDI001585,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,josiah turner.josiah@scalable.com,,2121
+CORPVDI001585,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,josiah turner.josiah@scalable.com,,2122
+CORPVDI001585,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,josiah turner.josiah@scalable.com,,2123
+CORPVDI001585,1121,Application Summary,,4,11/01/2024 01:25:00 AM,josiah turner.josiah@scalable.com,,2124
+CORPVDI001585,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,josiah turner.josiah@scalable.com,,2125
+CORPVDI001585,1031,Create New Application,,2,11/04/2024 01:00:00 AM,josiah turner.josiah@scalable.com,,2126
+CORPVDI001585,1009,First Applicant Details,,2,11/04/2024 01:10:00 AM,josiah turner.josiah@scalable.com,,2127
+CORPVDI001585,4033,Feasibility Income,,2,11/04/2024 01:15:00 AM,josiah turner.josiah@scalable.com,,2128
+CORPVDI001585,5000,Microsoft Excel,,2,11/04/2024 01:20:00 AM,josiah turner.josiah@scalable.com,Mortgages,2129
+CORPVDI001585,774,Feasibility Outgoings,,2,11/04/2024 01:25:00 AM,josiah turner.josiah@scalable.com,,2130
+CORPVDI001585,5000,Microsoft Excel,,2,11/04/2024 01:30:00 AM,josiah turner.josiah@scalable.com,Mortgages,2131
+CORPVDI001585,1121,Application Summary,,2,11/04/2024 01:35:00 AM,josiah turner.josiah@scalable.com,,2132
+CORPVDI001585,1001,Finish Mortgage Application,,2,11/04/2024 01:40:00 AM,josiah turner.josiah@scalable.com,,2133
+CORPVDI001641,1031,Create New Application,,4,11/01/2024 01:00:00 AM,tashya flynn.tashya@scalable.com,,2134
+CORPVDI001641,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,tashya flynn.tashya@scalable.com,,2135
+CORPVDI001641,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,tashya flynn.tashya@scalable.com,,2136
+CORPVDI001641,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,tashya flynn.tashya@scalable.com,,2137
+CORPVDI001641,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,tashya flynn.tashya@scalable.com,,2138
+CORPVDI001641,1121,Application Summary,,4,11/01/2024 01:25:00 AM,tashya flynn.tashya@scalable.com,,2139
+CORPVDI001641,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,tashya flynn.tashya@scalable.com,,2140
+CORPVDI001641,1031,Create New Application,,2,11/04/2024 01:00:00 AM,tashya flynn.tashya@scalable.com,,2141
+CORPVDI001641,1009,First Applicant Details,,2,11/04/2024 01:10:00 AM,tashya flynn.tashya@scalable.com,,2142
+CORPVDI001641,4033,Feasibility Income,,2,11/04/2024 01:15:00 AM,tashya flynn.tashya@scalable.com,,2143
+CORPVDI001641,5000,Microsoft Excel,,2,11/04/2024 01:20:00 AM,tashya flynn.tashya@scalable.com,Mortgages,2144
+CORPVDI001641,774,Feasibility Outgoings,,2,11/04/2024 01:25:00 AM,tashya flynn.tashya@scalable.com,,2145
+CORPVDI001641,5000,Microsoft Excel,,2,11/04/2024 01:30:00 AM,tashya flynn.tashya@scalable.com,Mortgages,2146
+CORPVDI001641,1121,Application Summary,,2,11/04/2024 01:35:00 AM,tashya flynn.tashya@scalable.com,,2147
+CORPVDI001641,1001,Finish Mortgage Application,,2,11/04/2024 01:40:00 AM,tashya flynn.tashya@scalable.com,,2148
+CORPVDI001662,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,wallace villarreal.wallace@scalable.com,,2149
+CORPVDI001662,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,wallace villarreal.wallace@scalable.com,,2150
+CORPVDI001662,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,wallace villarreal.wallace@scalable.com,,2151
+CORPVDI001662,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,wallace villarreal.wallace@scalable.com,,2152
+CORPVDI001662,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,wallace villarreal.wallace@scalable.com,,2153
+CORPVDI001662,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,wallace villarreal.wallace@scalable.com,,2154
+CORPVDI001662,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,wallace villarreal.wallace@scalable.com,,2155
+CORPVDI001662,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,wallace villarreal.wallace@scalable.com,,2156
+CORPVDI001662,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,wallace villarreal.wallace@scalable.com,,2157
+CORPVDI001665,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,eliana keller.eliana@scalable.com,,2158
+CORPVDI001665,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,eliana keller.eliana@scalable.com,,2159
+CORPVDI001665,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,eliana keller.eliana@scalable.com,,2160
+CORPVDI001665,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,eliana keller.eliana@scalable.com,,2161
+CORPVDI001665,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,eliana keller.eliana@scalable.com,,2162
+CORPVDI001665,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,eliana keller.eliana@scalable.com,,2163
+CORPVDI001665,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,eliana keller.eliana@scalable.com,,2164
+CORPVDI001665,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,eliana keller.eliana@scalable.com,,2165
+CORPVDI001665,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,eliana keller.eliana@scalable.com,,2166
+CORPVDI001700,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,hedda mack.hedda@scalable.com,,2167
+CORPVDI001700,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,hedda mack.hedda@scalable.com,,2168
+CORPVDI001700,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,hedda mack.hedda@scalable.com,,2169
+CORPVDI001700,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,hedda mack.hedda@scalable.com,,2170
+CORPVDI001700,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,hedda mack.hedda@scalable.com,,2171
+CORPVDI001700,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,hedda mack.hedda@scalable.com,,2172
+CORPVDI001700,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,hedda mack.hedda@scalable.com,,2173
+CORPVDI001700,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,hedda mack.hedda@scalable.com,,2174
+CORPVDI001700,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,hedda mack.hedda@scalable.com,,2175
+CORPVDI001701,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,leilani morton.leilani@scalable.com,,2176
+CORPVDI001701,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,leilani morton.leilani@scalable.com,,2177
+CORPVDI001701,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,leilani morton.leilani@scalable.com,,2178
+CORPVDI001701,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,leilani morton.leilani@scalable.com,,2179
+CORPVDI001701,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,leilani morton.leilani@scalable.com,,2180
+CORPVDI001701,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,leilani morton.leilani@scalable.com,,2181
+CORPVDI001701,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,leilani morton.leilani@scalable.com,,2182
+CORPVDI001701,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,leilani morton.leilani@scalable.com,,2183
+CORPVDI001701,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,leilani morton.leilani@scalable.com,,2184
+CORPVDI001721,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,nora sampson.nora@scalable.com,,2185
+CORPVDI001721,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,nora sampson.nora@scalable.com,,2186
+CORPVDI001721,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,nora sampson.nora@scalable.com,,2187
+CORPVDI001721,1008,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:15:00 AM,nora sampson.nora@scalable.com,,2188
+CORPVDI001721,4032,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:20:00 AM,nora sampson.nora@scalable.com,,2189
+CORPVDI001721,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:25:00 AM,nora sampson.nora@scalable.com,,2190
+CORPVDI001721,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:30:00 AM,nora sampson.nora@scalable.com,,2191
+CORPVDI001721,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:35:00 AM,nora sampson.nora@scalable.com,,2192
+CORPVDI001721,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:40:00 AM,nora sampson.nora@scalable.com,,2193
+CORPVDI001721,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:45:00 AM,nora sampson.nora@scalable.com,,2194
+CORPVDI001721,1217,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:50:00 AM,nora sampson.nora@scalable.com,,2195
+CORPVDI001721,773,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:55:00 AM,nora sampson.nora@scalable.com,,2196
+CORPVDI001721,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 02:00:00 AM,nora sampson.nora@scalable.com,,2197
+CORPVDI001722,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,aquila pacheco.aquila@scalable.com,,2198
+CORPVDI001722,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,aquila pacheco.aquila@scalable.com,,2199
+CORPVDI001722,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,aquila pacheco.aquila@scalable.com,,2200
+CORPVDI001722,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,aquila pacheco.aquila@scalable.com,,2201
+CORPVDI001722,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,aquila pacheco.aquila@scalable.com,,2202
+CORPVDI001722,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,aquila pacheco.aquila@scalable.com,,2203
+CORPVDI001722,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:30:00 AM,aquila pacheco.aquila@scalable.com,,2204
+CORPVDI001722,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:35:00 AM,aquila pacheco.aquila@scalable.com,,2205
+CORPVDI001724,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,knox cardenas.knox@scalable.com,,2206
+CORPVDI001724,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,knox cardenas.knox@scalable.com,,2207
+CORPVDI001724,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,knox cardenas.knox@scalable.com,,2208
+CORPVDI001724,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,knox cardenas.knox@scalable.com,,2209
+CORPVDI001724,4031,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:20:00 AM,knox cardenas.knox@scalable.com,,2210
+CORPVDI001724,4554,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:25:00 AM,knox cardenas.knox@scalable.com,,2211
+CORPVDI001724,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:30:00 AM,knox cardenas.knox@scalable.com,,2212
+CORPVDI001724,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:35:00 AM,knox cardenas.knox@scalable.com,,2213
+CORPVDI001724,3321,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:40:00 AM,knox cardenas.knox@scalable.com,,2214
+CORPVDI001724,4481,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:45:00 AM,knox cardenas.knox@scalable.com,,2215
+CORPVDI001724,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:50:00 AM,knox cardenas.knox@scalable.com,,2216
+CORPVDI001724,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:55:00 AM,knox cardenas.knox@scalable.com,,2217
+CORPVDI001724,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 02:00:00 AM,knox cardenas.knox@scalable.com,,2218
+CORPVDI001725,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,may cabrera.may@scalable.com,,2219
+CORPVDI001725,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,may cabrera.may@scalable.com,,2220
+CORPVDI001725,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,may cabrera.may@scalable.com,,2221
+CORPVDI001725,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,may cabrera.may@scalable.com,,2222
+CORPVDI001725,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,may cabrera.may@scalable.com,,2223
+CORPVDI001725,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,may cabrera.may@scalable.com,,2224
+CORPVDI001725,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,may cabrera.may@scalable.com,,2225
+CORPVDI001725,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,may cabrera.may@scalable.com,,2226
+CORPVDI001725,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,may cabrera.may@scalable.com,,2227
+CORPVDI001726,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,hamilton bates.hamilton@scalable.com,,2228
+CORPVDI001726,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,hamilton bates.hamilton@scalable.com,,2229
+CORPVDI001726,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,hamilton bates.hamilton@scalable.com,,2230
+CORPVDI001726,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:25:00 AM,hamilton bates.hamilton@scalable.com,,2231
+CORPVDI001726,4554,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:30:00 AM,hamilton bates.hamilton@scalable.com,,2232
+CORPVDI001726,3321,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:35:00 AM,hamilton bates.hamilton@scalable.com,,2233
+CORPVDI001726,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:40:00 AM,hamilton bates.hamilton@scalable.com,,2234
+CORPVDI001726,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:45:00 AM,hamilton bates.hamilton@scalable.com,,2235
+CORPVDI001726,4434,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:50:00 AM,hamilton bates.hamilton@scalable.com,,2236
+CORPVDI001726,3320,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 02:00:00 AM,hamilton bates.hamilton@scalable.com,,2237
+CORPVDI001726,4480,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 02:05:00 AM,hamilton bates.hamilton@scalable.com,,2238
+CORPVDI001726,1211,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 02:15:00 AM,hamilton bates.hamilton@scalable.com,,2239
+CORPVDI001726,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 02:20:00 AM,hamilton bates.hamilton@scalable.com,,2240
+CORPVDI001726,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 02:25:00 AM,hamilton bates.hamilton@scalable.com,,2241
+CORPVDI001726,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 12:55:00 PM,hamilton bates.hamilton@scalable.com,,2242
+CORPVDI00437,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,kenyon.west@scalable.com,,2243
+CORPVDI00437,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,kenyon.west@scalable.com,,2244
+CORPVDI00437,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,kenyon.west@scalable.com,,2245
+CORPVDI00437,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,kenyon.west@scalable.com,,2246
+CORPVDI00437,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,kenyon.west@scalable.com,,2247
+CORPVDI00437,1009,Microsoft Outlook,US East (N. Virginia),1,12/01/2024 01:05:00 AM,kenyon.west@scalable.com,,2248
+CORPVDI00437,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:10:00 AM,kenyon.west@scalable.com,,2249
+CORPVDI00437,1009,Teamviewer,US East (N. Virginia),1,12/01/2024 01:15:00 AM,kenyon.west@scalable.com,,2250
+CORPVDI00437,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:20:00 AM,kenyon.west@scalable.com,,2251
+CORPVDI00437,4033,Microsoft Excel,US East (N. Virginia),1,12/01/2024 01:25:00 AM,kenyon.west@scalable.com,L1,2252
+CORPVDI00437,4033,Microsoft Outlook,US East (N. Virginia),1,12/01/2024 01:30:00 AM,kenyon.west@scalable.com,,2253
+CORPVDI00437,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:35:00 AM,kenyon.west@scalable.com,,2254
+CORPVDI00951,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,gino.kihn@scalable.com,,2255
+CORPVDI00951,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,gino.kihn@scalable.com,,2256
+CORPVDI00951,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,gino.kihn@scalable.com,,2257
+CORPVDI00951,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,gino.kihn@scalable.com,,2258
+CORPVDI00951,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,gino.kihn@scalable.com,,2259
+CORPVDI00951,1031,Microsoft Excel,US East (N. Virginia),1,12/01/2024 01:05:00 AM,gino.kihn@scalable.com,L1,2260
+CORPVDI00951,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:10:00 AM,gino.kihn@scalable.com,,2261
+CORPVDI00951,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:15:00 AM,gino.kihn@scalable.com,,2262
+CORPVDI00951,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,gino.kihn@scalable.com,,2263
+CORPWIN001000,1031,Create New Application,,4,11/01/2024 01:00:00 AM,gary.pouros@scalable.com,,2264
+CORPWIN001000,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,gary.pouros@scalable.com,,2265
+CORPWIN001000,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,gary.pouros@scalable.com,,2266
+CORPWIN001000,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,gary.pouros@scalable.com,,2267
+CORPWIN001000,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,gary.pouros@scalable.com,,2268
+CORPWIN001000,1121,Application Summary,,4,11/01/2024 01:25:00 AM,gary.pouros@scalable.com,,2269
+CORPWIN001000,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,gary.pouros@scalable.com,,2270
+CORPWIN001001,1031,Create New Application,,4,11/01/2024 01:00:00 AM,tony.wastika@scalable.com,,2271
+CORPWIN001001,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,tony.wastika@scalable.com,,2272
+CORPWIN001001,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,tony.wastika@scalable.com,,2273
+CORPWIN001001,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,tony.wastika@scalable.com,,2274
+CORPWIN001001,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,tony.wastika@scalable.com,,2275
+CORPWIN001001,1121,Application Summary,,4,11/01/2024 01:25:00 AM,tony.wastika@scalable.com,,2276
+CORPWIN001001,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,tony.wastika@scalable.com,,2277
+CORPWIN001002,1031,Create New Application,,4,11/01/2024 01:00:00 AM,joshua.march@scalable.com,,2278
+CORPWIN001002,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,joshua.march@scalable.com,,2279
+CORPWIN001002,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,joshua.march@scalable.com,,2280
+CORPWIN001002,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,joshua.march@scalable.com,,2281
+CORPWIN001002,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,joshua.march@scalable.com,,2282
+CORPWIN001002,1121,Application Summary,,4,11/01/2024 01:25:00 AM,joshua.march@scalable.com,,2283
+CORPWIN001002,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,joshua.march@scalable.com,,2284
+CORPWIN001003,1031,Create New Application,,4,11/01/2024 01:00:00 AM,eliane.kingston@scalable.com,,2285
+CORPWIN001003,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,eliane.kingston@scalable.com,,2286
+CORPWIN001003,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,eliane.kingston@scalable.com,,2287
+CORPWIN001003,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,eliane.kingston@scalable.com,,2288
+CORPWIN001003,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,eliane.kingston@scalable.com,,2289
+CORPWIN001003,1121,Application Summary,,4,11/01/2024 01:25:00 AM,eliane.kingston@scalable.com,,2290
+CORPWIN001003,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,eliane.kingston@scalable.com,,2291
+CORPWIN001004,1031,Create New Application,,4,11/01/2024 01:00:00 AM,jacques.billing@scalable.com,,2292
+CORPWIN001004,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,jacques.billing@scalable.com,,2293
+CORPWIN001004,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,jacques.billing@scalable.com,,2294
+CORPWIN001004,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,jacques.billing@scalable.com,,2295
+CORPWIN001004,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,jacques.billing@scalable.com,,2296
+CORPWIN001004,1121,Application Summary,,4,11/01/2024 01:25:00 AM,jacques.billing@scalable.com,,2297
+CORPWIN001004,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,jacques.billing@scalable.com,,2298
+CORPWIN001005,1031,Create New Application,,4,11/01/2024 01:00:00 AM,marcelo.graebel@scalable.com,,2299
+CORPWIN001005,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,marcelo.graebel@scalable.com,,2300
+CORPWIN001005,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,marcelo.graebel@scalable.com,,2301
+CORPWIN001005,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,marcelo.graebel@scalable.com,,2302
+CORPWIN001005,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,marcelo.graebel@scalable.com,,2303
+CORPWIN001005,1121,Application Summary,,4,11/01/2024 01:25:00 AM,marcelo.graebel@scalable.com,,2304
+CORPWIN001005,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,marcelo.graebel@scalable.com,,2305
+CORPWIN001006,1031,Create New Application,,4,11/01/2024 01:00:00 AM,mariela.hoffart@scalable.com,,2306
+CORPWIN001006,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,mariela.hoffart@scalable.com,,2307
+CORPWIN001006,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,mariela.hoffart@scalable.com,,2308
+CORPWIN001006,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,mariela.hoffart@scalable.com,,2309
+CORPWIN001006,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,mariela.hoffart@scalable.com,,2310
+CORPWIN001006,1121,Application Summary,,4,11/01/2024 01:25:00 AM,mariela.hoffart@scalable.com,,2311
+CORPWIN001006,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,mariela.hoffart@scalable.com,,2312
+CORPWIN001018,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,irma.fox@scalable.com,,2313
+CORPWIN001018,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,irma.fox@scalable.com,,2314
+CORPWIN001018,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,irma.fox@scalable.com,,2315
+CORPWIN001018,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,irma.fox@scalable.com,,2316
+CORPWIN001018,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,irma.fox@scalable.com,,2317
+CORPWIN001018,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:05:00 AM,irma.fox@scalable.com,,2318
+CORPWIN001018,4033,LogMeIn Rescue,US East (N. Virginia),1,12/01/2024 01:10:00 AM,irma.fox@scalable.com,,2319
+CORPWIN001018,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:15:00 AM,irma.fox@scalable.com,,2320
+CORPWIN001018,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,irma.fox@scalable.com,,2321
+CORPWIN001023,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,lana.hinton@scalable.com,,2322
+CORPWIN001023,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,lana.hinton@scalable.com,,2323
+CORPWIN001023,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,lana.hinton@scalable.com,,2324
+CORPWIN001023,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,lana.hinton@scalable.com,,2325
+CORPWIN001472,1031,Create New Application,,4,11/01/2024 01:00:00 AM,cassandra hooper.cassandra@scalable.com,,2326
+CORPWIN001472,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,cassandra hooper.cassandra@scalable.com,,2327
+CORPWIN001472,4033,Feasibility Income,,4,11/01/2024 01:10:00 AM,cassandra hooper.cassandra@scalable.com,,2328
+CORPWIN001472,774,Feasibility Outgoings,,4,11/01/2024 01:15:00 AM,cassandra hooper.cassandra@scalable.com,,2329
+CORPWIN001472,1121,Application Summary,,4,11/01/2024 01:20:00 AM,cassandra hooper.cassandra@scalable.com,,2330
+CORPWIN001472,1001,Finish Mortgage Application,,4,11/01/2024 01:25:00 AM,cassandra hooper.cassandra@scalable.com,,2331
+CORPWIN001472,1031,Create New Application,,3,11/03/2024 01:00:00 AM,cassandra hooper.cassandra@scalable.com,,2332
+CORPWIN001472,1009,First Applicant Details,,3,11/03/2024 01:05:00 AM,cassandra hooper.cassandra@scalable.com,,2333
+CORPWIN001472,4033,Feasibility Income,,3,11/03/2024 01:10:00 AM,cassandra hooper.cassandra@scalable.com,,2334
+CORPWIN001472,774,Feasibility Outgoings,,3,11/03/2024 01:15:00 AM,cassandra hooper.cassandra@scalable.com,,2335
+CORPWIN001472,1121,Application Summary,,3,11/03/2024 01:20:00 AM,cassandra hooper.cassandra@scalable.com,,2336
+CORPWIN001472,900,Mortgage Declined,,3,11/03/2024 01:25:00 AM,cassandra hooper.cassandra@scalable.com,,2337
+CORPWIN001472,1001,Finish Mortgage Application,,3,11/03/2024 01:30:00 AM,cassandra hooper.cassandra@scalable.com,,2338
+CORPWIN001472,1031,Create New Application,,2,11/04/2024 01:00:00 AM,cassandra hooper.cassandra@scalable.com,,2339
+CORPWIN001472,1009,First Applicant Details,,2,11/04/2024 01:10:00 AM,cassandra hooper.cassandra@scalable.com,,2340
+CORPWIN001472,4033,Feasibility Income,,2,11/04/2024 01:15:00 AM,cassandra hooper.cassandra@scalable.com,,2341
+CORPWIN001472,5000,Microsoft Excel,,2,11/04/2024 01:20:00 AM,cassandra hooper.cassandra@scalable.com,Mortgages,2342
+CORPWIN001472,774,Feasibility Outgoings,,2,11/04/2024 01:25:00 AM,cassandra hooper.cassandra@scalable.com,,2343
+CORPWIN001472,1121,Application Summary,,2,11/04/2024 01:30:00 AM,cassandra hooper.cassandra@scalable.com,,2344
+CORPWIN001472,1001,Finish Mortgage Application,,2,11/04/2024 01:35:00 AM,cassandra hooper.cassandra@scalable.com,,2345
+CORPWIN001473,1031,Create New Application,,4,11/01/2024 01:00:00 AM,simon hurst.simon@scalable.com,,2346
+CORPWIN001473,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,simon hurst.simon@scalable.com,,2347
+CORPWIN001473,4033,Feasibility Income,,4,11/01/2024 01:10:00 AM,simon hurst.simon@scalable.com,,2348
+CORPWIN001473,774,Feasibility Outgoings,,4,11/01/2024 01:15:00 AM,simon hurst.simon@scalable.com,,2349
+CORPWIN001473,1121,Application Summary,,4,11/01/2024 01:20:00 AM,simon hurst.simon@scalable.com,,2350
+CORPWIN001473,1001,Finish Mortgage Application,,4,11/01/2024 01:25:00 AM,simon hurst.simon@scalable.com,,2351
+CORPWIN001473,1031,Create New Application,,3,11/03/2024 01:00:00 AM,simon hurst.simon@scalable.com,,2352
+CORPWIN001473,1009,First Applicant Details,,3,11/03/2024 01:05:00 AM,simon hurst.simon@scalable.com,,2353
+CORPWIN001473,4033,Feasibility Income,,3,11/03/2024 01:10:00 AM,simon hurst.simon@scalable.com,,2354
+CORPWIN001473,774,Feasibility Outgoings,,3,11/03/2024 01:15:00 AM,simon hurst.simon@scalable.com,,2355
+CORPWIN001473,1121,Application Summary,,3,11/03/2024 01:20:00 AM,simon hurst.simon@scalable.com,,2356
+CORPWIN001473,900,Mortgage Declined,,3,11/03/2024 01:25:00 AM,simon hurst.simon@scalable.com,,2357
+CORPWIN001473,1001,Finish Mortgage Application,,3,11/03/2024 01:30:00 AM,simon hurst.simon@scalable.com,,2358
+CORPWIN001473,1031,Create New Application,,2,11/04/2024 01:00:00 AM,simon hurst.simon@scalable.com,,2359
+CORPWIN001473,1009,First Applicant Details,,2,11/04/2024 01:10:00 AM,simon hurst.simon@scalable.com,,2360
+CORPWIN001473,4033,Feasibility Income,,2,11/04/2024 01:15:00 AM,simon hurst.simon@scalable.com,,2361
+CORPWIN001473,5000,Microsoft Excel,,2,11/04/2024 01:20:00 AM,simon hurst.simon@scalable.com,Mortgages,2362
+CORPWIN001473,774,Feasibility Outgoings,,2,11/04/2024 01:25:00 AM,simon hurst.simon@scalable.com,,2363
+CORPWIN001473,1121,Application Summary,,2,11/04/2024 01:30:00 AM,simon hurst.simon@scalable.com,,2364
+CORPWIN001473,1001,Finish Mortgage Application,,2,11/04/2024 01:35:00 AM,simon hurst.simon@scalable.com,,2365
+CORPWIN001474,1031,Create New Application,,4,11/01/2024 01:00:00 AM,dean woodward.dean@scalable.com,,2366
+CORPWIN001474,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,dean woodward.dean@scalable.com,,2367
+CORPWIN001474,4033,Feasibility Income,,4,11/01/2024 01:10:00 AM,dean woodward.dean@scalable.com,,2368
+CORPWIN001474,774,Feasibility Outgoings,,4,11/01/2024 01:15:00 AM,dean woodward.dean@scalable.com,,2369
+CORPWIN001474,1121,Application Summary,,4,11/01/2024 01:20:00 AM,dean woodward.dean@scalable.com,,2370
+CORPWIN001474,1001,Finish Mortgage Application,,4,11/01/2024 01:25:00 AM,dean woodward.dean@scalable.com,,2371
+CORPWIN001474,1031,Create New Application,,3,11/03/2024 01:00:00 AM,dean woodward.dean@scalable.com,,2372
+CORPWIN001474,1009,First Applicant Details,,3,11/03/2024 01:05:00 AM,dean woodward.dean@scalable.com,,2373
+CORPWIN001474,4033,Feasibility Income,,3,11/03/2024 01:10:00 AM,dean woodward.dean@scalable.com,,2374
+CORPWIN001474,774,Feasibility Outgoings,,3,11/03/2024 01:15:00 AM,dean woodward.dean@scalable.com,,2375
+CORPWIN001474,1121,Application Summary,,3,11/03/2024 01:20:00 AM,dean woodward.dean@scalable.com,,2376
+CORPWIN001474,900,Mortgage Declined,,3,11/03/2024 01:25:00 AM,dean woodward.dean@scalable.com,,2377
+CORPWIN001474,1001,Finish Mortgage Application,,3,11/03/2024 01:30:00 AM,dean woodward.dean@scalable.com,,2378
+CORPWIN001474,1031,Create New Application,,1,11/05/2024 01:00:00 AM,dean woodward.dean@scalable.com,,2379
+CORPWIN001474,1009,First Applicant Details,,1,11/05/2024 01:10:00 AM,dean woodward.dean@scalable.com,,2380
+CORPWIN001474,4033,Feasibility Income,,1,11/05/2024 01:15:00 AM,dean woodward.dean@scalable.com,,2381
+CORPWIN001474,5000,Windows Calculator,,1,11/05/2024 01:20:00 AM,dean woodward.dean@scalable.com,,2382
+CORPWIN001474,774,Feasibility Outgoings,,1,11/05/2024 01:25:00 AM,dean woodward.dean@scalable.com,,2383
+CORPWIN001474,1121,Application Summary,,1,11/05/2024 01:30:00 AM,dean woodward.dean@scalable.com,,2384
+CORPWIN001474,1001,Finish Mortgage Application,,1,11/05/2024 01:35:00 AM,dean woodward.dean@scalable.com,,2385
+CORPWIN001475,1031,Create New Application,,4,11/01/2024 01:00:00 AM,benjamin pruitt.benjamin@scalable.com,,2386
+CORPWIN001475,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,benjamin pruitt.benjamin@scalable.com,,2387
+CORPWIN001475,4033,Feasibility Income,,4,11/01/2024 01:10:00 AM,benjamin pruitt.benjamin@scalable.com,,2388
+CORPWIN001475,774,Feasibility Outgoings,,4,11/01/2024 01:15:00 AM,benjamin pruitt.benjamin@scalable.com,,2389
+CORPWIN001475,1121,Application Summary,,4,11/01/2024 01:20:00 AM,benjamin pruitt.benjamin@scalable.com,,2390
+CORPWIN001475,1001,Finish Mortgage Application,,4,11/01/2024 01:25:00 AM,benjamin pruitt.benjamin@scalable.com,,2391
+CORPWIN001475,1031,Create New Application,,3,11/03/2024 01:00:00 AM,benjamin pruitt.benjamin@scalable.com,,2392
+CORPWIN001475,1009,First Applicant Details,,3,11/03/2024 01:05:00 AM,benjamin pruitt.benjamin@scalable.com,,2393
+CORPWIN001475,4033,Feasibility Income,,3,11/03/2024 01:10:00 AM,benjamin pruitt.benjamin@scalable.com,,2394
+CORPWIN001475,774,Feasibility Outgoings,,3,11/03/2024 01:15:00 AM,benjamin pruitt.benjamin@scalable.com,,2395
+CORPWIN001475,1121,Application Summary,,3,11/03/2024 01:20:00 AM,benjamin pruitt.benjamin@scalable.com,,2396
+CORPWIN001475,900,Server Not Responding,,3,11/03/2024 01:25:00 AM,benjamin pruitt.benjamin@scalable.com,,2397
+CORPWIN001475,1001,Finish Mortgage Application,,3,11/03/2024 01:30:00 AM,benjamin pruitt.benjamin@scalable.com,,2398
+CORPWIN001475,1031,Create New Application,,1,11/05/2024 01:00:00 AM,benjamin pruitt.benjamin@scalable.com,,2399
+CORPWIN001475,1009,First Applicant Details,,1,11/05/2024 01:10:00 AM,benjamin pruitt.benjamin@scalable.com,,2400
+CORPWIN001475,4033,Feasibility Income,,1,11/05/2024 01:15:00 AM,benjamin pruitt.benjamin@scalable.com,,2401
+CORPWIN001475,5000,Windows Calculator,,1,11/05/2024 01:20:00 AM,benjamin pruitt.benjamin@scalable.com,,2402
+CORPWIN001475,774,Feasibility Outgoings,,1,11/05/2024 01:25:00 AM,benjamin pruitt.benjamin@scalable.com,,2403
+CORPWIN001475,1121,Application Summary,,1,11/05/2024 01:30:00 AM,benjamin pruitt.benjamin@scalable.com,,2404
+CORPWIN001475,1001,Finish Mortgage Application,,1,11/05/2024 01:35:00 AM,benjamin pruitt.benjamin@scalable.com,,2405
+CORPWIN001537,1031,Create New Application,,4,11/01/2024 01:00:00 AM,fuller watson.fuller@scalable.com,,2406
+CORPWIN001537,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,fuller watson.fuller@scalable.com,,2407
+CORPWIN001537,4033,Feasibility Income,,4,11/01/2024 01:10:00 AM,fuller watson.fuller@scalable.com,,2408
+CORPWIN001537,774,Feasibility Outgoings,,4,11/01/2024 01:15:00 AM,fuller watson.fuller@scalable.com,,2409
+CORPWIN001537,1121,Application Summary,,4,11/01/2024 01:20:00 AM,fuller watson.fuller@scalable.com,,2410
+CORPWIN001537,1001,Finish Mortgage Application,,4,11/01/2024 01:25:00 AM,fuller watson.fuller@scalable.com,,2411
+CORPWIN001537,1031,Create New Application,,3,11/03/2024 01:00:00 AM,fuller watson.fuller@scalable.com,,2412
+CORPWIN001537,1009,First Applicant Details,,3,11/03/2024 01:05:00 AM,fuller watson.fuller@scalable.com,,2413
+CORPWIN001537,4033,Feasibility Income,,3,11/03/2024 01:10:00 AM,fuller watson.fuller@scalable.com,,2414
+CORPWIN001537,774,Feasibility Outgoings,,3,11/03/2024 01:15:00 AM,fuller watson.fuller@scalable.com,,2415
+CORPWIN001537,1121,Application Summary,,3,11/03/2024 01:20:00 AM,fuller watson.fuller@scalable.com,,2416
+CORPWIN001537,900,Server Not Responding,,3,11/03/2024 01:25:00 AM,fuller watson.fuller@scalable.com,,2417
+CORPWIN001537,1001,Finish Mortgage Application,,3,11/03/2024 01:30:00 AM,fuller watson.fuller@scalable.com,,2418
+CORPWIN001537,1031,Create New Application,,1,11/05/2024 01:00:00 AM,fuller watson.fuller@scalable.com,,2419
+CORPWIN001537,1009,First Applicant Details,,1,11/05/2024 01:10:00 AM,fuller watson.fuller@scalable.com,,2420
+CORPWIN001537,4033,Feasibility Income,,1,11/05/2024 01:15:00 AM,fuller watson.fuller@scalable.com,,2421
+CORPWIN001537,5000,Windows Calculator,,1,11/05/2024 01:20:00 AM,fuller watson.fuller@scalable.com,,2422
+CORPWIN001537,774,Feasibility Outgoings,,1,11/05/2024 01:25:00 AM,fuller watson.fuller@scalable.com,,2423
+CORPWIN001537,1121,Application Summary,,1,11/05/2024 01:30:00 AM,fuller watson.fuller@scalable.com,,2424
+CORPWIN001537,1001,Finish Mortgage Application,,1,11/05/2024 01:35:00 AM,fuller watson.fuller@scalable.com,,2425
+CORPWIN001560,1031,Create New Application,,4,11/01/2024 01:00:00 AM,malcolm payne.malcolm@scalable.com,,2426
+CORPWIN001560,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,malcolm payne.malcolm@scalable.com,,2427
+CORPWIN001560,4033,Feasibility Income,,4,11/01/2024 01:10:00 AM,malcolm payne.malcolm@scalable.com,,2428
+CORPWIN001560,774,Feasibility Outgoings,,4,11/01/2024 01:15:00 AM,malcolm payne.malcolm@scalable.com,,2429
+CORPWIN001560,1121,Application Summary,,4,11/01/2024 01:20:00 AM,malcolm payne.malcolm@scalable.com,,2430
+CORPWIN001560,1001,Finish Mortgage Application,,4,11/01/2024 01:25:00 AM,malcolm payne.malcolm@scalable.com,,2431
+CORPWIN001560,1031,Create New Application,,3,11/03/2024 01:00:00 AM,malcolm payne.malcolm@scalable.com,,2432
+CORPWIN001560,900,Server Not Responding,,3,11/03/2024 01:05:00 AM,malcolm payne.malcolm@scalable.com,,2433
+CORPWIN001560,1031,Create New Application,,3,11/03/2024 01:10:00 AM,malcolm payne.malcolm@scalable.com,,2434
+CORPWIN001560,1009,First Applicant Details,,3,11/03/2024 01:15:00 AM,malcolm payne.malcolm@scalable.com,,2435
+CORPWIN001560,4033,Feasibility Income,,3,11/03/2024 01:20:00 AM,malcolm payne.malcolm@scalable.com,,2436
+CORPWIN001560,774,Feasibility Outgoings,,3,11/03/2024 01:25:00 AM,malcolm payne.malcolm@scalable.com,,2437
+CORPWIN001560,1121,Application Summary,,3,11/03/2024 01:30:00 AM,malcolm payne.malcolm@scalable.com,,2438
+CORPWIN001560,1001,Finish Mortgage Application,,3,11/03/2024 01:35:00 AM,malcolm payne.malcolm@scalable.com,,2439
+CORPWIN001560,1031,Create New Application,,1,11/05/2024 01:00:00 AM,malcolm payne.malcolm@scalable.com,,2440
+CORPWIN001560,1009,First Applicant Details,,1,11/05/2024 01:10:00 AM,malcolm payne.malcolm@scalable.com,,2441
+CORPWIN001560,4033,Feasibility Income,,1,11/05/2024 01:15:00 AM,malcolm payne.malcolm@scalable.com,,2442
+CORPWIN001560,774,Feasibility Outgoings,,1,11/05/2024 01:20:00 AM,malcolm payne.malcolm@scalable.com,,2443
+CORPWIN001560,5000,Windows Calculator,,1,11/05/2024 01:25:00 AM,malcolm payne.malcolm@scalable.com,,2444
+CORPWIN001560,1121,Application Summary,,1,11/05/2024 01:30:00 AM,malcolm payne.malcolm@scalable.com,,2445
+CORPWIN001560,1001,Finish Mortgage Application,,1,11/05/2024 01:35:00 AM,malcolm payne.malcolm@scalable.com,,2446
+CORPWIN001561,1031,Create New Application,,4,11/01/2024 01:00:00 AM,melyssa mcpherson.melyssa@scalable.com,,2447
+CORPWIN001561,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,melyssa mcpherson.melyssa@scalable.com,,2448
+CORPWIN001561,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,melyssa mcpherson.melyssa@scalable.com,,2449
+CORPWIN001561,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,melyssa mcpherson.melyssa@scalable.com,,2450
+CORPWIN001561,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,melyssa mcpherson.melyssa@scalable.com,,2451
+CORPWIN001561,1121,Application Summary,,4,11/01/2024 01:25:00 AM,melyssa mcpherson.melyssa@scalable.com,,2452
+CORPWIN001561,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,melyssa mcpherson.melyssa@scalable.com,,2453
+CORPWIN001561,1031,Create New Application,,3,11/03/2024 01:00:00 AM,melyssa mcpherson.melyssa@scalable.com,,2454
+CORPWIN001561,1009,First Applicant Details,,3,11/03/2024 01:15:00 AM,melyssa mcpherson.melyssa@scalable.com,,2455
+CORPWIN001561,4033,Feasibility Income,,3,11/03/2024 01:20:00 AM,melyssa mcpherson.melyssa@scalable.com,,2456
+CORPWIN001561,774,Feasibility Outgoings,,3,11/03/2024 01:25:00 AM,melyssa mcpherson.melyssa@scalable.com,,2457
+CORPWIN001561,900,Server Not Responding,,3,11/03/2024 01:30:00 AM,melyssa mcpherson.melyssa@scalable.com,,2458
+CORPWIN001561,1031,Create New Application,,3,11/03/2024 01:35:00 AM,melyssa mcpherson.melyssa@scalable.com,,2459
+CORPWIN001561,1009,First Applicant Details,,3,11/03/2024 01:40:00 AM,melyssa mcpherson.melyssa@scalable.com,,2460
+CORPWIN001561,4033,Feasibility Income,,3,11/03/2024 01:45:00 AM,melyssa mcpherson.melyssa@scalable.com,,2461
+CORPWIN001561,774,Feasibility Outgoings,,3,11/03/2024 01:50:00 AM,melyssa mcpherson.melyssa@scalable.com,,2462
+CORPWIN001561,1121,Application Summary,,3,11/03/2024 01:55:00 AM,melyssa mcpherson.melyssa@scalable.com,,2463
+CORPWIN001561,1001,Finish Mortgage Application,,3,11/03/2024 02:00:00 AM,melyssa mcpherson.melyssa@scalable.com,,2464
+CORPWIN001569,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,zahir griffin.zahir@scalable.com,,2465
+CORPWIN001569,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,zahir griffin.zahir@scalable.com,,2466
+CORPWIN001569,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,zahir griffin.zahir@scalable.com,,2467
+CORPWIN001569,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,zahir griffin.zahir@scalable.com,,2468
+CORPWIN001569,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,zahir griffin.zahir@scalable.com,,2469
+CORPWIN001569,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,zahir griffin.zahir@scalable.com,,2470
+CORPWIN001569,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,zahir griffin.zahir@scalable.com,,2471
+CORPWIN001569,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,zahir griffin.zahir@scalable.com,,2472
+CORPWIN001569,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,zahir griffin.zahir@scalable.com,,2473
+CORPWIN001640,1031,Create New Application,,4,11/01/2024 01:00:00 AM,tanek larsen.tanek@scalable.com,,2474
+CORPWIN001640,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,tanek larsen.tanek@scalable.com,,2475
+CORPWIN001640,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,tanek larsen.tanek@scalable.com,,2476
+CORPWIN001640,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,tanek larsen.tanek@scalable.com,,2477
+CORPWIN001640,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,tanek larsen.tanek@scalable.com,,2478
+CORPWIN001640,1121,Application Summary,,4,11/01/2024 01:25:00 AM,tanek larsen.tanek@scalable.com,,2479
+CORPWIN001640,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,tanek larsen.tanek@scalable.com,,2480
+CORPWIN001640,1031,Create New Application,,2,11/04/2024 01:00:00 AM,tanek larsen.tanek@scalable.com,,2481
+CORPWIN001640,1009,First Applicant Details,,2,11/04/2024 01:10:00 AM,tanek larsen.tanek@scalable.com,,2482
+CORPWIN001640,4033,Feasibility Income,,2,11/04/2024 01:15:00 AM,tanek larsen.tanek@scalable.com,,2483
+CORPWIN001640,5000,Microsoft Excel,,2,11/04/2024 01:20:00 AM,tanek larsen.tanek@scalable.com,Mortgages,2484
+CORPWIN001640,774,Feasibility Outgoings,,2,11/04/2024 01:25:00 AM,tanek larsen.tanek@scalable.com,,2485
+CORPWIN001640,5000,Microsoft Excel,,2,11/04/2024 01:30:00 AM,tanek larsen.tanek@scalable.com,Mortgages,2486
+CORPWIN001640,1121,Application Summary,,2,11/04/2024 01:35:00 AM,tanek larsen.tanek@scalable.com,,2487
+CORPWIN001640,1001,Finish Mortgage Application,,2,11/04/2024 01:40:00 AM,tanek larsen.tanek@scalable.com,,2488
+CORPWIN001642,1031,Create New Application,,4,11/01/2024 01:00:00 AM,emma lane.emma@scalable.com,,2489
+CORPWIN001642,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,emma lane.emma@scalable.com,,2490
+CORPWIN001642,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,emma lane.emma@scalable.com,,2491
+CORPWIN001642,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,emma lane.emma@scalable.com,,2492
+CORPWIN001642,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,emma lane.emma@scalable.com,,2493
+CORPWIN001642,1121,Application Summary,,4,11/01/2024 01:25:00 AM,emma lane.emma@scalable.com,,2494
+CORPWIN001642,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,emma lane.emma@scalable.com,,2495
+CORPWIN001642,1031,Create New Application,,2,11/04/2024 01:00:00 AM,emma lane.emma@scalable.com,,2496
+CORPWIN001642,1009,First Applicant Details,,2,11/04/2024 01:10:00 AM,emma lane.emma@scalable.com,,2497
+CORPWIN001642,4033,Feasibility Income,,2,11/04/2024 01:15:00 AM,emma lane.emma@scalable.com,,2498
+CORPWIN001642,774,Feasibility Outgoings,,2,11/04/2024 01:20:00 AM,emma lane.emma@scalable.com,,2499
+CORPWIN001642,5000,Microsoft Excel,,2,11/04/2024 01:25:00 AM,emma lane.emma@scalable.com,Mortgages,2500
+CORPWIN001642,1121,Application Summary,,2,11/04/2024 01:30:00 AM,emma lane.emma@scalable.com,,2501
+CORPWIN001642,1001,Finish Mortgage Application,,2,11/04/2024 01:35:00 AM,emma lane.emma@scalable.com,,2502
+CORPWIN001660,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,edward warner.edward@scalable.com,,2503
+CORPWIN001660,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,edward warner.edward@scalable.com,,2504
+CORPWIN001660,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,edward warner.edward@scalable.com,,2505
+CORPWIN001660,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,edward warner.edward@scalable.com,,2506
+CORPWIN001660,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,edward warner.edward@scalable.com,,2507
+CORPWIN001660,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,edward warner.edward@scalable.com,,2508
+CORPWIN001660,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,edward warner.edward@scalable.com,,2509
+CORPWIN001660,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,edward warner.edward@scalable.com,,2510
+CORPWIN001660,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,edward warner.edward@scalable.com,,2511
+CORPWIN001661,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,bradley fields.bradley@scalable.com,,2512
+CORPWIN001661,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,bradley fields.bradley@scalable.com,,2513
+CORPWIN001661,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,bradley fields.bradley@scalable.com,,2514
+CORPWIN001661,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,bradley fields.bradley@scalable.com,,2515
+CORPWIN001661,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,bradley fields.bradley@scalable.com,,2516
+CORPWIN001661,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,bradley fields.bradley@scalable.com,,2517
+CORPWIN001661,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,bradley fields.bradley@scalable.com,,2518
+CORPWIN001661,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,bradley fields.bradley@scalable.com,,2519
+CORPWIN001661,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,bradley fields.bradley@scalable.com,,2520
+CORPWIN001663,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,judith holt.judith@scalable.com,,2521
+CORPWIN001663,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,judith holt.judith@scalable.com,,2522
+CORPWIN001663,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,judith holt.judith@scalable.com,,2523
+CORPWIN001663,1008,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:15:00 AM,judith holt.judith@scalable.com,,2524
+CORPWIN001663,4032,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:20:00 AM,judith holt.judith@scalable.com,,2525
+CORPWIN001663,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:25:00 AM,judith holt.judith@scalable.com,,2526
+CORPWIN001663,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:30:00 AM,judith holt.judith@scalable.com,,2527
+CORPWIN001663,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:35:00 AM,judith holt.judith@scalable.com,,2528
+CORPWIN001663,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:40:00 AM,judith holt.judith@scalable.com,,2529
+CORPWIN001663,4481,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:45:00 AM,judith holt.judith@scalable.com,,2530
+CORPWIN001663,1217,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:50:00 AM,judith holt.judith@scalable.com,,2531
+CORPWIN001663,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:55:00 AM,judith holt.judith@scalable.com,,2532
+CORPWIN001663,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 02:00:00 AM,judith holt.judith@scalable.com,,2533
+CORPWIN001664,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,grant kinney.grant@scalable.com,,2534
+CORPWIN001664,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,grant kinney.grant@scalable.com,,2535
+CORPWIN001664,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,grant kinney.grant@scalable.com,,2536
+CORPWIN001664,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,grant kinney.grant@scalable.com,,2537
+CORPWIN001664,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,grant kinney.grant@scalable.com,,2538
+CORPWIN001664,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,grant kinney.grant@scalable.com,,2539
+CORPWIN001664,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,grant kinney.grant@scalable.com,,2540
+CORPWIN001664,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,grant kinney.grant@scalable.com,,2541
+CORPWIN001664,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,grant kinney.grant@scalable.com,,2542
+CORPWIN001666,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,hamish conway.hamish@scalable.com,,2543
+CORPWIN001666,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,hamish conway.hamish@scalable.com,,2544
+CORPWIN001666,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,hamish conway.hamish@scalable.com,,2545
+CORPWIN001666,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,hamish conway.hamish@scalable.com,,2546
+CORPWIN001666,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,hamish conway.hamish@scalable.com,,2547
+CORPWIN001666,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,hamish conway.hamish@scalable.com,,2548
+CORPWIN001666,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,hamish conway.hamish@scalable.com,,2549
+CORPWIN001666,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,hamish conway.hamish@scalable.com,,2550
+CORPWIN001666,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,hamish conway.hamish@scalable.com,,2551
+CORPWIN001667,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,abigail mathis.abigail@scalable.com,,2552
+CORPWIN001667,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,abigail mathis.abigail@scalable.com,,2553
+CORPWIN001667,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,abigail mathis.abigail@scalable.com,,2554
+CORPWIN001667,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,abigail mathis.abigail@scalable.com,,2555
+CORPWIN001667,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,abigail mathis.abigail@scalable.com,,2556
+CORPWIN001667,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,abigail mathis.abigail@scalable.com,,2557
+CORPWIN001667,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,abigail mathis.abigail@scalable.com,,2558
+CORPWIN001667,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,abigail mathis.abigail@scalable.com,,2559
+CORPWIN001667,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,abigail mathis.abigail@scalable.com,,2560
+CORPWIN001668,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,rachel harrell.rachel@scalable.com,,2561
+CORPWIN001668,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,rachel harrell.rachel@scalable.com,,2562
+CORPWIN001668,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,rachel harrell.rachel@scalable.com,,2563
+CORPWIN001668,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,rachel harrell.rachel@scalable.com,,2564
+CORPWIN001668,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,rachel harrell.rachel@scalable.com,,2565
+CORPWIN001668,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,rachel harrell.rachel@scalable.com,,2566
+CORPWIN001668,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,rachel harrell.rachel@scalable.com,,2567
+CORPWIN001668,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,rachel harrell.rachel@scalable.com,,2568
+CORPWIN001668,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,rachel harrell.rachel@scalable.com,,2569
+CORPWIN001719,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,dante knight.dante@scalable.com,,2570
+CORPWIN001719,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,dante knight.dante@scalable.com,,2571
+CORPWIN001719,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,dante knight.dante@scalable.com,,2572
+CORPWIN001719,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,dante knight.dante@scalable.com,,2573
+CORPWIN001719,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,dante knight.dante@scalable.com,,2574
+CORPWIN001719,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,dante knight.dante@scalable.com,,2575
+CORPWIN001719,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,dante knight.dante@scalable.com,,2576
+CORPWIN001719,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,dante knight.dante@scalable.com,,2577
+CORPWIN001719,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,dante knight.dante@scalable.com,,2578
+CORPWIN001720,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,sydnee sheppard.sydnee@scalable.com,,2579
+CORPWIN001720,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,sydnee sheppard.sydnee@scalable.com,,2580
+CORPWIN001720,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,sydnee sheppard.sydnee@scalable.com,,2581
+CORPWIN001720,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,sydnee sheppard.sydnee@scalable.com,,2582
+CORPWIN001720,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,sydnee sheppard.sydnee@scalable.com,,2583
+CORPWIN001720,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,sydnee sheppard.sydnee@scalable.com,,2584
+CORPWIN001720,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:30:00 AM,sydnee sheppard.sydnee@scalable.com,,2585
+CORPWIN001720,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:35:00 AM,sydnee sheppard.sydnee@scalable.com,,2586
+CORPWIN001723,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,denton schneider.denton@scalable.com,,2587
+CORPWIN001723,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,denton schneider.denton@scalable.com,,2588
+CORPWIN001723,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,denton schneider.denton@scalable.com,,2589
+CORPWIN001723,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,denton schneider.denton@scalable.com,,2590
+CORPWIN001723,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,denton schneider.denton@scalable.com,,2591
+CORPWIN001723,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,denton schneider.denton@scalable.com,,2592
+CORPWIN001723,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,denton schneider.denton@scalable.com,,2593
+CORPWIN001723,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,denton schneider.denton@scalable.com,,2594
+CORPWIN001723,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,denton schneider.denton@scalable.com,,2595
+CORPWIN001727,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,ethan alvarado.ethan@scalable.com,,2596
+CORPWIN001727,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,ethan alvarado.ethan@scalable.com,,2597
+CORPWIN001727,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,ethan alvarado.ethan@scalable.com,,2598
+CORPWIN001727,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,ethan alvarado.ethan@scalable.com,,2599
+CORPWIN001727,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,ethan alvarado.ethan@scalable.com,,2600
+CORPWIN001727,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,ethan alvarado.ethan@scalable.com,,2601
+CORPWIN001727,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,ethan alvarado.ethan@scalable.com,,2602
+CORPWIN001727,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,ethan alvarado.ethan@scalable.com,,2603
+CORPWIN001727,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,ethan alvarado.ethan@scalable.com,,2604
+CORPWIN001728,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,brynn cox.brynn@scalable.com,,2605
+CORPWIN001728,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,brynn cox.brynn@scalable.com,,2606
+CORPWIN001728,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,brynn cox.brynn@scalable.com,,2607
+CORPWIN001728,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,brynn cox.brynn@scalable.com,,2608
+CORPWIN001728,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,brynn cox.brynn@scalable.com,,2609
+CORPWIN001728,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,brynn cox.brynn@scalable.com,,2610
+CORPWIN001728,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,brynn cox.brynn@scalable.com,,2611
+CORPWIN001728,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,brynn cox.brynn@scalable.com,,2612
+CORPWIN001728,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,brynn cox.brynn@scalable.com,,2613
+CORPWIN001737,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,russell wilkins.russell@scalable.com,,2614
+CORPWIN001737,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,russell wilkins.russell@scalable.com,,2615
+CORPWIN001737,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,russell wilkins.russell@scalable.com,,2616
+CORPWIN001737,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,russell wilkins.russell@scalable.com,,2617
+CORPWIN001737,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,russell wilkins.russell@scalable.com,,2618
+CORPWIN001737,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,russell wilkins.russell@scalable.com,,2619
+CORPWIN001737,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,russell wilkins.russell@scalable.com,,2620
+CORPWIN001737,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,russell wilkins.russell@scalable.com,,2621
+CORPWIN001737,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,russell wilkins.russell@scalable.com,,2622
+CORPWIN001738,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,lucius gardner.lucius@scalable.com,,2623
+CORPWIN001738,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,lucius gardner.lucius@scalable.com,,2624
+CORPWIN001738,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,lucius gardner.lucius@scalable.com,,2625
+CORPWIN001738,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,lucius gardner.lucius@scalable.com,,2626
+CORPWIN001738,1008,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,lucius gardner.lucius@scalable.com,,2627
+CORPWIN001738,4032,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:30:00 AM,lucius gardner.lucius@scalable.com,,2628
+CORPWIN001738,4553,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:35:00 AM,lucius gardner.lucius@scalable.com,,2629
+CORPWIN001738,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:40:00 AM,lucius gardner.lucius@scalable.com,,2630
+CORPWIN001738,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:45:00 AM,lucius gardner.lucius@scalable.com,,2631
+CORPWIN001738,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:50:00 AM,lucius gardner.lucius@scalable.com,,2632
+CORPWIN001738,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 02:00:00 AM,lucius gardner.lucius@scalable.com,,2633
+CORPWIN001738,4481,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 02:05:00 AM,lucius gardner.lucius@scalable.com,,2634
+CORPWIN001738,1217,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 02:10:00 AM,lucius gardner.lucius@scalable.com,,2635
+CORPWIN001738,773,AWS - Create Method,US East (N. Virginia),4,09/30/2024 02:20:00 AM,lucius gardner.lucius@scalable.com,,2636
+CORPWIN001738,4480,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 02:25:00 AM,lucius gardner.lucius@scalable.com,,2637
+CORPWIN001738,1211,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 02:30:00 AM,lucius gardner.lucius@scalable.com,,2638
+CORPWIN001738,770,AWS - Create Method,US East (N. Virginia),4,09/30/2024 02:35:00 AM,lucius gardner.lucius@scalable.com,,2639
+CORPWIN001738,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 02:40:00 AM,lucius gardner.lucius@scalable.com,,2640
+CORPWIN001739,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,kelly hudson.kelly@scalable.com,,2641
+CORPWIN001739,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,kelly hudson.kelly@scalable.com,,2642
+CORPWIN001739,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,kelly hudson.kelly@scalable.com,,2643
+CORPWIN001739,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,kelly hudson.kelly@scalable.com,,2644
+CORPWIN001739,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,kelly hudson.kelly@scalable.com,,2645
+CORPWIN001739,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,kelly hudson.kelly@scalable.com,,2646
+CORPWIN001739,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:30:00 AM,kelly hudson.kelly@scalable.com,,2647
+CORPWIN001739,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:35:00 AM,kelly hudson.kelly@scalable.com,,2648
+CORPWIN001740,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,mohammad nichols.mohammad@scalable.com,,2649
+CORPWIN001740,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,mohammad nichols.mohammad@scalable.com,,2650
+CORPWIN001740,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,mohammad nichols.mohammad@scalable.com,,2651
+CORPWIN001740,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,mohammad nichols.mohammad@scalable.com,,2652
+CORPWIN001740,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,mohammad nichols.mohammad@scalable.com,,2653
+CORPWIN001740,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,mohammad nichols.mohammad@scalable.com,,2654
+CORPWIN001740,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:30:00 AM,mohammad nichols.mohammad@scalable.com,,2655
+CORPWIN001740,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:35:00 AM,mohammad nichols.mohammad@scalable.com,,2656
+CORPWIN001770,1031,Create New Application,,4,11/01/2024 01:00:00 AM,ulric daniels.ulric@scalable.com,,2657
+CORPWIN001770,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,ulric daniels.ulric@scalable.com,,2658
+CORPWIN001770,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,ulric daniels.ulric@scalable.com,,2659
+CORPWIN001770,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,ulric daniels.ulric@scalable.com,,2660
+CORPWIN001770,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,ulric daniels.ulric@scalable.com,,2661
+CORPWIN001770,1121,Application Summary,,4,11/01/2024 01:25:00 AM,ulric daniels.ulric@scalable.com,,2662
+CORPWIN001770,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,ulric daniels.ulric@scalable.com,,2663
+CORPWIN001770,1031,Create New Application,,2,11/04/2024 01:00:00 AM,ulric daniels.ulric@scalable.com,,2664
+CORPWIN001770,1009,First Applicant Details,,2,11/04/2024 01:10:00 AM,ulric daniels.ulric@scalable.com,,2665
+CORPWIN001770,4033,Feasibility Income,,2,11/04/2024 01:15:00 AM,ulric daniels.ulric@scalable.com,,2666
+CORPWIN001770,774,Feasibility Outgoings,,2,11/04/2024 01:20:00 AM,ulric daniels.ulric@scalable.com,,2667
+CORPWIN001770,5000,Microsoft Excel,,2,11/04/2024 01:25:00 AM,ulric daniels.ulric@scalable.com,Mortgages,2668
+CORPWIN001770,1121,Application Summary,,2,11/04/2024 01:30:00 AM,ulric daniels.ulric@scalable.com,,2669
+CORPWIN001770,1001,Finish Mortgage Application,,2,11/04/2024 01:35:00 AM,ulric daniels.ulric@scalable.com,,2670
+CORPWIN001865,1031,Create New Application,,4,11/01/2024 01:00:00 AM,erin mcconnell.erin@scalable.com,,2671
+CORPWIN001865,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,erin mcconnell.erin@scalable.com,,2672
+CORPWIN001865,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,erin mcconnell.erin@scalable.com,,2673
+CORPWIN001865,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,erin mcconnell.erin@scalable.com,,2674
+CORPWIN001865,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,erin mcconnell.erin@scalable.com,,2675
+CORPWIN001865,1121,Application Summary,,4,11/01/2024 01:25:00 AM,erin mcconnell.erin@scalable.com,,2676
+CORPWIN001865,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,erin mcconnell.erin@scalable.com,,2677
+CORPWIN001865,1031,Create New Application,,2,11/04/2024 01:00:00 AM,erin mcconnell.erin@scalable.com,,2678
+CORPWIN001865,1009,First Applicant Details,,2,11/04/2024 01:10:00 AM,erin mcconnell.erin@scalable.com,,2679
+CORPWIN001865,4033,Feasibility Income,,2,11/04/2024 01:15:00 AM,erin mcconnell.erin@scalable.com,,2680
+CORPWIN001865,774,Feasibility Outgoings,,2,11/04/2024 01:20:00 AM,erin mcconnell.erin@scalable.com,,2681
+CORPWIN001865,5000,Microsoft Excel,,2,11/04/2024 01:25:00 AM,erin mcconnell.erin@scalable.com,Mortgages,2682
+CORPWIN001865,1121,Application Summary,,2,11/04/2024 01:30:00 AM,erin mcconnell.erin@scalable.com,,2683
+CORPWIN001865,1001,Finish Mortgage Application,,2,11/04/2024 01:35:00 AM,erin mcconnell.erin@scalable.com,,2684
+CORPWIN001895,1031,Create New Application,,4,11/01/2024 01:00:00 AM,amber harper.amber@scalable.com,,2685
+CORPWIN001895,1009,First Applicant Details,,4,11/01/2024 01:05:00 AM,amber harper.amber@scalable.com,,2686
+CORPWIN001895,1002,Second Applicant Details,,4,11/01/2024 01:10:00 AM,amber harper.amber@scalable.com,,2687
+CORPWIN001895,4033,Feasibility Income,,4,11/01/2024 01:15:00 AM,amber harper.amber@scalable.com,,2688
+CORPWIN001895,774,Feasibility Outgoings,,4,11/01/2024 01:20:00 AM,amber harper.amber@scalable.com,,2689
+CORPWIN001895,1121,Application Summary,,4,11/01/2024 01:25:00 AM,amber harper.amber@scalable.com,,2690
+CORPWIN001895,1001,Finish Mortgage Application,,4,11/01/2024 01:30:00 AM,amber harper.amber@scalable.com,,2691
+CORPWIN001895,1031,Create New Application,,2,11/04/2024 01:00:00 AM,amber harper.amber@scalable.com,,2692
+CORPWIN001895,1009,First Applicant Details,,2,11/04/2024 01:10:00 AM,amber harper.amber@scalable.com,,2693
+CORPWIN001895,4033,Feasibility Income,,2,11/04/2024 01:15:00 AM,amber harper.amber@scalable.com,,2694
+CORPWIN001895,5000,Microsoft Excel,,2,11/04/2024 01:20:00 AM,amber harper.amber@scalable.com,Mortgages,2695
+CORPWIN001895,774,Feasibility Outgoings,,2,11/04/2024 01:25:00 AM,amber harper.amber@scalable.com,,2696
+CORPWIN001895,1121,Application Summary,,2,11/04/2024 01:30:00 AM,amber harper.amber@scalable.com,,2697
+CORPWIN001895,1001,Finish Mortgage Application,,2,11/04/2024 01:35:00 AM,amber harper.amber@scalable.com,,2698
+CORPWIN001895,1031,Create New Application,,1,11/05/2024 01:00:00 AM,amber harper.amber@scalable.com,,2699
+CORPWIN001895,1009,First Applicant Details,,1,11/05/2024 01:10:00 AM,amber harper.amber@scalable.com,,2700
+CORPWIN001895,4033,Feasibility Income,,1,11/05/2024 01:15:00 AM,amber harper.amber@scalable.com,,2701
+CORPWIN001895,774,Feasibility Outgoings,,1,11/05/2024 01:20:00 AM,amber harper.amber@scalable.com,,2702
+CORPWIN001895,5000,Windows Calculator,,1,11/05/2024 01:25:00 AM,amber harper.amber@scalable.com,,2703
+CORPWIN001895,1121,Application Summary,,1,11/05/2024 01:30:00 AM,amber harper.amber@scalable.com,,2704
+CORPWIN001895,1001,Finish Mortgage Application,,1,11/05/2024 01:35:00 AM,amber harper.amber@scalable.com,,2705
+CORPWIN001962,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,macaulay langley.macaulay@scalable.com,,2706
+CORPWIN001962,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,macaulay langley.macaulay@scalable.com,,2707
+CORPWIN001962,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,macaulay langley.macaulay@scalable.com,,2708
+CORPWIN001962,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,macaulay langley.macaulay@scalable.com,,2709
+CORPWIN001962,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,macaulay langley.macaulay@scalable.com,,2710
+CORPWIN001962,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,macaulay langley.macaulay@scalable.com,,2711
+CORPWIN001962,1218,AWS - Select CORS,US East (N. Virginia),4,09/30/2024 01:30:00 AM,macaulay langley.macaulay@scalable.com,,2712
+CORPWIN001962,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:35:00 AM,macaulay langley.macaulay@scalable.com,,2713
+CORPWIN001962,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:40:00 AM,macaulay langley.macaulay@scalable.com,,2714
+CORPWIN002069,1031,AWS - Create API - Start,US East (N. Virginia),4,09/30/2024 01:00:00 AM,conan sellers.conan@scalable.com,,2715
+CORPWIN002069,1009,AWS - Create REST API,US East (N. Virginia),4,09/30/2024 01:05:00 AM,conan sellers.conan@scalable.com,,2716
+CORPWIN002069,4033,AWS - Select Endpoint Type,US East (N. Virginia),4,09/30/2024 01:10:00 AM,conan sellers.conan@scalable.com,,2717
+CORPWIN002069,4555,AWS - Create API Resource,US East (N. Virginia),4,09/30/2024 01:15:00 AM,conan sellers.conan@scalable.com,,2718
+CORPWIN002069,3322,AWS - Create Resource,US East (N. Virginia),4,09/30/2024 01:20:00 AM,conan sellers.conan@scalable.com,,2719
+CORPWIN002069,4482,AWS - Select a Mock API,US East (N. Virginia),4,09/30/2024 01:25:00 AM,conan sellers.conan@scalable.com,,2720
+CORPWIN002069,774,AWS - Create Method,US East (N. Virginia),4,09/30/2024 01:30:00 AM,conan sellers.conan@scalable.com,,2721
+CORPWIN002069,1455,AWS - Create API - Finish,US East (N. Virginia),4,09/30/2024 01:35:00 AM,conan sellers.conan@scalable.com,,2722
+CORPWIN00310,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,piper.hahn@scalable.com,,2723
+CORPWIN00310,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,piper.hahn@scalable.com,,2724
+CORPWIN00310,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,piper.hahn@scalable.com,,2725
+CORPWIN00310,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,piper.hahn@scalable.com,,2726
+CORPWIN00508,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,earline.bailey@scalable.com,,2727
+CORPWIN00508,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,earline.bailey@scalable.com,,2728
+CORPWIN00508,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,earline.bailey@scalable.com,,2729
+CORPWIN00508,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,earline.bailey@scalable.com,,2730
+CORPWIN00619,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,gerardo.padberg@scalable.com,,2731
+CORPWIN00619,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,gerardo.padberg@scalable.com,,2732
+CORPWIN00619,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,gerardo.padberg@scalable.com,,2733
+CORPWIN00619,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,gerardo.padberg@scalable.com,,2734
+CORPWIN00619,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,gerardo.padberg@scalable.com,,2735
+CORPWIN00619,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:05:00 AM,gerardo.padberg@scalable.com,,2736
+CORPWIN00619,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:10:00 AM,gerardo.padberg@scalable.com,,2737
+CORPWIN00619,4033,Microsoft Outlook,US East (N. Virginia),1,12/01/2024 01:15:00 AM,gerardo.padberg@scalable.com,,2738
+CORPWIN00619,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,gerardo.padberg@scalable.com,,2739
+CORPWIN00620,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,brandon.satterfield@scalable.com,,2740
+CORPWIN00620,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,brandon.satterfield@scalable.com,,2741
+CORPWIN00620,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,brandon.satterfield@scalable.com,,2742
+CORPWIN00620,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,brandon.satterfield@scalable.com,,2743
+CORPWIN00620,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,brandon.satterfield@scalable.com,,2744
+CORPWIN00620,1031,Microsoft Excel,US East (N. Virginia),1,12/01/2024 01:05:00 AM,brandon.satterfield@scalable.com,L1,2745
+CORPWIN00620,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:10:00 AM,brandon.satterfield@scalable.com,,2746
+CORPWIN00620,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:15:00 AM,brandon.satterfield@scalable.com,,2747
+CORPWIN00620,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,brandon.satterfield@scalable.com,,2748
+CORPWIN00633,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,marcelino.veum@scalable.com,,2749
+CORPWIN00633,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,marcelino.veum@scalable.com,,2750
+CORPWIN00633,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,marcelino.veum@scalable.com,,2751
+CORPWIN00633,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,marcelino.veum@scalable.com,,2752
+CORPWIN00633,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,marcelino.veum@scalable.com,,2753
+CORPWIN00633,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:05:00 AM,marcelino.veum@scalable.com,,2754
+CORPWIN00633,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:10:00 AM,marcelino.veum@scalable.com,,2755
+CORPWIN00633,4033,Microsoft Excel,US East (N. Virginia),1,12/01/2024 01:15:00 AM,marcelino.veum@scalable.com,L1,2756
+CORPWIN00633,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,marcelino.veum@scalable.com,,2757
+CORPWIN00634,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,lonnie.kertzmann@scalable.com,,2758
+CORPWIN00634,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,lonnie.kertzmann@scalable.com,,2759
+CORPWIN00634,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,lonnie.kertzmann@scalable.com,,2760
+CORPWIN00634,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,lonnie.kertzmann@scalable.com,,2761
+CORPWIN00634,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,lonnie.kertzmann@scalable.com,,2762
+CORPWIN00634,1031,Microsoft Excel,US East (N. Virginia),1,12/01/2024 01:05:00 AM,lonnie.kertzmann@scalable.com,L1,2763
+CORPWIN00634,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:10:00 AM,lonnie.kertzmann@scalable.com,,2764
+CORPWIN00634,1009,Microsoft Outlook,US East (N. Virginia),1,12/01/2024 01:15:00 AM,lonnie.kertzmann@scalable.com,,2765
+CORPWIN00634,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:20:00 AM,lonnie.kertzmann@scalable.com,,2766
+CORPWIN00634,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:25:00 AM,lonnie.kertzmann@scalable.com,,2767
+CORPWIN00635,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,alvena.gutmann@scalable.com,,2768
+CORPWIN00635,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,alvena.gutmann@scalable.com,,2769
+CORPWIN00635,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,alvena.gutmann@scalable.com,,2770
+CORPWIN00635,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,alvena.gutmann@scalable.com,,2771
+CORPWIN00635,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,alvena.gutmann@scalable.com,,2772
+CORPWIN00635,1031,Microsoft Excel,US East (N. Virginia),1,12/01/2024 01:05:00 AM,alvena.gutmann@scalable.com,L1,2773
+CORPWIN00635,1031,Microsoft Outlook,US East (N. Virginia),1,12/01/2024 01:10:00 AM,alvena.gutmann@scalable.com,,2774
+CORPWIN00635,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:15:00 AM,alvena.gutmann@scalable.com,,2775
+CORPWIN00635,1009,LogMeIn Rescue,US East (N. Virginia),1,12/01/2024 01:20:00 AM,alvena.gutmann@scalable.com,,2776
+CORPWIN00635,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:25:00 AM,alvena.gutmann@scalable.com,,2777
+CORPWIN00635,4033,Microsoft Outlook,US East (N. Virginia),1,12/01/2024 01:30:00 AM,alvena.gutmann@scalable.com,,2778
+CORPWIN00635,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:35:00 AM,alvena.gutmann@scalable.com,,2779
+CORPWIN00636,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,dorthy.hodkiewicz@scalable.com,,2780
+CORPWIN00636,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,dorthy.hodkiewicz@scalable.com,,2781
+CORPWIN00636,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,dorthy.hodkiewicz@scalable.com,,2782
+CORPWIN00636,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,dorthy.hodkiewicz@scalable.com,,2783
+CORPWIN00636,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,dorthy.hodkiewicz@scalable.com,,2784
+CORPWIN00636,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:05:00 AM,dorthy.hodkiewicz@scalable.com,,2785
+CORPWIN00636,774,LogMeIn Rescue,US East (N. Virginia),1,12/01/2024 01:10:00 AM,dorthy.hodkiewicz@scalable.com,,2786
+CORPWIN00636,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:15:00 AM,dorthy.hodkiewicz@scalable.com,,2787
+CORPWIN00636,774,LogMeIn Rescue,US East (N. Virginia),1,12/01/2024 01:20:00 AM,dorthy.hodkiewicz@scalable.com,,2788
+CORPWIN00636,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:25:00 AM,dorthy.hodkiewicz@scalable.com,,2789
+CORPWIN00661,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,lia.boehm@scalable.com,,2790
+CORPWIN00661,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,lia.boehm@scalable.com,,2791
+CORPWIN00661,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,lia.boehm@scalable.com,,2792
+CORPWIN00661,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,lia.boehm@scalable.com,,2793
+CORPWIN00661,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,lia.boehm@scalable.com,,2794
+CORPWIN00661,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:05:00 AM,lia.boehm@scalable.com,,2795
+CORPWIN00661,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:10:00 AM,lia.boehm@scalable.com,,2796
+CORPWIN00661,4033,LogMeIn Rescue,US East (N. Virginia),1,12/01/2024 01:15:00 AM,lia.boehm@scalable.com,,2797
+CORPWIN00661,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,lia.boehm@scalable.com,,2798
+CORPWIN00662,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,eldora.schimmel@scalable.com,,2799
+CORPWIN00662,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,eldora.schimmel@scalable.com,,2800
+CORPWIN00662,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,eldora.schimmel@scalable.com,,2801
+CORPWIN00662,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,eldora.schimmel@scalable.com,,2802
+CORPWIN00662,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,eldora.schimmel@scalable.com,,2803
+CORPWIN00662,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:05:00 AM,eldora.schimmel@scalable.com,,2804
+CORPWIN00662,1009,LogMeIn Rescue,US East (N. Virginia),1,12/01/2024 01:10:00 AM,eldora.schimmel@scalable.com,,2805
+CORPWIN00662,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:15:00 AM,eldora.schimmel@scalable.com,,2806
+CORPWIN00662,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,eldora.schimmel@scalable.com,,2807
+CORPWIN00663,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,jailyn.conroy@scalable.com,,2808
+CORPWIN00663,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,jailyn.conroy@scalable.com,,2809
+CORPWIN00663,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,jailyn.conroy@scalable.com,,2810
+CORPWIN00663,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,jailyn.conroy@scalable.com,,2811
+CORPWIN00663,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,jailyn.conroy@scalable.com,,2812
+CORPWIN00663,1009,Teamviewer,US East (N. Virginia),1,12/01/2024 01:05:00 AM,jailyn.conroy@scalable.com,,2813
+CORPWIN00663,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:10:00 AM,jailyn.conroy@scalable.com,,2814
+CORPWIN00663,1009,Teamviewer,US East (N. Virginia),1,12/01/2024 01:15:00 AM,jailyn.conroy@scalable.com,,2815
+CORPWIN00663,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:20:00 AM,jailyn.conroy@scalable.com,,2816
+CORPWIN00663,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:25:00 AM,jailyn.conroy@scalable.com,,2817
+CORPWIN00664,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,amari.blanda@scalable.com,,2818
+CORPWIN00664,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,amari.blanda@scalable.com,,2819
+CORPWIN00664,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,amari.blanda@scalable.com,,2820
+CORPWIN00664,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,amari.blanda@scalable.com,,2821
+CORPWIN00664,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,amari.blanda@scalable.com,,2822
+CORPWIN00664,1031,Teamviewer,US East (N. Virginia),1,12/01/2024 01:05:00 AM,amari.blanda@scalable.com,,2823
+CORPWIN00664,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:10:00 AM,amari.blanda@scalable.com,,2824
+CORPWIN00664,1031,Teamviewer,US East (N. Virginia),1,12/01/2024 01:15:00 AM,amari.blanda@scalable.com,,2825
+CORPWIN00664,774,Teamviewer,US East (N. Virginia),1,12/01/2024 01:15:00 AM,lilian.ledner@scalable.com,,2826
+CORPWIN00664,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:20:00 AM,amari.blanda@scalable.com,,2827
+CORPWIN00664,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:25:00 AM,amari.blanda@scalable.com,,2828
+CORPWIN00700,1031,Create New Application,,1,11/05/2024 01:00:00 AM,danny.carvajal@scalable.com,,2829
+CORPWIN00700,1009,First Applicant Details,,1,11/05/2024 01:10:00 AM,danny.carvajal@scalable.com,,2830
+CORPWIN00700,4033,Feasibility Income,,1,11/05/2024 01:15:00 AM,danny.carvajal@scalable.com,,2831
+CORPWIN00700,774,Feasibility Outgoings,,1,11/05/2024 01:20:00 AM,danny.carvajal@scalable.com,,2832
+CORPWIN00700,5000,Windows Calculator,,1,11/05/2024 01:25:00 AM,danny.carvajal@scalable.com,,2833
+CORPWIN00700,1121,Application Summary,,1,11/05/2024 01:30:00 AM,danny.carvajal@scalable.com,,2834
+CORPWIN00700,1001,Finish Mortgage Application,,1,11/05/2024 01:35:00 AM,danny.carvajal@scalable.com,,2835
+CORPWIN00701,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,lilian.ledner@scalable.com,,2836
+CORPWIN00701,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,lilian.ledner@scalable.com,,2837
+CORPWIN00701,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,lilian.ledner@scalable.com,,2838
+CORPWIN00701,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,lilian.ledner@scalable.com,,2839
+CORPWIN00701,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,lilian.ledner@scalable.com,,2840
+CORPWIN00701,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:05:00 AM,lilian.ledner@scalable.com,,2841
+CORPWIN00701,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:10:00 AM,lilian.ledner@scalable.com,,2842
+CORPWIN00701,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,lilian.ledner@scalable.com,,2843
+CORPWIN00702,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,meredith.douglas@scalable.com,,2844
+CORPWIN00702,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,meredith.douglas@scalable.com,,2845
+CORPWIN00702,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,meredith.douglas@scalable.com,,2846
+CORPWIN00702,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,meredith.douglas@scalable.com,,2847
+CORPWIN00702,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,meredith.douglas@scalable.com,,2848
+CORPWIN00702,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:05:00 AM,meredith.douglas@scalable.com,,2849
+CORPWIN00702,1009,Microsoft Outlook,US East (N. Virginia),1,12/01/2024 01:10:00 AM,meredith.douglas@scalable.com,,2850
+CORPWIN00702,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:15:00 AM,meredith.douglas@scalable.com,,2851
+CORPWIN00702,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,meredith.douglas@scalable.com,,2852
+CORPWIN00703,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,mario.hagenes@scalable.com,,2853
+CORPWIN00703,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,mario.hagenes@scalable.com,,2854
+CORPWIN00703,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,mario.hagenes@scalable.com,,2855
+CORPWIN00703,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,mario.hagenes@scalable.com,,2856
+CORPWIN00703,1031,Create New Incident,US East (N. Virginia),1,12/01/2024 01:00:00 AM,mario.hagenes@scalable.com,,2857
+CORPWIN00703,1009,Add Contact,US East (N. Virginia),1,12/01/2024 01:05:00 AM,mario.hagenes@scalable.com,,2858
+CORPWIN00703,4033,Incident Description,US East (N. Virginia),1,12/01/2024 01:10:00 AM,mario.hagenes@scalable.com,,2859
+CORPWIN00703,4033,Microsoft Outlook,US East (N. Virginia),1,12/01/2024 01:15:00 AM,mario.hagenes@scalable.com,,2860
+CORPWIN00703,774,Ticket Submitted,US East (N. Virginia),1,12/01/2024 01:20:00 AM,mario.hagenes@scalable.com,,2861
+CORPWIN00901,1031,Create New Application,,1,11/05/2024 01:00:00 AM,tom.fong@scalable.com,,2862
+CORPWIN00901,1009,First Applicant Details,,1,11/05/2024 01:10:00 AM,tom.fong@scalable.com,,2863
+CORPWIN00901,4033,Feasibility Income,,1,11/05/2024 01:15:00 AM,tom.fong@scalable.com,,2864
+CORPWIN00901,774,Feasibility Outgoings,,1,11/05/2024 01:20:00 AM,tom.fong@scalable.com,,2865
+CORPWIN00901,5000,Windows Calculator,,1,11/05/2024 01:25:00 AM,tom.fong@scalable.com,,2866
+CORPWIN00901,1121,Application Summary,,1,11/05/2024 01:30:00 AM,tom.fong@scalable.com,,2867
+CORPWIN00901,1001,Finish Mortgage Application,,1,11/05/2024 01:35:00 AM,tom.fong@scalable.com,,2868
+CORPWIN00980,1031,Create New Incident,US East (N. Virginia),4,10/30/2024 01:00:00 AM,alfonzo.will@scalable.com,,2869
+CORPWIN00980,1009,Add Contact,US East (N. Virginia),4,10/30/2024 01:05:00 AM,alfonzo.will@scalable.com,,2870
+CORPWIN00980,4033,Incident Description,US East (N. Virginia),4,10/30/2024 01:10:00 AM,alfonzo.will@scalable.com,,2871
+CORPWIN00980,774,Ticket Submitted,US East (N. Virginia),4,10/30/2024 01:35:00 AM,alfonzo.will@scalable.com,,2872

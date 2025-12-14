@@ -1,0 +1,15 @@
+<data_view_info name="Data Simulator Program Crashes Raw" table="cmdb_program_crash" show_summary="f" group_fields="t">
+	<columns>
+		<column path="command_line_args" show_in_table="t"/>
+		<column path="computer" show_in_table="t"/>
+		<column path="location" show_in_table="t"/>
+		<column path="program_instance" show_in_table="t"/>
+		<column path="timestamp" show_in_table="t"/>
+		<column path="user" show_in_table="t"/>
+		<column path="user>person" show_in_table="t"/>
+		<column path="id" show_in_table="t"/>
+		<column path="user>source" show_in_table="t"/>
+		<column path="computer>virtual" show_in_table="t"/>
+		<column path="computer>os_ver" show_in_table="t"/>
+	</columns>
+</data_view_info>

@@ -1,0 +1,6 @@
+<data_view_info name="Data Simulator User Journey Previews" table="ds_user_journey_preview" show_summary="f" group_fields="t">
+	<columns>
+		<column path="name" show_in_table="t"/>
+		<column path="label" show_in_table="t"/>
+	</columns>
+</data_view_info>

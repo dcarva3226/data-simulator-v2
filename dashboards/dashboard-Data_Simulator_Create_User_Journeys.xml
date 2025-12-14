@@ -1,0 +1,88 @@
+<dashboard name="Data Simulator Create User Journeys" columns="2" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+	<widgets>
+		<ui_widget_html title="Overview" colspan="2" rowspan="1" show_title="t">
+			<attributes>
+				<html><![CDATA[<div><span style="font-family: Helvetica; font-size: small;">This section can be used to create user journeys.</span></div>]]></html>
+			</attributes>
+		</ui_widget_html>
+		<ui_widget_function_list title="User Journey Totals" colspan="1" rowspan="1" show_title="t" show_decoration="t">
+			<functions>
+				<ui_widget_function name="Filler 1">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<configs>
+								<data_view_info name="Data Simulator Program Crashes Raw" table="cmdb_program_crash" show_summary="f" group_fields="t">
+									<columns>
+										<column path="command_line_args" show_in_table="t"/>
+										<column path="computer" show_in_table="t"/>
+										<column path="location" show_in_table="t"/>
+										<column path="program_instance" show_in_table="t"/>
+										<column path="timestamp" show_in_table="t"/>
+										<column path="user" show_in_table="t"/>
+										<column path="user>person" show_in_table="t"/>
+										<column path="id" show_in_table="t"/>
+										<column path="user>source" show_in_table="t"/>
+										<column path="computer>virtual" show_in_table="t"/>
+										<column path="computer>os_ver" show_in_table="t"/>
+									</columns>
+								</data_view_info>
+							</configs>
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"blue",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="Filler 2">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"green",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="Filler 3">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"orange",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Program Crashes Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+			</functions>
+		</ui_widget_function_list>
+		<ui_widget_chart title="User Journeys" colspan="1" rowspan="1" type="DOUGHNUT_CHART" aggregate="COUNT" limit="25" order_by="Aggregation value" order_dir="DESC" drill_into_details="f" data_view="Data Simulator Program Crashes Raw" group_by="computer>os_ver" showToolTip="true"/>
+	</widgets>
+</dashboard>

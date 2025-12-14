@@ -1,0 +1,119 @@
+<data_view_info name="Data Simulator Daily Usage Previews" table="ds_daily_usage_preview" show_summary="f" group_fields="t">
+	<columns>
+		<column path="label" show_in_table="t" label="Details"/>
+		<column path="name" show_in_table="f"/>
+		<column show_in_table="t" label="Totals">
+			<attributes>
+				<path><![CDATA[_calc:value::string:"include(\"ssi.utils.js\");
+var retVal = \"\";
+var name = get(\"Name\");
+
+if (name == \"tot_person_included_groups\") {
+
+    let col = Query.coalesce(Query.countDistinct(\"agp.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_groups_include\", \"gi\");
+    q.join(\"acu_group_person\", \"agp\", \"agp.group\", \"gi.group\");	
+    retVal = this.exec.execute1(q); 
+
+} else if (name == \"tot_person_included_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_users_include\", \"ui\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ui.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_persons_excluded_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_users_exclude\", \"ux\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ux.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_unique_persons\") {
+    
+    let subq1 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq1.from(\"ds_daily_usage_users_exclude\", \"e\");
+    subq1.join(\"cmn_user\", \"u\", \"u.id\", \"e.user\"); 
+    subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let EXCLUDED_USER_PERSONS = this.exec.executeL1(subq1);
+    
+    let subq2 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"gp.person\")));
+    subq2.from(\"ds_daily_usage_groups_include\", \"gi\");
+    subq2.join(\"acu_group_person\", \"gp\", \"gp.group\", \"gi.group\"); 
+    let INCLUDED_GROUP_PERSONS = this.exec.executeL1(subq2);    
+    
+    let subq3 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq3.from(\"ds_daily_usage_users_include\", \"gi\");
+    subq3.join(\"cmn_user\", \"u\", \"u.id\", \"gi.user\");     
+    subq3.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let INCLUDED_USER_PERSONS = this.exec.executeL1(subq3);        
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"cmn_user\", \"u\");
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    
+    if (INCLUDED_USER_PERSONS.length > 0 || INCLUDED_GROUP_PERSONS.length > 0) {
+        q.where
+        (
+            Criterion.AND
+            (
+                Criterion.OR
+                (
+                    Criterion.IN(\"u.person\", INCLUDED_USER_PERSONS),
+                    Criterion.IN(\"u.person\", INCLUDED_GROUP_PERSONS)
+                ),
+                Criterion.NOT_IN(\"u.person\", EXCLUDED_USER_PERSONS),
+                Criterion.ILIKE(\"u.source\", \"%@datasim%\")    
+            )
+        );
+    } else {
+        q.where(Criterion.NOT_IN(\"u.person\", EXCLUDED_USER_PERSONS));                    
+    }
+    
+    retVal = this.exec.execute1(q);
+  
+} else if (name == \"tot_software\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"s.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_software\", \"s\");
+    q.where(Criterion.EQ(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_software_disabled\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"s.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_software\", \"s\");
+    q.where(Criterion.NE(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_webapps\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"w.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_webapp\", \"w\");
+    q.where(Criterion.EQ(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_webapps_disabled\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"w.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_daily_usage_webapp\", \"w\");
+    q.where(Criterion.NE(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+}
+
+retVal;":]]></path>
+			</attributes>
+		</column>
+	</columns>
+</data_view_info>

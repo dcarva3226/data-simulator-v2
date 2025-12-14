@@ -1,0 +1,37 @@
+<data_view_info name="Data Simulator Include Groups" table="ds_daily_usage_groups_include" show_summary="f" group_fields="t">
+	<columns>
+		<column path="group" show_in_table="t"/>
+		<column path="group>type" show_in_table="t"/>
+		<column custom_control="Drill Down" data_view="Data Simulator Group Persons" orderDir="ASC" show_in_table="t" label="Person Count">
+			<attributes>
+				<path><![CDATA[_agg:person_count::Data Simulator Group Persons:" var 'group' is "group" ":COUNT:]]></path>
+				<criteria><![CDATA[ var 'group' is "group" ]]></criteria>
+			</attributes>
+		</column>
+		<column show_in_table="t" label="Usable Persons">
+			<attributes>
+				<path><![CDATA[_calc:valid_persons::string:"include(\"ssi.utils.js\");
+var group = get(\"Group\");
+
+let q = Query.select(java.util.Arrays.asList(Query.count(\"gp.id\")));
+q.from(\"acu_group_person\", \"gp\"); 
+q.join(\"cmn_user\", \"u\", \"u.person\", \"gp.person\")
+q.where(Criterion.AND(Criterion.EQ(\"gp.group\", group), Criterion.ILIKE(\"u.source\", \"%@datasim%\")));
+let personCount = this.exec.execute1(q);    
+    
+personCount;":person_count]]></path>
+			</attributes>
+		</column>
+	</columns>
+	<related_views>
+		<data_view_info name="Data Simulator Group Persons" table="acu_group_person" show_summary="f" group_fields="t">
+			<columns>
+				<column path="group" show_in_table="t"/>
+				<column path="group>name" show_in_table="f"/>
+				<column path="person" show_in_table="t"/>
+				<column path="group>type" show_in_table="t"/>
+				<column path="group>type>name" show_in_table="f"/>
+			</columns>
+		</data_view_info>
+	</related_views>
+</data_view_info>

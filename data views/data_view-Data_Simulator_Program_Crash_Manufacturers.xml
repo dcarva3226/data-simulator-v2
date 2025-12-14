@@ -1,0 +1,21 @@
+<data_view_info name="Data Simulator Program Crash Manufacturers" table="ds_crash_prog_manufacturer" show_summary="f" group_fields="t">
+	<columns>
+		<column path="manufacturer" show_in_table="t"/>
+		<column show_in_table="t" label="Person Count">
+			<attributes>
+				<path><![CDATA[_calc:person_count::string:"const exec = dbApi.getQueryExecutor();
+
+var manufacturer = get(\"Manufacturer\");
+
+var q = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"p.id\")));
+q.from(\"ds_crash_prog_manufacturer\", \"m\");
+q.join(\"cmdb_ci_computer\", \"c\", \"c.manufacturer\", \"m.manufacturer\");
+q.join(\"cmn_user\", \"u\", \"u.id\", \"c.primary_user\");             
+q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+q.where(Criterion.AND(Criterion.EQ(\"c.manufacturer\", manufacturer), Criterion.ILIKE(\"u.source\", \"%@datasim%\")));            
+var results = exec.executeL1(q); 
+results.length;":]]></path>
+			</attributes>
+		</column>
+	</columns>
+</data_view_info>

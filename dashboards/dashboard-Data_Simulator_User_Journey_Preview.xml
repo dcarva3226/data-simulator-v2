@@ -1,0 +1,32 @@
+<dashboard name="Data Simulator User Journey Preview" columns="2" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+	<widgets>
+		<ui_widget_data_grid title="Review Configuration" colspan="1" rowspan="1" data_view="Data Simulator User Journey Configs" limit="20">
+			<fields>
+				<field path="description"/>
+				<field path="value"/>
+			</fields>
+			<configs>
+				<data_view_info name="Data Simulator User Journey Configs" table="ds_user_journey_config" show_summary="f" group_fields="t">
+					<columns>
+						<column path="name" show_in_table="t"/>
+						<column path="description" show_in_table="t"/>
+						<column path="order" show_in_table="t"/>
+						<column path="type" show_in_table="t"/>
+						<column path="value" show_in_table="t"/>
+						<column path="var_name" show_in_table="t"/>
+					</columns>
+				</data_view_info>
+			</configs>
+		</ui_widget_data_grid>
+		<ui_widget_data_grid title="Person Totals" colspan="1" rowspan="1" data_view="Data Simulator User Journey Previews" limit="20">
+			<configs>
+				<data_view_info name="Data Simulator User Journey Previews" table="ds_user_journey_preview" show_summary="f" group_fields="t">
+					<columns>
+						<column path="name" show_in_table="t"/>
+						<column path="label" show_in_table="t"/>
+					</columns>
+				</data_view_info>
+			</configs>
+		</ui_widget_data_grid>
+	</widgets>
+</dashboard>

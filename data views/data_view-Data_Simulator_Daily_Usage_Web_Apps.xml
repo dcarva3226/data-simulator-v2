@@ -1,0 +1,115 @@
+<data_view_info name="Data Simulator Daily Usage Web Apps" table="ds_daily_usage_webapp" show_summary="f" group_fields="t">
+	<columns>
+		<column path="department" show_in_table="t"/>
+		<column path="enabled" show_in_table="t"/>
+		<column path="location" show_in_table="t"/>
+		<column path="role" show_in_table="t"/>
+		<column path="team" show_in_table="t"/>
+		<column path="webapp" show_in_table="t" label="Web App*"/>
+		<column custom_control="Colored Status" show_in_table="t" label="Message">
+			<attributes>
+				<path><![CDATA[_calc:message::string:"var mgr = dbApi.getEntityManager();
+var retVal = \"\";
+
+var groups = [get(\"Department\"), get(\"Location\"), get(\"Team\"), get(\"Role\")];
+
+var deptType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Department\")).get(\"id\");
+var locType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Location\")).get(\"id\");
+var teamType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Team\")).get(\"id\");
+var roleType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Role\")).get(\"id\");
+
+var types = [deptType, locType, teamType, roleType];
+
+for (var i = 0; i < groups.length; i++) {
+    if (!groups[i]) break;
+    var crit1 = Criterion.EQ(\"name\", groups[i]);
+    var crit2 = Criterion.EQ(\"type\", types[i]);
+    var entity = mgr.readEntity(\"acu_group\", Criterion.AND(crit1, crit2)); 
+    if (!entity) {
+        retVal = \"The group '\" + groups[i] + \"' was not found in the acu_group table.\";
+        break;
+    }
+}
+
+// Does the webapp have a SaaS app?
+var webapp = get(\"Web App*\");
+var saas = mgr.readEntity(\"acu_saas_app\", Criterion.EQ(\"webapp\", webapp));
+if (!saas)
+    retVal = \"The webapp does not have an Acumen SaaS webapp record in 'acu_saas_app'.\";
+
+if (retVal != \"\") retVal += \":#b00\";
+retVal;":]]></path>
+			</attributes>
+		</column>
+		<column show_in_table="t" label="Person count">
+			<attributes>
+				<path><![CDATA[_calc:person_count::string:"var dept = get(\"Department\");
+var loc = get(\"Location\");
+var team = get(\"Team\");
+var role = get(\"Role\");
+
+var mgr = dbApi.getEntityManager();
+
+var deptType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Department\")).get(\"id\");
+var locType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Location\")).get(\"id\");
+var teamType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Team\")).get(\"id\");
+var roleType = mgr.readEntity(\"acu_group_type\", Criterion.EQ(\"name\", \"Role\")).get(\"id\"); 
+
+var deptGroupId = null, locGroupId = null, teamGroupId = null, roleGroupId = null;
+
+var deptGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", deptType), Criterion.EQ(\"name\", dept)));
+if (deptGroup) deptGroupId = deptGroup.get(\"id\");
+
+var locGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", locType), Criterion.EQ(\"name\", loc)));
+if (locGroup) locGroupId = locGroup.get(\"id\");
+
+var teamGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", teamType), Criterion.EQ(\"name\", team)));
+if (teamGroup) teamGroupId = teamGroup.get(\"id\");
+
+var roleGroup = mgr.readEntity(\"acu_group\", 
+    Criterion.AND(Criterion.EQ(\"type\", roleType), Criterion.EQ(\"name\", role)));
+if (roleGroup) roleGroupId = roleGroup.get(\"id\");
+
+var crits = new java.util.ArrayList();
+
+if (dept) crits.add(Criterion.EQ(\"group\", deptGroupId));
+if (loc) crits.add(Criterion.EQ(\"group\", locGroupId));
+if (team) crits.add(Criterion.EQ(\"group\", teamGroupId));
+if (role) crits.add(Criterion.EQ(\"group\", roleGroupId));
+
+var groupPersonCount = 0;
+
+if (crits.size() > 0)
+    groupPersonCount = mgr.query(\"acu_group_person\").where(Criterion.AND(crits)).count();
+
+groupPersonCount;":]]></path>
+			</attributes>
+		</column>
+	</columns>
+	<controls>
+		<control name="Colored Status">
+			<attributes>
+				<renderer><![CDATA[if ($ctx.value == null || $ctx.value === '') {
+    '';
+} else {
+    var split = $ctx.value.split(':');
+    var label = split[0];
+    var color = '#EEE';
+    var marker = 0;
+    if (split.length > 1) {
+		color = split[1];
+    }
+    if (split.length > 2) {
+		marker = split[2];
+    }
+    var style = ';font-weight:normal;width:100%;border-radius:5px;box-shadow:0 1px 1px #CCC;color:#FFF;padding:3px 5px 0 5px;height:22px;box-sizing:border-box;';
+    var clazz = 'status-sm ' + label.toLowerCase() +'';
+    '<div class=\"'+ clazz +'\" data-marker=\"'+ marker + '\" style=\"background-color:'+ color + style  + '\">'+ label +'</div>'
+}]]></renderer>
+			</attributes>
+		</control>
+	</controls>
+</data_view_info>

@@ -1,0 +1,9 @@
+<data_view_info name="Data Simulator Create Resources User Db" table="ds_create_res_user_db" show_summary="f" group_fields="t">
+	<columns>
+		<column path="user_name" show_in_table="t"/>
+		<column path="first_name" show_in_table="t"/>
+		<column path="last_name" show_in_table="t"/>
+		<column path="email" show_in_table="t"/>
+		<column path="phone" show_in_table="t"/>
+	</columns>
+</data_view_info>

@@ -1,0 +1,85 @@
+<data_view_info name="Data Simulator Create Resources Computers" table="cmdb_ci_computer" show_summary="f" group_fields="t">
+	<columns>
+		<column path="name" show_in_table="t"/>
+		<column path="antispyware" show_in_table="t"/>
+		<column path="antivirus" show_in_table="t"/>
+		<column path="asset_type" show_in_table="t"/>
+		<column path="asset_tag" show_in_table="t"/>
+		<column path="bios_manufacturer" show_in_table="t"/>
+		<column path="bios_date" show_in_table="t"/>
+		<column path="bios_version" show_in_table="t"/>
+		<column path="baseboard_manufacturer" show_in_table="t"/>
+		<column path="baseboard_product" show_in_table="t"/>
+		<column path="baseboard_serial_no" show_in_table="t"/>
+		<column path="baseboard_version" show_in_table="t"/>
+		<column path="cpu" show_in_table="t"/>
+		<column path="cpu_count" show_in_table="t"/>
+		<column path="cpu_socket_count" show_in_table="t"/>
+		<column path="cpu_speed" show_in_table="t"/>
+		<column path="chassis" show_in_table="t"/>
+		<column path="cluster" show_in_table="t"/>
+		<column path="dns_fullname" show_in_table="t"/>
+		<column path="description" show_in_table="t"/>
+		<column path="bae_sccm_hardware_import_date" show_in_table="t"/>
+		<column path="device_location" show_in_table="t"/>
+		<column path="discovery_status" show_in_table="t"/>
+		<column path="disk_encryption" show_in_table="t"/>
+		<column path="domain" show_in_table="t"/>
+		<column path="domain_role" show_in_table="t"/>
+		<column path="enclosure_serial_no" show_in_table="t"/>
+		<column path="environment" show_in_table="t"/>
+		<column path="firewall" show_in_table="t"/>
+		<column path="form_factor" show_in_table="t"/>
+		<column path="hd" show_in_table="t"/>
+		<column path="hostid" show_in_table="t"/>
+		<column path="ip_address" show_in_table="t"/>
+		<column path="last_boot_up_date" show_in_table="t"/>
+		<column path="last_logged_in_user" show_in_table="t"/>
+		<column path="last_logged_in_user_admin" show_in_table="t"/>
+		<column path="location" show_in_table="t"/>
+		<column path="mac_address" show_in_table="t"/>
+		<column path="manufacturer" show_in_table="t"/>
+		<column path="memory_free_slot_count" show_in_table="t"/>
+		<column path="memory_total_capacity" show_in_table="t"/>
+		<column path="memory_total_slot_count" show_in_table="t"/>
+		<column path="model_name" show_in_table="t"/>
+		<column path="model_version" show_in_table="t"/>
+		<column path="os_architecture" show_in_table="t"/>
+		<column path="os_build_label" show_in_table="t"/>
+		<column path="os_build_number" show_in_table="t"/>
+		<column path="os_kernel_version" show_in_table="t"/>
+		<column path="os_service_pack" show_in_table="t"/>
+		<column path="ou" show_in_table="t"/>
+		<column path="os" show_in_table="t"/>
+		<column path="os_ver" show_in_table="t"/>
+		<column path="operational" show_in_table="t"/>
+		<column path="owner" show_in_table="t"/>
+		<column path="owner_group" show_in_table="t"/>
+		<column path="phc_site_code" show_in_table="t"/>
+		<column path="parsons_last_logged_in_user" show_in_table="t"/>
+		<column path="part_number" show_in_table="t"/>
+		<column path="primary_user" show_in_table="t"/>
+		<column path="proton_device_data" show_in_table="t"/>
+		<column path="ram" show_in_table="t"/>
+		<column path="serial_number" show_in_table="t"/>
+		<column path="staff_number" show_in_table="t"/>
+		<column path="stats" show_in_table="t"/>
+		<column path="status" show_in_table="t"/>
+		<column path="support_contact" show_in_table="t"/>
+		<column path="system_serial_no" show_in_table="t"/>
+		<column path="system_uuid" show_in_table="t"/>
+		<column path="time_zone" show_in_table="t"/>
+		<column path="computer_type" show_in_table="t"/>
+		<column path="update_policy" show_in_table="t"/>
+		<column path="virtual" show_in_table="t"/>
+		<column path="virtualization_software" show_in_table="t"/>
+		<column path="primary_user>source" show_in_table="t"/>
+	</columns>
+	<custom_filters>
+		<custom_filter name="Data Simulator Computers">
+			<attributes>
+				<criteria><![CDATA[ 'primary_user>source' contains "datasim" ]]></criteria>
+			</attributes>
+		</custom_filter>
+	</custom_filters>
+</data_view_info>

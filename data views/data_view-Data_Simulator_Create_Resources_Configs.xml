@@ -1,0 +1,125 @@
+<data_view_info name="Data Simulator Create Resources Configs" table="ds_create_res_config" show_summary="f" group_fields="t">
+	<columns>
+		<column path="name" show_in_table="t"/>
+		<column path="description" show_in_table="t"/>
+		<column path="value" show_in_table="t"/>
+		<column path="var_name" show_in_table="f" label="Var Name"/>
+		<column path="type" show_in_table="f"/>
+		<column path="order" show_in_table="f"/>
+		<column custom_control="Colored Status" show_in_table="t" label="Error Message">
+			<attributes>
+				<path><![CDATA[_calc:message::string:"include(\"ssi.utils.js\");
+var varName = get(\"Var Name\");
+var value = get(\"Value\");
+
+var errs = get(\"Errors\");
+var retVal = \"\";
+
+if (varName == \"number_of_users\") {
+
+    if (parseInt(value) < 0)
+        retVal = \"This value must be 0 or greater.\"
+  
+} else if (varName == \"number_of_computers\") {
+
+    if (parseInt(value) < 0) 
+        retVal = \"This number must be 0 or greater.\";
+
+} else if (varName == \"vdi_percentage\") {
+
+    if (parseInt(value) < 1 || parseInt(value) > 100) 
+        retVal = \"This number must be between 1 and 100.\";
+
+} else if (varName == \"operating_systems\") {
+    
+    var osSplit = value.split(\";\");
+    for (var i=0; i < osSplit.length; i++) {
+        
+        var os = osSplit[i].trim();
+
+        var entity = this.mgr.readEntity(\"cmdb_software_product_version\",
+            Criterion.EQ(\"friendly_name\", os)); 
+               
+        if (!entity) {
+            retVal = \"One or more OSs are not found in the database. (\" + os + \")\";
+            break;        
+        }  
+    }
+    
+} else if (varName == \"comp_manuf\") {
+    
+    var entity = this.mgr.readEntity(\"cmdb_discovered_company\", Criterion.EQ(\"name\", value.trim())); 
+           
+    if (!entity) {
+        retVal = \"The computer manufacturer was not found in the database.\";
+    }  
+
+} else if (varName == \"comp_cpu\") {
+    
+    var cnt = this.mgr.query(\"cmdb_cpu\").where(Criterion.EQ(\"model\", value.trim())).count(); 
+           
+    if (cnt == 0) {
+        retVal = \"The CPU was not found in the database.\";
+    }  
+
+} else if (varName == \"comp_ip_address_prefix\") {
+    
+    var ipSplit = value.split(\".\");
+    
+    if (ipSplit.length != 2) {
+        retVal = \"Enter an IP prefix like '192.169'.\";
+    }  
+    
+    if (isNaN(ipSplit[0]) || isNaN(ipSplit[1])) {
+        retVal = \"Enter a numeric IP like '192.169'.\";
+    }  
+} else if (varName == \"bios_release_date_old_perc\") {
+    
+    if (value < 0 || value > 100) {
+        retVal = \"Enter an value between 0 and 100.\";
+    }
+} else if (varName == \"bios_release_date_recent\") {
+    
+    if (value == \"\") {
+        retVal = \"Enter a date value.\";
+    }
+} else if (varName == \"bios_release_date_older\") {
+    
+    var dt = new java.util.Date(value);
+    var df = getDateDiff(dt, new java.util.Date());
+    
+    if (value == \"\" || df < 1095) {
+        retVal = \"Enter a date value that is greater than 3 years.\";
+    }
+}
+
+if (retVal != \"\") retVal += \":#b00\";
+
+retVal;":]]></path>
+			</attributes>
+		</column>
+	</columns>
+	<controls>
+		<control name="Colored Status">
+			<attributes>
+				<renderer><![CDATA[if ($ctx.value == null || $ctx.value === '') {
+    '';
+} else {
+    var split = $ctx.value.split(':');
+    var label = split[0];
+    var color = '#EEE';
+    var marker = 0;
+    if (split.length > 1) {
+		color = split[1];
+    }
+    if (split.length > 2) {
+		marker = split[2];
+    }
+    var style = ';font-weight:normal;width:100%;border-radius:5px;box-shadow:0 1px 1px #CCC;color:#FFF;padding:3px 5px 0 5px;height:22px;box-sizing:border-box;';
+    var clazz = 'status-sm ' + label.toLowerCase() +'';
+    '<div class=\"'+ clazz +'\" data-marker=\"'+ marker + '\" style=\"background-color:'+ color + style  + '\">'+ label +'</div>'
+}]]></renderer>
+			</attributes>
+		</control>
+	</controls>
+</data_view_info>

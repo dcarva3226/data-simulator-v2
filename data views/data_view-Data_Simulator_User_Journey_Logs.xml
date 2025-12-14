@@ -1,0 +1,8 @@
+<data_view_info name="Data Simulator User Journey Logs" table="ds_user_journey_log" show_summary="f" group_fields="t">
+	<columns>
+		<column path="name" show_in_table="t"/>
+		<column path="err" show_in_table="t"/>
+		<column path="uj_recs_created" show_in_table="t"/>
+		<column path="parameter_list" show_in_table="t"/>
+	</columns>
+</data_view_info>

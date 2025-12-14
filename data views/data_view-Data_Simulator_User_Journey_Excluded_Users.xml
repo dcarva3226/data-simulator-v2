@@ -1,0 +1,5 @@
+<data_view_info name="Data Simulator User Journey Excluded Users" table="ds_user_journey_user_exclude" show_summary="f" group_fields="t">
+	<columns>
+		<column path="user" show_in_table="t"/>
+	</columns>
+</data_view_info>

@@ -1,0 +1,41 @@
+Name,Description,Value,Error Message,Order,Variable Name,Type
+Create Program Daily Usage,Create program daily usage records,TRUE,,1,ds_cfg_create_pdu,bool
+Create Hardware Utilization,Create hardware utilization records alongside the daily usage,TRUE,,2,ds_cfg_create_hw,bool
+Start Date,Start date for usage creation (i.e. mm/dd/yyyy),1/1/2024,,3,ds_cfg_start_date,date
+End Date,End date for usage creation (i.e. mm/dd/yyyy),1/31/2024,,4,ds_cfg_end_date,date
+Usage Plan 1 Percentage,Percentage of increasing usage + increasing mouse clicks,30,,5,ds_cfg_plan_1,int
+Usage Plan 2 Percentage,Percentage of increasing usage + increasing mouse clicks but flatten out,30,,6,ds_cfg_plan_2,int
+Usage Plan 2 Flatten Percentage,Percentage of data range where the usage flattens out for plan 2,75,,7,ds_cfg_plan_2_flat,int
+Usage Plan 3 Percentage,Percentage of increasing usage by interactions stay low (read-only),30,,8,ds_cfg_plan_3,int
+Usage Plan 4 Percentage,Percentage of decreating usage and decreasing  mouse clicks,10,,9,ds_cfg_plan_4,int
+Light Usage Percentage,Percentage of users contributing to light usage (i.e. 5),40,,10,ds_cfg_lup,int
+Medium Usage Percentage,Percentage of users contributing to medium usage (i.e. 40),30,,11,ds_cfg_mup,int
+Heavy Usage Percentage,Percentage of users contributing to heavy usage (i.e. 40),30,,12,ds_cfg_hup,int
+No Usage Percentage,Percentage of users contributing no usage (i.e. 15),0,,13,ds_cfg_nup,int
+Light Usage Min Minutes,Light usage minimum minutes value per day,5,,14,ds_cfg_lu_min_mins,int
+Light Usage Max Minutes,Light usage maximum minutes value per  day,60,,15,ds_cfg_lu_max_mins,int
+Medium Usage Min Minutes,Medium usage minimum minutes value per  day,61,,16,ds_cfg_mu_min_mins,int
+Medium Usage Max Minutes,Medium usage maximum minutes value per  day,180,,17,ds_cfg_mu_max_mins,int
+Heavy Usage Min Minutes,Heavy usage minimum minutes value per  day,181,,18,ds_cfg_hu_min_mins,int
+Heavy Usage Max Minutes,Heavy usage maximum minutes value per  day,300,,19,ds_cfg_hu_max_mins,int
+Light Usage Min Keystrokes,Light usage minimum keystrokes value,100,,20,ds_cfg_lu_min_keys,int
+Light Usage Max Keystrokes,Light usage maximum keystrokes value,250,,21,ds_cfg_lu_max_keys,int
+Medium Usage Min Keystrokes,Medium usage minimum keystrokes value,251,,22,ds_cfg_mu_min_keys,int
+Medium Usage Max Keystrokes,Medium usage maximum keystrokes value,500,,23,ds_cfg_mu_max_keys,int
+Heavy Usage Min Keystrokes,Light usage minimum keystrokes value,501,,24,ds_cfg_hu_min_keys,int
+Heavy Usage Max Keystrokes,Light usage maximum keystrokes value,2000,,25,ds_cfg_hu_max_keys,int
+Light Usage Min Mouseclicks,Light usage minimum mouse clicks value,50,,26,ds_cfg_lu_min_mous,int
+Light Usage Max Mouseclicks,Light usage maximum mouse clicks value,100,,27,ds_cfg_lu_max_mous,int
+Medium Usage Min Mouseclicks,Medium usage minimum mouse clicks value,101,,28,ds_cfg_mu_min_mous,int
+Medium Usage Max Mouseclicks,Medium usage maximum mouse clicks value,300,,29,ds_cfg_mu_max_mous,int
+Heavy Usage Min Mouseclicks,Heavy usage minimum mouse clicks value,301,,30,ds_cfg_hu_min_mous,int
+Heavy Usage Max Mouseclicks,Heavy usage maximum mouse clicks value,1500,,31,ds_cfg_hu_max_mous,int
+Exclude Weekends,Do not generate usage on weekends (true or false),TRUE,,32,ds_cfg_exclude_weekends,bool
+Minimum Times Started,Minimum number of times started value (i.e. 1),1,,33,ds_cfg_min_times_started,int
+Maximum Times Started,Maximum number of times started value (i.e. 10),5,,34,ds_cfg_max_times_started,int
+Start Hour,Hour of the day where usage begins (0-23),8,,35,ds_cfg_start_hour,int
+End Hour,Hour of the day where usage ends (0-23),23,,36,ds_cfg_end_hour,int
+Device Utilization CPU Min,Device resource utilization minimum CPU,15,,37,ds_cfg_hw_cpu_min,int
+Device Utilization CPU Max,Device resource utilization maximum CPU,35,,38,ds_cfg_hw_cpu_max,int
+Device Utilization Mem Max,Device resource utilization minimum memory,15,,39,ds_cfg_hw_mem_min,int
+Device Utilization Mem Max,Device resource utilization maximum memory,35,,40,ds_cfg_hw_mem_max,int

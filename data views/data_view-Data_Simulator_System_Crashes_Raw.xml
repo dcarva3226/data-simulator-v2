@@ -1,0 +1,13 @@
+<data_view_info name="Data Simulator System Crashes Raw" table="cmdb_system_crash" show_summary="f" group_fields="t">
+	<columns>
+		<column path="computer" show_in_table="t"/>
+		<column path="computer>primary_user" show_in_table="t"/>
+		<column path="timestamp" show_in_table="t"/>
+		<column path="computer>primary_user>person" show_in_table="t"/>
+		<column path="id" show_in_table="t"/>
+		<column path="computer>primary_user>source" show_in_table="t"/>
+		<column path="computer>virtual" show_in_table="t"/>
+		<column path="computer>manufacturer" show_in_table="t"/>
+		<column path="computer>os_ver" show_in_table="t"/>
+	</columns>
+</data_view_info>

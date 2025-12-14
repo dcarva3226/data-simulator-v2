@@ -1,0 +1,227 @@
+<data_view_info name="Data Simulator Daily Usage Configs" table="ds_daily_usage_config" show_summary="f" group_fields="t">
+	<columns>
+		<column path="name" show_in_table="t"/>
+		<column path="description" show_in_table="t"/>
+		<column path="value" show_in_table="t"/>
+		<column custom_control="Colored Status" show_in_table="t" label="Error Message">
+			<attributes>
+				<path><![CDATA[_calc:message::string:"var mgr = dbApi.getEntityManager();
+var name = get(\"Name\");
+var value = get(\"Value\");
+
+var retVal = \"\";
+
+if (name == \"Create Program Daily Usage\")  {
+    
+    if (value != \"TRUE\" && value != \"FALSE\") 
+        retVal = \"Please enter TRUE or FALSE.\";
+}   
+
+if (name == \"Create Hardware Utilization\")  {
+    
+    if (value != \"TRUE\" && value != \"FALSE\") 
+        retVal = \"Please enter TRUE or FALSE.\";
+}
+
+if (name == \"Start Hour\") {
+    if (value < 0 || value > 23 || !value)
+       retVal = \"This value must be between 0 and 23.\";
+}
+
+if (name == \"End Hour\") {
+    if (value < 0 || value > 23 || !value)
+       retVal = \"This value must be between 0 and 23.\";
+} 
+
+if (name == \"Exclude Weekends\") {
+    
+    if (value != \"TRUE\" && value != \"FALSE\") 
+        retVal = \"Please enter TRUE or FALSE.\";
+}   
+
+/*************************************************************************************
+    Make sure start date is older than end date
+*************************************************************************************/
+if (name == \"Start Date\" || name == \"End Date\") {
+
+    var isValid = false;
+    var startDate = null, endDate = null;
+    var configs = this.mgr.readLazily(\"ds_daily_usage_config\", Criterion.IN(\"name\", [\"Start Date\", \"End Date\"]));
+    while (configs.hasNext()) {
+     
+        var config = configs.next();
+        var cfgValue = config.get('value');
+        if (cfgValue) {
+            
+            // Date check functions did not work, so using try/catch                    
+            try {
+                var dt = new java.util.Date(cfgValue);
+                isValid = true;            
+            } catch (e) {
+                retVal = \"Please enter a valid date in dd/mm/yyyy format.\";
+                isValid = false;            
+            }
+            
+            if (isValid) {        
+                if (config.get('name') == \"Start Date\")
+                    startDate = new java.util.Date(cfgValue);
+                else
+                    endDate = new java.util.Date(cfgValue);                              
+            }
+        }        
+    }
+    
+    if (isValid) {
+        if (config.get('name') == \"Start Date\")
+            startDate = new java.util.Date(cfgValue);
+        else
+            endDate = new java.util.Date(cfgValue);  
+         
+        if (startDate && endDate) {
+                      
+            if (startDate.getTime() > endDate.getTime()) {
+                retVal = \"The Start Date must be less than the End Date.\";  
+            }
+        } else {    
+            retVal = \"The Start Date and End Date must not be empty.\";
+        } 
+    }    
+}
+
+/*************************************************************************************
+    Make sure light, heavy, med usage percentages add up to 100
+*************************************************************************************/
+if (name.indexOf(\"Usage Percentage\") > -1) {
+    
+    var total = 0;
+    var lup = 0, mup = 0, hup = 0, nup = 0;
+    
+    var configs = mgr.readLazily(\"ds_daily_usage_config\", Criterion.ILIKE(\"name\", \"%Usage Percentage%\"));
+    while (configs.hasNext()) {
+        var config = configs.next();
+        total += parseInt(config.get('value'));
+    }
+    
+    if (total != 100) {
+        retVal = \"The light, med, heavy and no usage percentages must equal 100.\";                   
+    }
+}
+
+/*************************************************************************************
+    Make sure [Light, Med, Heavy] usage min and max minutes are legit
+*************************************************************************************/
+var TYPES = ['Minutes', 'Keystrokes'];
+var WEIGHTS = ['Light', 'Medium', 'Heavy'];
+
+for (var i = 0; i < WEIGHTS.length; i++) {
+    
+    for (var x = 0; x < TYPES.length; x++) {
+    
+        if (name.indexOf(WEIGHTS[i] + \" Usage Min \" + TYPES[x]) > -1 || name.indexOf(WEIGHTS[i] + \" Usage Max \" + TYPES[x]) > -1) {
+            var min = 0, max = 0;
+        
+            var configs = mgr.readLazily(\"ds_daily_usage_config\", Criterion.ILIKE(\"name\", WEIGHTS[i] + \" Usage%\" + TYPES[x]));
+            while (configs.hasNext()) {
+        
+                var config = configs.next();
+                var cfgName = config.get('name');
+        
+                if (cfgName == WEIGHTS[i] + \" Usage Min \" + TYPES[x]) 
+                    min = parseInt(config.get('value'));
+                else
+                    max = parseInt(config.get('value'));
+            }
+            
+            if (min > max) {
+                retVal = \"The minimum value must be less than the maximum value\"; 
+            }
+        }    
+    }    
+}
+
+/*************************************************************************************
+    Make sure times started are legit
+*************************************************************************************/
+if (name.indexOf(\"Minimum Times Started\") > -1 ) {
+    if (parseInt(value) < 1 || parseInt(value) > 50 || !value)
+        retVal = \"This value must be between 1 and 50.\";    
+}
+
+if (name.indexOf(\"Maximum Times Started\") > -1 ) {
+    if (parseInt(value) < 1 || parseInt(value) > 50 || !value)
+        retVal = \"This value must be between 1 and 50.\";    
+}
+
+/*************************************************************************************
+    Make sure uptime minutes are legit
+*************************************************************************************/
+if (name.indexOf(\"Minimum Uptime Minutes\") > -1 ) {
+    if (parseInt(value) < 1 || parseInt(value) > 1440 || !value)
+        retVal = \"This value must be between 1 and 1440.\";  
+}
+
+if (name.indexOf(\"Maximum Uptime Minutes\") > -1 ) {
+    if (parseInt(value) < 1 || parseInt(value) > 1440 || !value)
+        retVal = \"This value must be between 1 and 1440.\";  
+}
+
+/*************************************************************************************
+    Make sure usage plans are legit
+*************************************************************************************/
+if (name.indexOf(\"Usage Plan 2 Flatten Percentage\") > -1) {
+    if (parseInt(value) < 1 || parseInt(value) > 100 || !value)
+        retVal = \"This value must be between 1 and 100.\";      
+}
+
+if (name.indexOf(\"Usage Plan\") > -1 && name.indexOf(\"Flatten\") == -1) {
+    
+    var total = 0;
+    var plan1 = 0, plan2 = 0, plan3 = 0, plan4 = 0;
+    
+    var crit1 = Criterion.ILIKE(\"name\", \"%Usage Plan%\");
+    var crit2 = Criterion.NOT_LIKE(\"name\", \"%atten%\");
+    
+    var configs = mgr.readLazily(\"ds_daily_usage_config\", Criterion.AND(crit1, crit2));
+    while (configs.hasNext()) {
+        var config = configs.next();
+        total += parseInt(config.get('value'));
+    }
+    
+    if (total != 100) {
+        retVal = \"The usage plan percentages must equal 100.\";                   
+    }
+}
+
+if (retVal != \"\") retVal += \":#b00\";
+
+retVal;":]]></path>
+			</attributes>
+		</column>
+		<column path="order" show_in_table="f"/>
+		<column path="var_name" show_in_table="f"/>
+		<column path="type" show_in_table="f"/>
+	</columns>
+	<controls>
+		<control name="Colored Status">
+			<attributes>
+				<renderer><![CDATA[if ($ctx.value == null || $ctx.value === '') {
+    '';
+} else {
+    var split = $ctx.value.split(':');
+    var label = split[0];
+    var color = '#EEE';
+    var marker = 0;
+    if (split.length > 1) {
+		color = split[1];
+    }
+    if (split.length > 2) {
+		marker = split[2];
+    }
+    var style = ';font-weight:normal;width:100%;border-radius:5px;box-shadow:0 1px 1px #CCC;color:#FFF;padding:3px 5px 0 5px;height:22px;box-sizing:border-box;';
+    var clazz = 'status-sm ' + label.toLowerCase() +'';
+    '<div class=\"'+ clazz +'\" data-marker=\"'+ marker + '\" style=\"background-color:'+ color + style  + '\">'+ label +'</div>'
+}]]></renderer>
+			</attributes>
+		</control>
+	</controls>
+</data_view_info>

@@ -1,0 +1,49 @@
+<data_view_info name="Data Simulator Job Logs" table="sys_sch_job_log" category="Auto Generated" show_summary="f" group_fields="f">
+	<columns>
+		<column path="job_id" show_in_table="t"/>
+		<column custom_control="RAG" red="1" perc="true" min="0" green="50" max="100" show_in_table="t" label="Progress Status">
+			<attributes>
+				<path><![CDATA[_calc:progress_status::string:"var x = get(\"Progress\");
+x;":]]></path>
+			</attributes>
+		</column>
+		<column path="sys_user_id" show_in_table="t"/>
+		<column path="queue_time" show_in_table="t"/>
+		<column path="idempotence_type_id" show_in_table="f"/>
+		<column path="start_time" show_in_table="t"/>
+		<column path="end_time" show_in_table="t"/>
+		<column path="intent_time" show_in_table="f"/>
+		<column path="progress" show_in_table="f"/>
+		<column path="schedule_digest" show_in_table="f"/>
+		<column path="schedule_name" show_in_table="f"/>
+		<column path="succeeded" show_in_table="t"/>
+		<column path="details" show_in_table="t"/>
+	</columns>
+	<custom_filters>
+		<custom_filter name="Data Simulator">
+			<attributes>
+				<criteria><![CDATA[ 'job_id' is  ]]></criteria>
+			</attributes>
+		</custom_filter>
+		<custom_filter name="Daily Usage Script">
+			<attributes>
+				<criteria><![CDATA[ 'job_id' contains "ssi.datasim.create.daily.usage.js" ]]></criteria>
+			</attributes>
+		</custom_filter>
+		<custom_filter name="Create Resources Script">
+			<attributes>
+				<criteria><![CDATA[ 'job_id' contains "ssi.datasim.create.resources.js" ]]></criteria>
+			</attributes>
+		</custom_filter>
+		<custom_filter name="Create Program Crashes">
+			<attributes>
+				<criteria><![CDATA[ 'job_id' contains "ssi.datasim.create.prog.crashes.js" ]]></criteria>
+			</attributes>
+		</custom_filter>
+		<custom_filter name="Create System Crashes">
+			<attributes>
+				<criteria><![CDATA[ 'job_id' contains "ssi.datasim.create.sys.crashes.js" ]]></criteria>
+			</attributes>
+		</custom_filter>
+	</custom_filters>
+</data_view_info>

@@ -1,0 +1,10 @@
+<data_view_info name="Data Simulator User Journey Configs" table="ds_user_journey_config" show_summary="f" group_fields="t">
+	<columns>
+		<column path="name" show_in_table="t"/>
+		<column path="description" show_in_table="t"/>
+		<column path="order" show_in_table="t"/>
+		<column path="type" show_in_table="t"/>
+		<column path="value" show_in_table="t"/>
+		<column path="var_name" show_in_table="t"/>
+	</columns>
+</data_view_info>

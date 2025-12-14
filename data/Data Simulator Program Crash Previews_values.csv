@@ -1,0 +1,8 @@
+Name,Label
+tot_person_included_users,"Total persons included in ""Include Users"""
+tot_persons_excluded_users,"Total persons excluded in ""Exclude Users"""
+tot_manufacturers,Total number of manufacturers included
+tot_manufacturer_users,Total number of unique persons included from manufacturers
+tot_unique_persons,Total unique persons available for crash creation
+tot_software,"Total enabled software titles specified under ""Select Programs"""
+tot_software_disabled,"Total disabled software titles specified under ""Select Programs"""

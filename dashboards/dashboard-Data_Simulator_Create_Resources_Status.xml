@@ -1,0 +1,90 @@
+<refs>
+	<sys_sch_job>
+		<ref id="365" name="ssi.datasim.create.daily.usage.js"/>
+	</sys_sch_job>
+</refs>
+<dashboard name="Data Simulator Create Resources Status" columns="3" rows="3" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+	<widgets>
+		<ui_widget_html title="Instructions" colspan="3" rowspan="1" show_title="t">
+			<attributes>
+				<html><![CDATA[<style>
+body {
+  background-color: #f5f5f0;
+}
+</style>
+<div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">Use the "<span style="font-weight: bold;">Script Status</span>" area to see if the script is currently running. If the script End Time is empty, then the script is</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">still running.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">If you need to cancel the script, edit the job below and select the "<span style="font-weight: bold;">Cancel Job</span>" button.</span><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;">&nbsp;The script may not stop immediately.</span></div><div><span style="color: rgb(0, 0, 128); font-family: Arial; font-size: small;"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">To refresh the data below, right-click on the "<span style="font-weight: bold;">Script Status</span>" area and select "<span style="font-weight: bold;">Refresh Data</span>" to see status updates.</span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);"><br></span></div><div><span style="font-family: Arial; font-size: small; color: rgb(0, 0, 128);">If the script is not running, you may click on the blue "<span style="font-weight: bold;">Run Script</span>" below. Only click on it once.&nbsp;<br></span></div>]]></html>
+			</attributes>
+		</ui_widget_html>
+		<ui_widget_data_grid title="Script Status (Last 5 Runs)" colspan="3" rowspan="1" data_view="Data Simulator Job Logs" custom_filter="Create Resources Script" order_by="queue_time" order_dir="DESC" limit="5">
+			<configs>
+				<data_view_info name="Data Simulator Job Logs" table="sys_sch_job_log" category="Auto Generated" show_summary="f" group_fields="f">
+					<columns>
+						<column path="job_id" show_in_table="t"/>
+						<column custom_control="RAG" red="1" perc="true" min="0" green="50" max="100" show_in_table="t" label="Progress Status">
+							<attributes>
+								<path><![CDATA[_calc:progress_status::string:"var x = get(\"Progress\");
+x;":]]></path>
+							</attributes>
+						</column>
+						<column path="sys_user_id" show_in_table="t"/>
+						<column path="queue_time" show_in_table="t"/>
+						<column path="idempotence_type_id" show_in_table="f"/>
+						<column path="start_time" show_in_table="t"/>
+						<column path="end_time" show_in_table="t"/>
+						<column path="intent_time" show_in_table="f"/>
+						<column path="progress" show_in_table="f"/>
+						<column path="schedule_digest" show_in_table="f"/>
+						<column path="schedule_name" show_in_table="f"/>
+						<column path="succeeded" show_in_table="t"/>
+						<column path="details" show_in_table="t"/>
+					</columns>
+					<custom_filters>
+						<custom_filter name="Data Simulator">
+							<attributes>
+								<criteria><![CDATA[ 'job_id' is "365" ]]></criteria>
+							</attributes>
+						</custom_filter>
+						<custom_filter name="Daily Usage Script">
+							<attributes>
+								<criteria><![CDATA[ 'job_id' contains "ssi.datasim.create.daily.usage.js" ]]></criteria>
+							</attributes>
+						</custom_filter>
+						<custom_filter name="Create Resources Script">
+							<attributes>
+								<criteria><![CDATA[ 'job_id' contains "ssi.datasim.create.resources.js" ]]></criteria>
+							</attributes>
+						</custom_filter>
+						<custom_filter name="Create Program Crashes">
+							<attributes>
+								<criteria><![CDATA[ 'job_id' contains "ssi.data.sim.create.prog.crashes.js" ]]></criteria>
+							</attributes>
+						</custom_filter>
+						<custom_filter name="Create System Crashes">
+							<attributes>
+								<criteria><![CDATA[ 'job_id' contains "ssi.data.sim.create.sys.crashes.js" ]]></criteria>
+							</attributes>
+						</custom_filter>
+					</custom_filters>
+				</data_view_info>
+			</configs>
+		</ui_widget_data_grid>
+		<ui_widget_function_list title="Script Execution" colspan="1" rowspan="1" show_title="f" show_decoration="f">
+			<functions>
+				<ui_widget_function name="Run Script" description="Run script, if script is not already running.">
+					<pipelines>
+						<pipeline type="ActionButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"blue",iconName:"server"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="RunJobPipeline">
+							<attributes>
+								<config><![CDATA[base.sys_sch_schedule.job_id:"ssi.datasim.create.resources.js"]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+			</functions>
+		</ui_widget_function_list>
+	</widgets>
+</dashboard>

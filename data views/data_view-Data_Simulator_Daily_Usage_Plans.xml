@@ -1,0 +1,70 @@
+<data_view_info name="Data Simulator Daily Usage Plans" table="ds_daily_usage_plan" show_summary="f" group_fields="t">
+	<columns>
+		<column path="plan" show_in_table="f"/>
+		<column show_in_table="t" label="Plan Name">
+			<attributes>
+				<path><![CDATA[_calc:plan_name::string:"var plan = get(\"Plan\");
+var retVal = \"\";
+
+switch (plan){
+    case 1 : 
+        retVal = \"Plan 1 - Increase\";
+        break;
+    case 2 :
+        retVal = \"Plan 2 - Increase but Flatten\";
+        break;
+    case 3 :
+        retVal = \"Plan 3 - Increase as Read-only\"
+        break;
+    case 4 :
+        retVal = \"Plan 4 - Decrease\";
+        break;
+}
+
+retVal;":]]></path>
+			</attributes>
+		</column>
+		<column show_in_table="t" label="Description">
+			<attributes>
+				<path><![CDATA[_calc:description::string:"var plan = get(\"Plan\");
+var retVal = \"\";
+
+switch (plan){
+    case 1 : 
+        retVal = \"Increasing usage and keystrokes over time.\";
+        break;
+    case 2 :
+        retVal = \"Increasing usage and keystrokes but usage flattens out over time.\";
+        break;
+    case 3 :
+        retVal = \"Increasing usage but keystrokes remain low over time. (read-only)\"
+        break;
+    case 4 :
+        retVal = \"Decreasing usage and keystrokes over time.\";
+        break;
+}
+
+retVal;":plan]]></path>
+			</attributes>
+		</column>
+		<column path="week" show_in_table="t"/>
+		<column path="lu_min_mins" show_in_table="t"/>
+		<column path="lu_max_mins" show_in_table="t"/>
+		<column path="mu_min_mins" show_in_table="t"/>
+		<column path="mu_max_mins" show_in_table="t"/>
+		<column path="hu_min_mins" show_in_table="t"/>
+		<column path="hu_max_mins" show_in_table="t"/>
+		<column path="lu_min_keys" show_in_table="t"/>
+		<column path="lu_max_keys" show_in_table="t"/>
+		<column path="mu_min_keys" show_in_table="t"/>
+		<column path="mu_max_keys" show_in_table="t"/>
+		<column path="hu_min_keys" show_in_table="t"/>
+		<column path="hu_max_keys" show_in_table="t"/>
+		<column path="lu_min_mous" show_in_table="t"/>
+		<column path="lu_max_mous" show_in_table="t"/>
+		<column path="mu_min_mous" show_in_table="t"/>
+		<column path="mu_max_mous" show_in_table="t"/>
+		<column path="hu_min_mous" show_in_table="t"/>
+		<column path="hu_max_mous" show_in_table="t"/>
+	</columns>
+</data_view_info>

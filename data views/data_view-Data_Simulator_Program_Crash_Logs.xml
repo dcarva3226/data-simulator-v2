@@ -1,0 +1,54 @@
+<data_view_info name="Data Simulator Program Crash Logs" table="ds_crash_prog_log" show_summary="f" group_fields="t">
+	<columns>
+		<column path="name" show_in_table="t"/>
+		<column custom_control="Colored Status" show_in_table="t" label="Status">
+			<attributes>
+				<path><![CDATA[_calc:status::string:"var errs = get(\"Errors\");
+var color = null;
+var retVal = 0;
+
+if (errs == \"None\") 
+{
+    retVal = \"Pass\";
+    color = \":#74b72e\";
+} else {
+    retVal = \"Failed\";
+    color = \":#B00\";
+}
+
+retVal += color;":]]></path>
+			</attributes>
+		</column>
+		<column path="created_on" show_in_table="t"/>
+		<column path="created_by" show_in_table="t" label="Run By"/>
+		<column path="parameter_list" show_in_table="t"/>            
+		<column path="recs_created" show_in_table="t"/>
+		<column path="spkg_created" show_in_table="t"/>
+		<column path="prog_inst_created" show_in_table="t"/>
+		<column path="prog_created" show_in_table="t"/>
+		<column path="err" show_in_table="t" label="Errors"/>
+	</columns>
+	<controls>
+		<control name="Colored Status">
+			<attributes>
+				<renderer><![CDATA[if ($ctx.value == null || $ctx.value === '') {
+    '';
+} else {
+    var split = $ctx.value.split(':');
+    var label = split[0];
+    var color = '#EEE';
+    var marker = 0;
+    if (split.length > 1) {
+		color = split[1];
+    }
+    if (split.length > 2) {
+		marker = split[2];
+    }
+    var style = ';font-weight:normal;width:100%;border-radius:5px;box-shadow:0 1px 1px #CCC;color:#FFF;padding:3px 5px 0 5px;height:22px;box-sizing:border-box;';
+    var clazz = 'status-sm ' + label.toLowerCase() +'';
+    '<div class=\"'+ clazz +'\" data-marker=\"'+ marker + '\" style=\"background-color:'+ color + style  + '\">'+ label +'</div>'
+}]]></renderer>
+			</attributes>
+		</control>
+	</controls>
+</data_view_info>

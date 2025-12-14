@@ -1,0 +1,293 @@
+<dashboard name="Data Simulator Daily Usage Home" columns="3" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+	<widgets>
+		<ui_widget_html title="Widget Title" colspan="3" rowspan="1" show_title="t">
+			<attributes>
+				<html><![CDATA[<div><span style="font-family: Verdana; font-size: small;">This section can be used to create program daily usage for users/computers in the platform.&nbsp;</span><span style="font-family: Verdana; font-size: small;">It will also create program and packages if needed.&nbsp;</span><span style="font-family: Verdana; font-size: small;">If specified in the configuration, i</span><span style="font-family: Verdana; font-size: small;">t will also&nbsp;</span><span style="font-family: Verdana; font-size: small;">create device resource utilization records. I</span><span style="font-family: Verdana; font-size: small;">f needed, use the Create Resources menu to generate users and computers.&nbsp;</span><span style="font-family: Verdana; font-size: small;">If the target program, program publisher, program instance or software package already exists, Data Simulator will not create a duplicate.</span></div><span style="font-family: Verdana;"><div><span style="font-size: small;"><br></span></div><div><span style="font-size: small;">Configuration - configure the parameters for the creation of program daily usage.</span></div><div><span style="font-size: small;">Include Groups - use this page to include groups that will get usage created for them.</span></div><div><span style="font-size: small;">Include/Exclude Users - use this page to include or exclude users that will get usage created for them.</span></div><div><span style="font-size: small;">Select Software - use this page to select which software will have usage created against it.</span></div><div><span style="font-size: small;">Select Web Apps - use this page to select which web applications will have usage created against it.</span></div><div><span style="font-size: small;">Review Settings - use this page to review the settings before you run the script.</span></div><div><span style="font-size: small;">Execute - use this area to check on current script status and execute the script to create program daily usage.</span></div><div><span style="font-size: small;">View Logs - view details about previous script runs.<br>View Usage Plan Logs - view the last set of usage pattern data that was used.</span></div><div><span style="font-size: small;"><br></span></div><div><div><span style="font-size: small; font-weight: bold;">Pre-requisites</span></div><div><ul><li><span style="font-size: small;">User and persons must already exist in the database.</span></li><li><span style="font-size: small;">Computers must already exist in the database.</span></li></ul></div></div></span>]]></html>
+			</attributes>
+		</ui_widget_html>
+		<ui_widget_function_list title="Desktop Application Usage Totals" colspan="1" rowspan="1" show_title="t" show_decoration="t">
+			<functions>
+				<ui_widget_function name="Usage Records Created">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<configs>
+								<data_view_info name="Data Simulator Daily Usage Raw" table="cmdb_program_daily_usage" category="Auto Generated" show_summary="f" group_fields="f">
+									<columns>
+										<column path="day_of_week" show_in_table="t"/>
+										<column path="keystrokes" show_in_table="t"/>
+										<column path="minutes_in_use" show_in_table="t"/>
+										<column path="uptime_minutes" show_in_table="t"/>
+										<column path="program_instance" show_in_table="t"/>
+										<column path="thin_client" show_in_table="t"/>
+										<column path="times_started" show_in_table="t"/>
+										<column path="usage_date" show_in_table="t"/>
+										<column path="used_from" show_in_table="t"/>
+										<column path="user" show_in_table="t"/>
+										<column path="user>user_name" show_in_table="t"/>
+										<column path="user>source" show_in_table="t"/>
+										<column path="program_instance>spkg" show_in_table="t" label="Software Package"/>
+										<column path="program_instance>spkg>name" show_in_table="t"/>
+										<column path="program_instance>spkg>version" show_in_table="t"/>
+										<column path="program_instance>spkg>publisher" show_in_table="t"/>
+										<column path="program_instance>spkg>operational" show_in_table="t"/>
+										<column path="program_instance>spkg>software" show_in_table="t" label="Software Product Version"/>
+										<column path="program_instance>spkg>software_resolver>software>product" show_in_table="t" label="Software Product"/>
+										<column path="id" show_in_table="t"/>
+										<column path="program_instance>install_path" show_in_table="t"/>
+										<column path="run_time" show_in_table="t"/>
+										<column path="use_time" show_in_table="t"/>
+										<column path="utc_offset" show_in_table="t"/>
+										<column path="created_on" show_in_table="t"/>
+										<column path="created_by" show_in_table="t"/>
+										<column path="used_from>virtual" show_in_table="t"/>
+									</columns>
+									<custom_filters>
+										<custom_filter name="Nick Machine">
+											<attributes>
+												<criteria><![CDATA[ 'used_from' contains "DESKTOP-TG0HUUH" and 'minutes_in_use' is not 0 ]]></criteria>
+											</attributes>
+										</custom_filter>
+									</custom_filters>
+								</data_view_info>
+							</configs>
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"blue",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="VDI Computer Usage Records">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'used_from>virtual\' is t and \'program_instance\' is not empty  "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"green",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'used_from>virtual\' is t and \'program_instance\' is not empty  "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="Desktop Computer Usage Records">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'used_from>virtual\' is not t and \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"orange",footerIcon:"arrow-right",footerText:"More Details",iconName:"archive"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'used_from>virtual\' is not t and \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+			</functions>
+		</ui_widget_function_list>
+		<ui_widget_function_list title="Web App Usage Totals" colspan="1" rowspan="1" show_title="t" show_decoration="t">
+			<functions>
+				<ui_widget_function name="Usage Records Created">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'program_instance\' is empty  "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"blue",footerIcon:"arrow-right",footerText:"More Details",iconName:"chrome"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'program_instance\' is empty  "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="VDI Computer Usage Records">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'user>source\' contains \"@datasim\" and \'used_from>virtual\' is t and \'program_instance\' is empty  "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"green",footerIcon:"arrow-right",footerText:"More Details",iconName:"chrome"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'user>source\' contains \"@datasim\" and \'used_from>virtual\' is t and \'program_instance\' is empty  "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="Desktop Computer Usage Records">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'used_from>virtual\' is not t and \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"orange",footerIcon:"arrow-right",footerText:"More Details",iconName:"chrome"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Daily Usage Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'used_from>virtual\' is not t and \'user>source\' contains \"@datasim\" and \'program_instance\' is not empty  "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+			</functions>
+		</ui_widget_function_list>
+		<ui_widget_function_list title="Device Resource Utilization Totals" colspan="1" rowspan="1" show_title="t" show_decoration="t">
+			<functions>
+				<ui_widget_function name="Device Resource Utilization Records">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<configs>
+								<data_view_info name="Data Simulator Resource Utilization Raw" table="cmdb_device_resource_util" show_summary="f" group_fields="t">
+									<columns>
+										<column path="computer" show_in_table="t"/>
+										<column path="memory_usage" show_in_table="t"/>
+										<column path="processor_usage" show_in_table="t"/>
+										<column path="usage_date" show_in_table="t"/>
+										<column path="computer>primary_user>source" show_in_table="t"/>
+										<column path="id" show_in_table="t"/>
+										<column path="computer>virtual" show_in_table="t"/>
+									</columns>
+								</data_view_info>
+							</configs>
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"blue",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="VDI Computer Utilization Records">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"green",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is t "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="Desktop Computer Utilization Records">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:COUNT_DISTINCT,show_scopes:true,value:id,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"orange",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" and \'computer>virtual\' is not t "]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="Average Memory Utilization">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:AVG,show_scopes:true,value:memory_usage,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"red",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="ScriptFormatterPipeline">
+							<attributes>
+								<config><![CDATA[Format:"$value = $value + \"%\";"]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+				<ui_widget_function name="Average CPU Utilization">
+					<pipelines>
+						<pipeline type="AggregatedDataSourcePipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:AVG,show_scopes:true,value:processor_usage,date_aggregate_first:,date_aggregate_second:,orderDir:,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="InfoButtonRendererPipeline">
+							<attributes>
+								<config><![CDATA[colorName:"lightblue",footerIcon:"arrow-right",footerText:"More Details",iconName:"server"]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="DataViewDrillDownTransitionPipeline">
+							<attributes>
+								<config><![CDATA[dataView:Data Simulator Resource Utilization Raw,aggregate:,show_scopes:false,date_aggregate_first:,date_aggregate_second:,orderDir:ASC,criteria:" \'computer>primary_user>source\' contains \"@datasim\" "]]></config>
+							</attributes>
+						</pipeline>
+						<pipeline type="ScriptFormatterPipeline">
+							<attributes>
+								<config><![CDATA[Format:"$value = $value + \"%\";"]]></config>
+							</attributes>
+						</pipeline>
+					</pipelines>
+				</ui_widget_function>
+			</functions>
+		</ui_widget_function_list>
+	</widgets>
+</dashboard>

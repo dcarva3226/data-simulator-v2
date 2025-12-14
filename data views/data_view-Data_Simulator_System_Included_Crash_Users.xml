@@ -1,0 +1,9 @@
+<data_view_info name="Data Simulator System Included Crash Users" table="ds_crash_system_user_include" show_summary="f" group_fields="t">
+	<columns>
+		<column path="user" show_in_table="t"/>
+		<column path="user>source" show_in_table="t"/>
+		<column path="user>person>name" show_in_table="t"/>
+		<column path="user>person>user_name" show_in_table="t"/>
+		<column path="user>person>email" show_in_table="t"/>
+	</columns>
+</data_view_info>

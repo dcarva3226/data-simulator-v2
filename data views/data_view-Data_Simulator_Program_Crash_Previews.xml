@@ -1,0 +1,115 @@
+<data_view_info name="Data Simulator Program Crash Previews" table="ds_crash_prog_preview" show_summary="f" group_fields="t">
+	<columns>
+		<column path="name" show_in_table="f"/>
+		<column path="label" show_in_table="t"/>
+		<column show_in_table="t" label="Totals">
+			<attributes>
+				<path><![CDATA[_calc:totals::string:"include(\"ssi.utils.js\");
+var retVal = \"\";
+var name = get(\"Name\");
+
+if (name == \"tot_person_included_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_user_include\", \"ui\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ui.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_persons_excluded_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_user_exclude\", \"ux\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ux.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_manufacturers\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"m.id\"), Query.value(0)).as(\"count\");
+    let q = Query.selectDistinct(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_manufacturer\", \"m\");
+    retVal = this.exec.execute1(q);    
+    
+}  else if (name == \"tot_manufacturer_users\") {
+    
+    let subq0 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"m.manufacturer\")));
+    subq0.from(\"ds_crash_prog_manufacturer\", \"m\");
+    let INCLUDED_MANUFS = this.exec.executeL1(subq0);    
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let subq1 = Query.select(java.util.Arrays.asList(col));
+    subq1.from(\"cmn_user\", \"u\");
+    subq1.join(\"cmdb_ci_computer\", \"c\", \"c.primary_user\", \"u.id\");
+    subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+    subq1.where(AND(IN(\"c.manufacturer\", INCLUDED_MANUFS), ILIKE(\"u.source\", \"%@datasim%\")));   
+    retVal = this.exec.execute1(subq1);      
+    
+} else if (name == \"tot_unique_persons\") {
+
+    let subq0 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"m.manufacturer\")));
+    subq0.from(\"ds_crash_prog_manufacturer\", \"m\");
+    let MANUFS = this.exec.executeL1(subq0);
+
+    let subq1 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq1.from(\"ds_crash_prog_user_include\", \"e\");
+    subq1.join(\"cmn_user\", \"u\", \"u.id\", \"e.user\"); 
+    subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let INCLUDED_USER_PERSONS = exec.executeL1(subq1);    
+    
+    let subq2 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\", \"id\")));
+    subq2.from(\"cmn_user\", \"u\");
+    subq2.join(\"cmdb_ci_computer\", \"c\", \"c.primary_user\", \"u.id\");
+    subq2.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+    subq2.where(IN(\"c.manufacturer\", MANUFS));
+    let INCLUDED_MANUF_PERSONS = exec.executeL1(subq2);
+            
+    let subq3 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq3.from(\"ds_crash_prog_user_exclude\", \"e\");
+    subq3.join(\"cmn_user\", \"u\", \"u.id\", \"e.user\"); 
+    subq3.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let EXCLUDED_USER_PERSONS = this.exec.executeL1(subq3);
+         
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"cmn_user\", \"u\");
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    q.where
+    (
+        AND
+        (
+            OR(IN(\"u.person\", INCLUDED_USER_PERSONS),
+                IN(\"u.person\", INCLUDED_MANUF_PERSONS)    
+            ),
+            NOT_IN(\"u.person\", EXCLUDED_USER_PERSONS),
+            ILIKE(\"u.source\", \"%@datasim%\")    
+        )
+    );
+    
+    retVal = this.exec.execute1(q);
+
+} else if (name == \"tot_software\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"p.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_software\", \"p\");
+    q.where(Criterion.EQ(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_software_disabled\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"p.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_prog_software\", \"p\");
+    q.where(Criterion.NE(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+}
+
+retVal;":]]></path>
+			</attributes>
+		</column>
+	</columns>
+</data_view_info>

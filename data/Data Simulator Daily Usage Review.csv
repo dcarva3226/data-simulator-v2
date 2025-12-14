@@ -1,0 +1,9 @@
+Details,Name
+"Total persons included in ""Include Groups""",tot_person_included_groups
+"Total persons included in ""Include Users""",tot_person_included_users
+"Total persons excluded in ""Exclude Users""",tot_persons_excluded_users
+Total unique persons available for usage creation,tot_unique_persons
+"Total enabled software titles specified under ""Select Software""",tot_software
+"Total disabled software titles specified under ""Select Software""",tot_software_disabled
+"Total enabled web applications specified under ""Select Web Apps""",tot_webapps
+"Total disabled web applications specified under ""Select Web Apps""",tot_webapps_disabled

@@ -1,0 +1,37 @@
+<data_view_info name="Data Simulator Daily Usage Raw" table="cmdb_program_daily_usage" category="Auto Generated" show_summary="f" group_fields="f">
+	<columns>
+		<column path="day_of_week" show_in_table="t"/>
+		<column path="keystrokes" show_in_table="t"/>
+		<column path="minutes_in_use" show_in_table="t"/>
+		<column path="uptime_minutes" show_in_table="t"/>
+		<column path="program_instance" show_in_table="t"/>
+		<column path="thin_client" show_in_table="t"/>
+		<column path="times_started" show_in_table="t"/>
+		<column path="usage_date" show_in_table="t"/>
+		<column path="used_from" show_in_table="t"/>
+		<column path="user" show_in_table="t"/>
+		<column path="user>user_name" show_in_table="t"/>
+		<column path="user>source" show_in_table="t"/>
+		<column path="program_instance>spkg" show_in_table="t" label="Software Package"/>
+		<column path="program_instance>spkg>name" show_in_table="t"/>
+		<column path="program_instance>spkg>version" show_in_table="t"/>
+		<column path="program_instance>spkg>publisher" show_in_table="t"/>
+		<column path="program_instance>spkg>operational" show_in_table="t"/>
+		<column path="program_instance>spkg>software" show_in_table="t" label="Software Product Version"/>
+		<column path="program_instance>spkg>software_resolver>software>product" show_in_table="t" label="Software Product"/>
+		<column path="id" show_in_table="t"/>
+		<column path="program_instance>install_path" show_in_table="t"/>
+		<column path="run_time" show_in_table="t"/>
+		<column path="use_time" show_in_table="t"/>
+		<column path="utc_offset" show_in_table="t"/>
+		<column path="created_on" show_in_table="t"/>
+		<column path="created_by" show_in_table="t"/>
+	</columns>
+	<custom_filters>
+		<custom_filter name="Nick Machine">
+			<attributes>
+				<criteria><![CDATA[ 'used_from' contains "DESKTOP-TG0HUUH" and 'minutes_in_use' is not 0 ]]></criteria>
+			</attributes>
+		</custom_filter>
+	</custom_filters>
+</data_view_info>

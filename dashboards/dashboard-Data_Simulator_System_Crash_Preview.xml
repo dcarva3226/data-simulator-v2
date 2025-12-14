@@ -1,0 +1,205 @@
+<dashboard name="Data Simulator System Crash Preview" columns="2" rows="2" auto_preview="t" on_demand_export="t" subscription_personalized="f" export_pdf_format="COLUMN" subscription_format="PNG">
+	<widgets>
+		<ui_widget_data_grid title="Review Configuration" colspan="1" rowspan="1" data_view="Data Simulator System Crash Configs" limit="20">
+			<fields>
+				<field path="description"/>
+				<field path="value"/>
+			</fields>
+			<configs>
+				<data_view_info name="Data Simulator System Crash Configs" table="ds_crash_system_config" show_summary="f" group_fields="t">
+					<columns>
+						<column path="name" show_in_table="t"/>
+						<column path="description" show_in_table="t"/>
+						<column path="order" show_in_table="f"/>
+						<column path="type" show_in_table="f"/>
+						<column path="value" show_in_table="t"/>
+						<column path="var_name" show_in_table="f"/>
+						<column custom_control="Colored Status" show_in_table="t" label="Error Message">
+							<attributes>
+								<path><![CDATA[_calc:error_message::string:"var mgr = dbApi.getEntityManager();
+var name = get(\"Name\");
+var value = get(\"Value\");
+var retVal = \"\";
+
+if (name == \"Program Crash Minimum\") {
+
+    if (parseInt(value) < 0 || parseInt(value) > 20)
+        retVal = \"This value must be 0 or greater and less than 20.\";    
+    
+} else if (name == \"Program Crash Maximum\") {
+
+    if (parseInt(value) < 0 || parseInt(value) > 20)
+        retVal = \"This value must be 0 or greater and less than 20.\";    
+    
+} else if (name == \"Start Date\" || name == \"End Date\") {
+
+    var startDate = null, endDate = null;
+    var configs = mgr.readLazily(\"ds_crash_prog_config\", Criterion.IN(\"name\", [\"Start Date\", \"End Date\"]));
+    while (configs.hasNext()) {
+     
+        var config = configs.next();
+        var cfgValue = config.get('value');
+        if (cfgValue) {        
+            if (config.get('name') == \"Start Date\")
+                startDate = new java.util.Date(cfgValue);
+            else
+                endDate = new java.util.Date(cfgValue);  
+        }        
+    }
+   
+    if (startDate && endDate) {
+        if (startDate.getTime() > endDate.getTime()) {
+            retVal = \"The Start Date must be less than the End Date.\";  
+        }
+    } else {    
+        retVal = \"The Start Date and End Date must not be empty.\";
+    } 
+         
+} else if (name == \"Exclude Weekends\") {
+    
+    if (value != \"TRUE\" && value != \"FALSE\") 
+        retVal = \"Please enter TRUE or FALSE.\";
+    
+}
+
+if (retVal != \"\") retVal += \":#b00\";
+
+retVal;":]]></path>
+							</attributes>
+						</column>
+					</columns>
+					<controls>
+						<control name="Colored Status">
+							<attributes>
+								<renderer><![CDATA[if ($ctx.value == null || $ctx.value === '') {
+    '';
+} else {
+    var split = $ctx.value.split(':');
+    var label = split[0];
+    var color = '#EEE';
+    var marker = 0;
+    if (split.length > 1) {
+		color = split[1];
+    }
+    if (split.length > 2) {
+		marker = split[2];
+    }
+    var style = ';font-weight:normal;width:100%;border-radius:5px;box-shadow:0 1px 1px #CCC;color:#FFF;padding:3px 5px 0 5px;height:22px;box-sizing:border-box;';
+    var clazz = 'status-sm ' + label.toLowerCase() +'';
+    '<div class=\"'+ clazz +'\" data-marker=\"'+ marker + '\" style=\"background-color:'+ color + style  + '\">'+ label +'</div>'
+}]]></renderer>
+							</attributes>
+						</control>
+					</controls>
+				</data_view_info>
+			</configs>
+		</ui_widget_data_grid>
+		<ui_widget_data_grid title="Person Totals" colspan="1" rowspan="1" data_view="Data Simulator System Crash Previews" limit="20">
+			<configs>
+				<data_view_info name="Data Simulator System Crash Previews" table="ds_crash_system_preview" show_summary="f" group_fields="t">
+					<columns>
+						<column path="name" show_in_table="t"/>
+						<column path="label" show_in_table="t"/>
+						<column show_in_table="t" label="Totals">
+							<attributes>
+								<path><![CDATA[_calc:totals::string:"include(\"ssi.utils.js\");
+var retVal = \"\";
+var name = get(\"Name\");
+
+if (name == \"tot_person_included_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_user_include\", \"ui\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ui.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_persons_excluded_users\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_user_exclude\", \"ux\");
+    q.join(\"cmn_user\", \"u\", \"u.id\", \"ux.user\")
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");	
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_manufacturers\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"m.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_manufacturer\", \"m\");
+    retVal = this.exec.execute1(q);    
+    
+} else if (name == \"tot_unique_persons\") {
+    
+    let INCLUDED_USER_PERSONS = null;
+    
+    let subq0 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"m.manufacturer\")));
+    subq0.from(\"ds_crash_system_manufacturer\", \"m\");
+    let MANUFS = this.exec.executeL1(subq0);
+
+    if (MANUFS.length == 0) {
+        let subq1 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+        subq1.from(\"ds_crash_system_user_include\", \"gi\");
+        subq1.join(\"cmn_user\", \"u\", \"u.id\", \"gi.user\");     
+        subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+        INCLUDED_USER_PERSONS = this.exec.executeL1(subq1);
+    } else {
+        let subq1 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\", \"id\")));
+        subq1.from(\"cmn_user\", \"u\");
+        subq1.join(\"cmdb_ci_computer\", \"c\", \"c.primary_user\", \"u.id\");
+        subq1.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\");
+        subq1.where(IN(\"c.manufacturer\", MANUFS));
+        INCLUDED_USER_PERSONS = exec.executeL1(subq1);
+    }
+            
+    let subq2 = Query.selectDistinct(java.util.Arrays.asList(Query.column(\"u.person\")));
+    subq2.from(\"ds_crash_system_user_exclude\", \"e\");
+    subq2.join(\"cmn_user\", \"u\", \"u.id\", \"e.user\"); 
+    subq2.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    let EXCLUDED_USER_PERSONS = this.exec.executeL1(subq2);
+         
+    let col = Query.coalesce(Query.countDistinct(\"u.person\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"cmn_user\", \"u\");
+    q.join(\"cmn_person\", \"p\", \"p.id\", \"u.person\"); 
+    q.where
+    (
+        Criterion.AND
+        (
+            Criterion.IN(\"u.person\", INCLUDED_USER_PERSONS),
+            Criterion.NOT_IN(\"u.person\", EXCLUDED_USER_PERSONS),
+            Criterion.ILIKE(\"u.source\", \"%@datasim%\")    
+        )
+    )
+    
+    retVal = this.exec.execute1(q);
+
+} else if (name == \"tot_software\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"s.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_software\", \"s\");
+    q.where(Criterion.EQ(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+} else if (name == \"tot_software_disabled\") {
+    
+    let col = Query.coalesce(Query.countDistinct(\"s.id\"), Query.value(0)).as(\"count\");
+    let q = Query.select(java.util.Arrays.asList(col));
+    q.from(\"ds_crash_system_software\", \"s\");
+    q.where(Criterion.NE(\"enabled\", true));
+    retVal = this.exec.execute1(q);
+    
+}
+
+retVal;":]]></path>
+							</attributes>
+						</column>
+					</columns>
+				</data_view_info>
+			</configs>
+		</ui_widget_data_grid>
+	</widgets>
+</dashboard>

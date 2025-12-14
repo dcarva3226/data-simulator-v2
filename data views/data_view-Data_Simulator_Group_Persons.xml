@@ -1,0 +1,9 @@
+<data_view_info name="Data Simulator Group Persons" table="acu_group_person" show_summary="f" group_fields="t">
+	<columns>
+		<column path="group" show_in_table="t"/>
+		<column path="group>name" show_in_table="f"/>
+		<column path="person" show_in_table="t"/>
+		<column path="group>type" show_in_table="t"/>
+		<column path="group>type>name" show_in_table="f"/>
+	</columns>
+</data_view_info>
