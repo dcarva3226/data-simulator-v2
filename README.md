@@ -1,5 +1,5 @@
 ## Project Title
-Needed a place to start storing sample javascript code for future re-use.
+Needed a place to start storing sample javascript code for future re-use. This project represents a data loader tool.
 
 ## License
 Proprietary / Custom License
