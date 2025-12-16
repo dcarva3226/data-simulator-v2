@@ -2,6 +2,8 @@
 Needed a place to start storing sample javascript code for future re-use.
 
 ## License
+Proprietary / Custom License
+
 Copyright (c) 2025 Danny Carvajal
 
 All rights reserved.
